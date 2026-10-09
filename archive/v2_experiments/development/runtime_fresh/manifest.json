@@ -1,0 +1,350 @@
+{
+  "model_sha256": "54b446300f28184b634de12859ac66ad9dd27f5a2513e1810febf0349608d48f",
+  "dataset_sha256": "536d9e1c02ca7db361e997a9237a0a1f3a8db3e736db1752a9656f14b0c00728",
+  "source_refs": {
+    "team_ref": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+    "generator_ref": "cc4c075daa3dd4c7f80510042732763fc9502933"
+  },
+  "episode_seeds": [
+    201,
+    202,
+    203
+  ],
+  "variants": [
+    "nominal"
+  ],
+  "candidate": {
+    "generation": {
+      "yaw_set_rad": [
+        0.0,
+        1.5707963267948966
+      ],
+      "use_ems": true,
+      "use_extreme_points": true,
+      "ems_anchors": [
+        "corner_ll",
+        "corner_lr",
+        "corner_ul",
+        "corner_ur",
+        "center"
+      ],
+      "dedup_distance_m": 0.08,
+      "dedup_mode": "support_aware",
+      "order": "likely_valid_first",
+      "max_candidates": 0,
+      "balance_anchors": true,
+      "balance_step_m": 0.04
+    },
+    "uncertainty": {
+      "lateral_clearance_m": 0.004,
+      "size_tolerance_m": 0.002,
+      "height_tolerance_m": 0.003,
+      "cog_uncertainty_ratio": 0.05,
+      "cog_uncertainty_min_m": 0.005,
+      "uncertain_policy": "robust",
+      "uncertain_multiplier": 2.0
+    },
+    "constraints": {
+      "min_support_ratio": 0.7,
+      "min_lbcp_margin_m": 0.0,
+      "pallet_overhang_m": 0.0,
+      "heavy_on_light": {
+        "enabled": true,
+        "mode": "share",
+        "max_weight_ratio": 1.0,
+        "tolerance_kg": 0.5,
+        "min_share": 0.1
+      },
+      "load_model": {
+        "ect_n_per_m": 5000.0,
+        "board_thickness_m": 0.003,
+        "safety_factor": 4.0,
+        "share_model": "lever"
+      },
+      "pallet_cog": {
+        "enabled": true,
+        "final_half_extent_ratio": 0.5,
+        "ramp_mass_kg": 150.0,
+        "allow_improving": true
+      },
+      "default_pallet_max_weight_kg": 1000.0
+    },
+    "cache_size": 256,
+    "collect_all_reasons": false
+  },
+  "robot": {
+    "robot_model": "hdr50_22",
+    "rated_payload_kg": 50.0,
+    "gripper": {
+      "footprint_m": [
+        0.34,
+        0.26
+      ],
+      "tcp_offset_m": 0.22,
+      "mass_kg": 15.0,
+      "clearance_m": 0.01
+    },
+    "cell": {
+      "base_from_pallet_center": [
+        0.0,
+        1.15,
+        0.35,
+        0.0
+      ],
+      "deck_height_m": 0.15,
+      "pick_point_base_m": [
+        -1.35,
+        1.05,
+        0.4
+      ]
+    },
+    "motion": {
+      "approach_clearance_m": 0.3,
+      "path_step_m": 0.05,
+      "max_joint_jump_rad": 0.35,
+      "limit_margin_rad": 0.02,
+      "speed_scale": 0.5,
+      "linear_speed_mps": 0.25,
+      "grip_time_s": 0.5,
+      "release_time_s": 0.5
+    },
+    "collision": {
+      "upper_arm_radius_m": 0.16,
+      "forearm_radius_m": 0.13,
+      "wrist_radius_m": 0.1,
+      "sample_step_m": 0.04
+    }
+  },
+  "virtual": {
+    "seed": 20261007,
+    "pallet": {
+      "height_limit_includes_pallet": true,
+      "default_max_load_kg": 1000.0,
+      "sizes_m": [
+        [
+          1.1,
+          1.1
+        ],
+        [
+          1.2,
+          1.0
+        ],
+        [
+          1.2,
+          0.8
+        ]
+      ]
+    },
+    "catalog": {
+      "nominal_weight": "midpoint"
+    },
+    "observation": {
+      "dimension_noise_std_m": 0.001,
+      "dimension_noise_clip_m": 0.003,
+      "weight_noise_std_ratio": 0.01,
+      "uncertain_probability": 0.05,
+      "uncertain_dimension_noise_std_m": 0.004,
+      "uncertain_confidence": 0.6
+    },
+    "episode": {
+      "policy": "mixed",
+      "epsilon": 0.3,
+      "top_n_random": 5,
+      "scene_every": 1,
+      "max_steps": 0
+    },
+    "strength": {
+      "enabled": true,
+      "profiles": {
+        "strong": 1,
+        "nominal": 1,
+        "weak": 1,
+        "humid": 1,
+        "mixed": 1,
+        "extreme": 1
+      },
+      "assignment": "round_robin",
+      "damage_factor": 0.25,
+      "detect_probability": 0.8
+    }
+  },
+  "runtime": {
+    "perception": {
+      "weight_noise_std_ratio": 0.01,
+      "size_noise_std_m": 0.001,
+      "uncertain_probability": 0.05,
+      "uncertain_size_noise_std_m": 0.004,
+      "uncertain_confidence": 0.6,
+      "label_fail_probability": 0.02,
+      "damage_detect_probability": 0.8,
+      "base_view_recover_probability": 0.7,
+      "base_view_size_noise_std_m": 0.001
+    },
+    "validator": {
+      "min_label_confidence": 0.5,
+      "size_tolerance_m": 0.012,
+      "size_tolerance_ratio": 0.04,
+      "weight_tolerance_ratio": 0.08,
+      "damage_policy": "reject"
+    },
+    "supervisor": {
+      "pallet_change_time_s": 60.0,
+      "pallet_change_manual": false,
+      "missing_timeout_s": 30.0,
+      "operator_time_s": 120.0
+    },
+    "execution": {
+      "place_xy_noise_std_m": 0.001,
+      "grip_fail_probability": 0.01,
+      "max_grip_retries": 1,
+      "retry_time_s": 4.0
+    },
+    "verify": {
+      "l0_xy_m": 0.005,
+      "l0_z_m": 0.005,
+      "l1_xy_m": 0.02,
+      "l1_z_m": 0.01,
+      "max_overlap_m": 0.002,
+      "max_protrusion_m": 0.002,
+      "min_support_ratio": 0.6,
+      "heightmap_cell_m": 0.01
+    },
+    "robot_checks_per_option": 12,
+    "seed": 0
+  },
+  "highlevel": {
+    "buffer": {
+      "slots": 4,
+      "travel_time_s": [],
+      "base_travel_time_s": 4.0,
+      "per_slot_extra_s": 1.0
+    },
+    "timing": {
+      "place_time_s": 8.0,
+      "pallet_change_time_s": 60.0,
+      "repack_move_time_s": 12.0
+    },
+    "reward": {
+      "volume_weight": 1.0,
+      "close_waste_weight": 1.0,
+      "time_weight": 0.0005,
+      "occupancy_weight": 0.002,
+      "ng_penalty": 0.05
+    },
+    "rules": {
+      "good_support": 0.95,
+      "retrieve_margin_m": 0.02,
+      "max_buffer_age": 12
+    },
+    "close": {
+      "fill_before_buffer": 0.3
+    },
+    "repack": {
+      "enabled": true,
+      "max_moves": 2,
+      "max_nodes": 24,
+      "min_gain": 0.0
+    },
+    "features": {
+      "value_provider": "proxy",
+      "value_model_path": "",
+      "order_list_known": true,
+      "heightmap_cell_m": 0.02
+    },
+    "ppo": {
+      "hidden": [
+        64,
+        64
+      ],
+      "learning_rate": 0.0003,
+      "gamma": 0.995,
+      "gae_lambda": 0.95,
+      "clip_range": 0.2,
+      "entropy_coef": 0.01,
+      "value_coef": 0.5,
+      "max_grad_norm": 0.5,
+      "n_steps": 1024,
+      "batch_size": 128,
+      "n_epochs": 6,
+      "total_steps": 30000,
+      "seed": 0
+    }
+  },
+  "planner": {
+    "top_k": 4,
+    "scenario_count": 3,
+    "horizon": 2,
+    "rollout_candidate_limit": 16,
+    "timeout_sec": 1.0,
+    "cvar_alpha": 0.2,
+    "grid_side": 12,
+    "target_support": 0.95,
+    "target_cog_margin": 0.2,
+    "target_load_margin": 0.2,
+    "min_cog_margin": 0.02,
+    "time_reference_sec": 20.0,
+    "base_handling_sec": 2.0,
+    "travel_speed_m_s": 0.5,
+    "rotation_sec_per_rad": 0.5,
+    "weights": {
+      "safety": 0.15,
+      "space": 0.3,
+      "future": 0.4,
+      "risk": 0.1,
+      "time": 0.05
+    }
+  },
+  "spec_mismatch": 0.02,
+  "missing": 0.02,
+  "runtime_source_sha256": {
+    "__init__.py": "66baee52d07862b1fabf744301302b4895fffe746df864d6c3b9af8a1265a08c",
+    "config.py": "a45dfd6b19447b43aab609792dfb7d1393da2b559a50275ff6e80ef268b6fcea",
+    "core.py": "bcdf455087eca8b95d74d53bfe0289bb0c8f18ad6cf77318c8e36bc69317cc62",
+    "executor.py": "1f77bc56483b09792f2fe92d9a72be5d57301266407a213f711e3dc0787814e0",
+    "gazebo_driver.py": "e310990723e21e50995f56e4f36ee1eb1c080fc88dd04e424ef3d73ef435fb8a",
+    "loop.py": "3da20a82a1fb5cfc3a6dfec583baf21a847b6b46e844b39de09d7d25febcf2e6",
+    "order.py": "f5164c9878cc40acd84dff8f0ed4587c4a37aad80a019ff75f1dd7ca9b1ce10d",
+    "perception.py": "b25a4a2a74036bcb0334e8b1d4f7edbeb597f9b2a157a6838882c0b9193f0fef",
+    "placer.py": "6ec96ab74a73d55b311c6c58b94bd1ed999b240f9384e9fd30b1777cffb9f838",
+    "ros_node.py": "8f6b4004157581e60e1e3b95b893fb972f943afa98abba132c5eda0fbd80d6cf",
+    "state_manager.py": "30b4eb63a7b6e0ae5fa7a933e8d42887f21e59ae14c2df34641231101f597288",
+    "state_validator.py": "20508a1116d2a6316fe05608369553d83fba4f354da44fefbf844f5159c075ab",
+    "supervisor.py": "495d54990d661a855808bf913b8be0cb75e2d640aad5e778c9d847a1e515a133"
+  },
+  "planner_source_sha256": {
+    "__init__.py": "4e060b69eeb8d50241011d3296a3f15bafceb1a8b8e27c179a4caf1111c6ada2",
+    "config.py": "1ee2eca31787bbaaaf130d90b91c6b782b11db2fedf0c6d9fecff109e6e845e5",
+    "demo.py": "a60ee88aeab93d672e17d591a546e76c3b8201595eb827bccfb58f563472f686",
+    "evaluation.py": "f0c8f3a396047e3971133e5eb298bf38ee9f90275d1ef4da8c2326f56d1f70e5",
+    "experiment.py": "c5e631821751222d4cea4805bf49add4faa925e29106b91b940a5202fbe95926",
+    "features.py": "401e89f02302998822f1f530234e4aa4669104a282c2922ad709f98667fc1400",
+    "geometry.py": "f529415074a30cc6d3047af7f1113d6654c31c9e5b99403261d02250e07a15d4",
+    "model.py": "b2caa0029118971e1bccc6c384320868f9ea5dc4e4f273464e20eacff3b0bcd4",
+    "model_pipeline.py": "a86b5c631d034b98a2c5cc531b83fd77867d3b649597ff57e40065d876066684",
+    "planner.py": "04cf9239b691a06a5e16e20f4a2833158e89424a658c944b9d945656c95d0c13",
+    "planning_service.py": "1913b66545cb37b7775306c98ad1edddce726120eeee4817314c6965d77c5fbc",
+    "reference_backend.py": "a4e2a530cc069ebf19236c8d608eddfc7e5055b1efb7ef2828768a4c9208d25e",
+    "rollout.py": "6b705db59ccffeaafcb11a93a04ef935ed87214274fdf051d5d777f0a2019597",
+    "scenarios.py": "b583d361ec69f16df4072e3008f8194d2b4b4fc6e0a031e39b72293fca5e502f",
+    "scene_bridge.py": "6099a03321a34dc80e61c21fe9b8bae7941a028705c9c1b8e13e96137b57ba3b",
+    "scoring.py": "53c472e18951a802561b326e27add724f10496d6fffafc6037c633ee1440bf7d",
+    "team_bridge.py": "9445935feb4f4bff39dc9700248ff05eff00a8bb36a585b69e05d28187c3483c",
+    "team_training.py": "f634e0c697bd9b0ffc30863735c2f5b73296bac4b5429b2c8e6e8d8eb1b1d5a1",
+    "training.py": "5ace81d00f004e189299bcd243681b39ec962c02dc1b118823f1a0c49c1fda4c",
+    "training_data.py": "da043ab327e9a56089d44d9a4728bee2085b79921fee345bf823ea1a04b78fee"
+  },
+  "scenario_ids": [
+    "S0001",
+    "S0002",
+    "S0003",
+    "S0004",
+    "S0005",
+    "S0006",
+    "S0007",
+    "S0008",
+    "S0009",
+    "S0010",
+    "S0011",
+    "S0012"
+  ]
+}

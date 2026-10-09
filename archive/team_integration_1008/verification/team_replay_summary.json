@@ -1,0 +1,36 @@
+{
+  "boxes": 5,
+  "placed": 5,
+  "ng": 0,
+  "pallets_used": 1,
+  "pallets_closed": 0,
+  "closed_fill_mean": null,
+  "fill_per_pallet_used": 0.04806591811509028,
+  "pallet_equivalents": 0.04806591811509028,
+  "time_s": 40.0,
+  "decisions": 5,
+  "counts": {
+    "PLACE_CURRENT": 5
+  },
+  "safety_issues": 0,
+  "pallets": [
+    {
+      "pallet_id": "P001-P0",
+      "boxes": 5,
+      "volume_m3": 0.07851567724099999,
+      "true_volume_m3": 0.08009000000000001,
+      "weight_kg": 35.8513,
+      "max_top_m": 0.2767,
+      "fill": 0.04806591811509028,
+      "issues": {}
+    }
+  ],
+  "return": 0.02806591811509028,
+  "scope": "OFFLINE_SIMULATION",
+  "robot_execution": "NOT_RUN",
+  "scenario_id": "S0001",
+  "placer": "donghan_ems_rollout_v1",
+  "planner_calls": 5,
+  "policy": "RULE",
+  "value_provider": "proxy"
+}

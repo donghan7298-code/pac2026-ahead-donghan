@@ -1,0 +1,1116 @@
+{
+  "scope": "OFFLINE_TRAINING_AND_EVALUATION",
+  "robot_execution": "NOT_RUN",
+  "ros2_execution": "NOT_RUN",
+  "provenance": {
+    "team_ref": "fd683e56e67af8e2de743b80456f9fd2177a3eef",
+    "generator_ref": "cc4c075daa3dd4c7f80510042732763fc9502933",
+    "generator_manifest": {
+      "schema_version": 1,
+      "generator_version": "1.2.0",
+      "dataset_name": "ahead_kr_general_parcel",
+      "mode": "sample",
+      "run_id": "ahead_kr_general_parcel-sample-20261008",
+      "seed": 20261008,
+      "git_commit": "UNKNOWN",
+      "scenario_count": 12,
+      "box_count": 96,
+      "units": {
+        "length": "m",
+        "mass": "kg",
+        "time": "s",
+        "angle": "rad"
+      },
+      "contract": {
+        "runtime_model": "pac_common dataclass",
+        "storage_config": "YAML",
+        "storage_test_data": "JSON/JSONL",
+        "planner_future_order_exposed": false,
+        "robot_feasibility_in_generator": false
+      }
+    },
+    "scope": "OFFLINE_SIMULATION",
+    "high_level_policy": "RULE",
+    "high_level_value_provider": "proxy",
+    "ppo_trained": false,
+    "source_dataset_sha256": {
+      "test_data/S0001.json": "9d1b112887286888938494bae46ac0733466b1b54cfbfcee688c7b8ce7b3fb92",
+      "test_data/S0002.json": "8bc164eeb860085f2b7ac058718149a8433c2c73ab4d8c2d402c2ef670f95851",
+      "test_data/S0003.json": "05e28145b1db9896aa7a8385a3c32bc44bf05fd1a923802c3570c810d2631653",
+      "test_data/S0004.json": "5d8cc19dac72a96498032b95f8ca0dd88383f325e7a9d33fe57897b62c91d67c",
+      "test_data/S0005.json": "98085100300f813096453847f9ed2ed15cfd7e3c2aa0a9bf0e31ab2336101cd6",
+      "test_data/S0006.json": "001e220ae023702bded94e180b4c20aad49c5ee74df793362ec4d8e8d98863f7",
+      "test_data/S0007.json": "01722d66a7478e3aa546969879053dfe0a45e22e86241ce3b5f7130acb940e32",
+      "test_data/S0008.json": "d22fbe85141088b05389cbaf673cc5b03711febae44e13d06825eb8e29ec3c27",
+      "test_data/S0009.json": "129d43a7973f8f1e81f195f83054386d488a506c1327855aae28901aef58c05d",
+      "test_data/S0010.json": "65b57ed6163ab4f4031bbaa6a6d1cbd5aecf638eac9edb12bba96463a36fce18",
+      "test_data/S0011.json": "43000194fe727c3c53311e16b7520e6a2fe5a78d32273685891fa4c1b44ea925",
+      "test_data/S0012.json": "79f0a3b3398a0c24533a018cffb934f1abed4486c2cf1a7742a770a72a4f37b5",
+      "ground_truth/S0001.json": "604498367686d50f9cb5ef386cd168487c949457dd8186ec2d2189ddd2607a71",
+      "ground_truth/S0002.json": "5652233d1a7cbaef4667c7451e68efb5b3a5bc11227a3e93f5d8fd1488480eb4",
+      "ground_truth/S0003.json": "d01a41b7a26e1bd9b983fb9e8eb25967f14f34c004fa2f286cd37c95e062a87b",
+      "ground_truth/S0004.json": "dd2aba1cb608f7bf030110bea33177168bd13b6ea5e96556bcd917f0a69638c6",
+      "ground_truth/S0005.json": "2574f0f9c601b0784ab444a61bb8e0f1d78b2807580b1262957cbf5f4ce30526",
+      "ground_truth/S0006.json": "d4c5da61fd5b622b7da319e6580cc613f5f8ee8360405f915fd97f6716c36358",
+      "ground_truth/S0007.json": "603d3bcff3baadff0a2e51ce07846e357ece1da2e1aa892cb7d575d3fb1e948f",
+      "ground_truth/S0008.json": "c410508616b1bb7d0f175e6b1279b8ce3db9e7e9553ee73a45bf830ddfb43120",
+      "ground_truth/S0009.json": "119fb9870fb20867ddd2944d5bd24ceb008d1ef01834b62be1eed70fca8107cf",
+      "ground_truth/S0010.json": "92e9853fb7bda041404c496485cc525b54829422a3a535f0455ce43b04166bf5",
+      "ground_truth/S0011.json": "b5c541de1828bffd75b53653416a199cfc5dda4d59bece17f216089a825841e9",
+      "ground_truth/S0012.json": "18b69638bc0d7fc47925a295081473538ef81015a84bb146113302cd4a052274",
+      "analysis/catalog.csv": "fbd937a693069e2f14c021169d77e1aaa6ecdd9e2e5b4350e049237121a8ae3d",
+      "analysis/coverage_report.json": "2686728e2a38bad9f06ba20f51b12dc2d8f6c199282167d5503a8fbacc70042d",
+      "analysis/coverage_report.md": "4394ad79379749fea6d52f757e8346dbbc399e0ca42f8ee19393ee5221fe4685",
+      "analysis/scenario_index.csv": "a286c4dc0cee2984fcce37590763b36b7d7d3b3f13bef5578ed1fdc748cc5b90",
+      "analysis/scenario_metadata.csv": "8714c710d7fd10a0f1cbf7384d2dd3138dadf0f31c3f515374c175617af0693a"
+    },
+    "virtual_config": {
+      "seed": 20261007,
+      "pallet": {
+        "height_limit_includes_pallet": true,
+        "default_max_load_kg": 1000.0,
+        "sizes_m": [
+          [
+            1.1,
+            1.1
+          ],
+          [
+            1.2,
+            1.0
+          ],
+          [
+            1.2,
+            0.8
+          ]
+        ]
+      },
+      "catalog": {
+        "nominal_weight": "midpoint"
+      },
+      "observation": {
+        "dimension_noise_std_m": 0.001,
+        "dimension_noise_clip_m": 0.003,
+        "weight_noise_std_ratio": 0.01,
+        "uncertain_probability": 0.05,
+        "uncertain_dimension_noise_std_m": 0.004,
+        "uncertain_confidence": 0.6
+      },
+      "episode": {
+        "policy": "mixed",
+        "epsilon": 0.3,
+        "top_n_random": 5,
+        "scene_every": 1,
+        "max_steps": 0
+      },
+      "strength": {
+        "enabled": true,
+        "profiles": {
+          "strong": 1,
+          "nominal": 1,
+          "weak": 1,
+          "humid": 1,
+          "mixed": 1,
+          "extreme": 1
+        },
+        "assignment": "round_robin",
+        "damage_factor": 0.25,
+        "detect_probability": 0.8
+      }
+    },
+    "highlevel_config": {
+      "buffer": {
+        "slots": 4,
+        "travel_time_s": [],
+        "base_travel_time_s": 4.0,
+        "per_slot_extra_s": 1.0
+      },
+      "timing": {
+        "place_time_s": 8.0,
+        "pallet_change_time_s": 60.0,
+        "repack_move_time_s": 12.0
+      },
+      "reward": {
+        "volume_weight": 1.0,
+        "close_waste_weight": 1.0,
+        "time_weight": 0.0005,
+        "occupancy_weight": 0.002,
+        "ng_penalty": 0.05
+      },
+      "rules": {
+        "good_support": 0.95,
+        "retrieve_margin_m": 0.02,
+        "max_buffer_age": 12
+      },
+      "close": {
+        "fill_before_buffer": 0.3
+      },
+      "repack": {
+        "enabled": true,
+        "max_moves": 2,
+        "max_nodes": 24,
+        "min_gain": 0.0
+      },
+      "features": {
+        "value_provider": "proxy",
+        "value_model_path": "",
+        "order_list_known": true,
+        "heightmap_cell_m": 0.02
+      },
+      "ppo": {
+        "hidden": [
+          64,
+          64
+        ],
+        "learning_rate": 0.0003,
+        "gamma": 0.995,
+        "gae_lambda": 0.95,
+        "clip_range": 0.2,
+        "entropy_coef": 0.01,
+        "value_coef": 0.5,
+        "max_grad_norm": 0.5,
+        "n_steps": 1024,
+        "batch_size": 128,
+        "n_epochs": 6,
+        "total_steps": 30000,
+        "seed": 0
+      }
+    },
+    "effective_splits": {
+      "train": [
+        "S0012",
+        "S0011",
+        "S0003",
+        "S0001",
+        "S0005",
+        "S0002",
+        "S0007",
+        "S0008"
+      ],
+      "val": [
+        "S0010",
+        "S0009"
+      ],
+      "test": [
+        "S0006",
+        "S0004"
+      ]
+    },
+    "split_note": {
+      "policy": "generator_split_with_inventory_leakage_guard",
+      "repartitioned": false,
+      "colliding_inventory_groups": 0
+    },
+    "planner_config": {
+      "top_k": 4,
+      "scenario_count": 3,
+      "horizon": 2,
+      "rollout_candidate_limit": 16,
+      "timeout_sec": 1.0,
+      "cvar_alpha": 0.2,
+      "grid_side": 12,
+      "target_support": 0.95,
+      "target_cog_margin": 0.2,
+      "target_load_margin": 0.2,
+      "min_cog_margin": 0.02,
+      "time_reference_sec": 20.0,
+      "base_handling_sec": 2.0,
+      "travel_speed_m_s": 0.5,
+      "rotation_sec_per_rad": 0.5,
+      "weights": {
+        "safety": 0.15,
+        "space": 0.3,
+        "future": 0.4,
+        "risk": 0.1,
+        "time": 0.05
+      }
+    },
+    "initialization": "NEW_MODEL"
+  },
+  "backend_contract": {
+    "backend": "pac_candidates.backend.CandidateBackend",
+    "source_sha256": {
+      "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+      "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+      "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+      "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+      "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+      "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+      "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+      "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+      "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+    },
+    "candidate_config": {
+      "generation": {
+        "yaw_set_rad": [
+          0.0,
+          1.5707963267948966
+        ],
+        "use_ems": true,
+        "use_extreme_points": true,
+        "ems_anchors": [
+          "corner_ll",
+          "corner_lr",
+          "corner_ul",
+          "corner_ur",
+          "center"
+        ],
+        "dedup_distance_m": 0.08,
+        "dedup_mode": "support_aware",
+        "order": "likely_valid_first",
+        "max_candidates": 0,
+        "balance_anchors": true,
+        "balance_step_m": 0.04
+      },
+      "uncertainty": {
+        "lateral_clearance_m": 0.004,
+        "size_tolerance_m": 0.002,
+        "height_tolerance_m": 0.003,
+        "cog_uncertainty_ratio": 0.05,
+        "cog_uncertainty_min_m": 0.005,
+        "uncertain_policy": "robust",
+        "uncertain_multiplier": 2.0
+      },
+      "constraints": {
+        "min_support_ratio": 0.7,
+        "min_lbcp_margin_m": 0.0,
+        "pallet_overhang_m": 0.0,
+        "heavy_on_light": {
+          "enabled": true,
+          "mode": "share",
+          "max_weight_ratio": 1.0,
+          "tolerance_kg": 0.5,
+          "min_share": 0.1
+        },
+        "load_model": {
+          "ect_n_per_m": 5000.0,
+          "board_thickness_m": 0.003,
+          "safety_factor": 4.0,
+          "share_model": "lever"
+        },
+        "pallet_cog": {
+          "enabled": true,
+          "final_half_extent_ratio": 0.5,
+          "ramp_mass_kg": 150.0,
+          "allow_improving": true
+        },
+        "default_pallet_max_weight_kg": 1000.0
+      },
+      "cache_size": 256,
+      "collect_all_reasons": false
+    }
+  },
+  "selected_epoch": 41,
+  "teacher_episodes": [
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.08829680903333333,
+      "pallet_equivalents": 0.08829680903333333,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.143040830634,
+          "true_volume_m3": 0.1428,
+          "weight_kg": 74.023,
+          "max_top_m": 0.212,
+          "fill": 0.08829680903333333,
+          "issues": {}
+        }
+      ],
+      "return": 0.056296809033333325,
+      "scenario_id": "S0012",
+      "wall_time_sec": 6.058755828000358,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.03498041080808079,
+      "pallet_equivalents": 0.03498041080808079,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.05714050105499999,
+          "true_volume_m3": 0.057120000000000004,
+          "weight_kg": 28.973499999999998,
+          "max_top_m": 0.1512,
+          "fill": 0.03498041080808079,
+          "issues": {}
+        }
+      ],
+      "return": 0.0029804108080807986,
+      "scenario_id": "S0011",
+      "wall_time_sec": 20.460062785000446,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.07719599863544535,
+      "pallet_equivalents": 0.07719599863544535,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.12609966377100001,
+          "true_volume_m3": 0.126016,
+          "weight_kg": 34.9097,
+          "max_top_m": 0.3405,
+          "fill": 0.07719599863544535,
+          "issues": {}
+        }
+      ],
+      "return": 0.04519599863544534,
+      "scenario_id": "S0003",
+      "wall_time_sec": 14.003485664999971,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 2,
+      "pallets_closed": 1,
+      "closed_fill_mean": 0.041335330329354145,
+      "fill_per_pallet_used": 0.05132349695531067,
+      "pallet_equivalents": 1.0613116635812672,
+      "time_s": 132.0,
+      "decisions": 9,
+      "counts": {
+        "PLACE_CURRENT": 7,
+        "BUFFER_CURRENT": 1,
+        "PALLET_CLOSE": 1,
+        "RETRIEVE_BUFFER": 1
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 7,
+          "volume_m3": 0.06752126209300001,
+          "true_volume_m3": 0.06813100000000001,
+          "weight_kg": 30.956200000000003,
+          "max_top_m": 0.1499,
+          "fill": 0.041335330329354145,
+          "issues": {}
+        },
+        {
+          "pallet_id": "P001-P1",
+          "boxes": 1,
+          "volume_m3": 0.10015260245999999,
+          "true_volume_m3": 0.09984,
+          "weight_kg": 10.9778,
+          "max_top_m": 0.4005,
+          "fill": 0.061311663581267196,
+          "issues": {}
+        }
+      ],
+      "return": -0.9340176757600247,
+      "scenario_id": "S0001",
+      "wall_time_sec": 12.882458391,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.06022662460422403,
+      "pallet_equivalents": 0.06022662460422403,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.09838019129099998,
+          "true_volume_m3": 0.098676,
+          "weight_kg": 38.738600000000005,
+          "max_top_m": 0.279,
+          "fill": 0.06022662460422403,
+          "issues": {}
+        }
+      ],
+      "return": 0.028226624604224045,
+      "scenario_id": "S0005",
+      "wall_time_sec": 19.53450627499933,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.11209472867160494,
+      "pallet_equivalents": 0.11209472867160494,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.181593460448,
+          "true_volume_m3": 0.180706,
+          "weight_kg": 53.5371,
+          "max_top_m": 0.4016,
+          "fill": 0.11209472867160494,
+          "issues": {}
+        }
+      ],
+      "return": 0.08009472867160493,
+      "scenario_id": "S0002",
+      "wall_time_sec": 15.621659331999581,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.16522567684236303,
+      "pallet_equivalents": 0.16522567684236303,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.26989614312200005,
+          "true_volume_m3": 0.27061100000000005,
+          "weight_kg": 83.5879,
+          "max_top_m": 0.6774,
+          "fill": 0.16522567684236303,
+          "issues": {}
+        }
+      ],
+      "return": 0.13322567684236297,
+      "scenario_id": "S0007",
+      "wall_time_sec": 11.012672105999627,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.08419421295370369,
+      "pallet_equivalents": 0.08419421295370369,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.136394624985,
+          "true_volume_m3": 0.13639600000000002,
+          "weight_kg": 52.13909999999999,
+          "max_top_m": 0.40990000000000004,
+          "fill": 0.08419421295370369,
+          "issues": {}
+        }
+      ],
+      "return": 0.0521942129537037,
+      "scenario_id": "S0008",
+      "wall_time_sec": 19.873164592999274,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "train",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.10021892314753088,
+      "pallet_equivalents": 0.10021892314753088,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.16235465549900002,
+          "true_volume_m3": 0.162264,
+          "weight_kg": 76.6751,
+          "max_top_m": 0.4005,
+          "fill": 0.10021892314753088,
+          "issues": {}
+        }
+      ],
+      "return": 0.06821892314753088,
+      "scenario_id": "S0010",
+      "wall_time_sec": 13.920488438000575,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "val",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 2,
+      "pallets_closed": 1,
+      "closed_fill_mean": 0.10569188234710741,
+      "fill_per_pallet_used": 0.08328192792837465,
+      "pallet_equivalents": 1.060871973509642,
+      "time_s": 132.0,
+      "decisions": 9,
+      "counts": {
+        "PLACE_CURRENT": 7,
+        "BUFFER_CURRENT": 1,
+        "PALLET_CLOSE": 1,
+        "RETRIEVE_BUFFER": 1
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 7,
+          "volume_m3": 0.172647689814,
+          "true_volume_m3": 0.17240500000000003,
+          "weight_kg": 64.9538,
+          "max_top_m": 0.3428,
+          "fill": 0.10569188234710741,
+          "issues": {}
+        },
+        {
+          "pallet_id": "P001-P1",
+          "boxes": 1,
+          "volume_m3": 0.09943436872800002,
+          "true_volume_m3": 0.09984,
+          "weight_kg": 16.8729,
+          "max_top_m": 0.3992,
+          "fill": 0.060871973509641866,
+          "issues": {}
+        }
+      ],
+      "return": -0.7997442617961434,
+      "scenario_id": "S0009",
+      "wall_time_sec": 9.455335890000242,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "val",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.15728819659444443,
+      "pallet_equivalents": 0.15728819659444443,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.254806878483,
+          "true_volume_m3": 0.25506599999999996,
+          "weight_kg": 42.9522,
+          "max_top_m": 0.4004,
+          "fill": 0.15728819659444443,
+          "issues": {}
+        }
+      ],
+      "return": 0.12528819659444443,
+      "scenario_id": "S0006",
+      "wall_time_sec": 9.960019697000462,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "test",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.11142551148209875,
+      "pallet_equivalents": 0.11142551148209875,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.180509328601,
+          "true_volume_m3": 0.18061300000000002,
+          "weight_kg": 36.3323,
+          "max_top_m": 0.3409,
+          "fill": 0.11142551148209875,
+          "issues": {}
+        }
+      ],
+      "return": 0.07942551148209875,
+      "scenario_id": "S0004",
+      "wall_time_sec": 11.251297769999837,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "split": "test",
+      "queries": 8,
+      "empty_queries": 0,
+      "feature_rejects": {}
+    }
+  ],
+  "query_evaluation": {
+    "train": {
+      "model": {
+        "queries": 64,
+        "candidates": 1724,
+        "teacher_best_top_k_recall": 0.984375,
+        "teacher_top1_relevance_regret": 0.0024074883449883445,
+        "future_output_mse": {
+          "mean": 0.00017858322739672976,
+          "cvar": 0.00023058914958275724,
+          "blocking_rate": 0.0019346829040931411,
+          "failure_rate": 0.0007507075049997797
+        }
+      },
+      "heuristic": {
+        "queries": 64,
+        "candidates": 1724,
+        "teacher_best_top_k_recall": 1.0,
+        "teacher_top1_relevance_regret": 0.0,
+        "future_output_mse": {
+          "mean": 0.000790507376137592,
+          "cvar": 0.0006031933187682022,
+          "blocking_rate": 0.023910801753029128,
+          "failure_rate": 0.009925238463521528
+        }
+      }
+    },
+    "val": {
+      "model": {
+        "queries": 16,
+        "candidates": 331,
+        "teacher_best_top_k_recall": 0.9375,
+        "teacher_top1_relevance_regret": 0.006249999999999999,
+        "future_output_mse": {
+          "mean": 0.0004812303403706064,
+          "cvar": 0.0005960135913772066,
+          "blocking_rate": 0.024741794698051597,
+          "failure_rate": 0.015506246131723269
+        }
+      },
+      "heuristic": {
+        "queries": 16,
+        "candidates": 331,
+        "teacher_best_top_k_recall": 0.9375,
+        "teacher_top1_relevance_regret": 0.006249999999999999,
+        "future_output_mse": {
+          "mean": 0.0017097100840937544,
+          "cvar": 0.0008565648453990632,
+          "blocking_rate": 0.2987579724739845,
+          "failure_rate": 0.12244041624706253
+        }
+      }
+    },
+    "test": {
+      "model": {
+        "queries": 16,
+        "candidates": 364,
+        "teacher_best_top_k_recall": 1.0,
+        "teacher_top1_relevance_regret": 0.0027173913043478243,
+        "future_output_mse": {
+          "mean": 0.000611019958815151,
+          "cvar": 0.0007493728931549308,
+          "blocking_rate": 0.016219081152290555,
+          "failure_rate": 0.00583268561428509
+        }
+      },
+      "heuristic": {
+        "queries": 16,
+        "candidates": 364,
+        "teacher_best_top_k_recall": 1.0,
+        "teacher_top1_relevance_regret": 0.0,
+        "future_output_mse": {
+          "mean": 0.00291007752616005,
+          "cvar": 0.0018728945898204234,
+          "blocking_rate": 0.05372405372405373,
+          "failure_rate": 0.02235958485958486
+        }
+      }
+    }
+  },
+  "holdout_benchmark": [
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.15728819659444443,
+      "pallet_equivalents": 0.15728819659444443,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.254806878483,
+          "true_volume_m3": 0.25506599999999996,
+          "weight_kg": 42.9522,
+          "max_top_m": 0.4004,
+          "fill": 0.15728819659444443,
+          "issues": {}
+        }
+      ],
+      "return": 0.12528819659444443,
+      "scenario_id": "S0006",
+      "wall_time_sec": 7.523093359999621,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "heuristic_rollout",
+      "planner_calls": 8,
+      "model_statuses": {
+        "NO_MODEL_HEURISTIC": 8
+      },
+      "planner_mean_sec": 0.9014653002500381,
+      "planner_max_sec": 2.3534282719992916
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.15728819659444443,
+      "pallet_equivalents": 0.15728819659444443,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.254806878483,
+          "true_volume_m3": 0.25506599999999996,
+          "weight_kg": 42.9522,
+          "max_top_m": 0.4004,
+          "fill": 0.15728819659444443,
+          "issues": {}
+        }
+      ],
+      "return": 0.12528819659444443,
+      "scenario_id": "S0006",
+      "wall_time_sec": 6.47714870100026,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "learned_ranking",
+      "planner_calls": 8,
+      "model_statuses": {
+        "PROVIDED": 8
+      },
+      "planner_mean_sec": 0.665502219624841,
+      "planner_max_sec": 2.003540547000739
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.15728819659444443,
+      "pallet_equivalents": 0.15728819659444443,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.254806878483,
+          "true_volume_m3": 0.25506599999999996,
+          "weight_kg": 42.9522,
+          "max_top_m": 0.4004,
+          "fill": 0.15728819659444443,
+          "issues": {}
+        }
+      ],
+      "return": 0.12528819659444443,
+      "scenario_id": "S0006",
+      "wall_time_sec": 7.546397649000028,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "learned_rollout",
+      "planner_calls": 8,
+      "model_statuses": {
+        "PROVIDED": 8
+      },
+      "planner_mean_sec": 0.8893458937498053,
+      "planner_max_sec": 1.5636360720000084
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.11142551148209875,
+      "pallet_equivalents": 0.11142551148209875,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.180509328601,
+          "true_volume_m3": 0.18061300000000002,
+          "weight_kg": 36.3323,
+          "max_top_m": 0.3409,
+          "fill": 0.11142551148209875,
+          "issues": {}
+        }
+      ],
+      "return": 0.07942551148209875,
+      "scenario_id": "S0004",
+      "wall_time_sec": 4.212648222999633,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "heuristic_rollout",
+      "planner_calls": 8,
+      "model_statuses": {
+        "NO_MODEL_HEURISTIC": 8
+      },
+      "planner_mean_sec": 0.5039912753750286,
+      "planner_max_sec": 0.8304174329996385
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.11142551148209875,
+      "pallet_equivalents": 0.11142551148209875,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.180509328601,
+          "true_volume_m3": 0.18061300000000002,
+          "weight_kg": 36.3323,
+          "max_top_m": 0.3409,
+          "fill": 0.11142551148209875,
+          "issues": {}
+        }
+      ],
+      "return": 0.07942551148209875,
+      "scenario_id": "S0004",
+      "wall_time_sec": 2.610600983999575,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "learned_ranking",
+      "planner_calls": 8,
+      "model_statuses": {
+        "PROVIDED": 8
+      },
+      "planner_mean_sec": 0.30658495512489026,
+      "planner_max_sec": 0.5098155330006193
+    },
+    {
+      "boxes": 8,
+      "placed": 8,
+      "ng": 0,
+      "pallets_used": 1,
+      "pallets_closed": 0,
+      "closed_fill_mean": null,
+      "fill_per_pallet_used": 0.11142551148209875,
+      "pallet_equivalents": 0.11142551148209875,
+      "time_s": 64.0,
+      "decisions": 8,
+      "counts": {
+        "PLACE_CURRENT": 8
+      },
+      "safety_issues": 0,
+      "pallets": [
+        {
+          "pallet_id": "P001-P0",
+          "boxes": 8,
+          "volume_m3": 0.180509328601,
+          "true_volume_m3": 0.18061300000000002,
+          "weight_kg": 36.3323,
+          "max_top_m": 0.3409,
+          "fill": 0.11142551148209875,
+          "issues": {}
+        }
+      ],
+      "return": 0.07942551148209875,
+      "scenario_id": "S0004",
+      "wall_time_sec": 4.50001681699996,
+      "scope": "OFFLINE_SIMULATION",
+      "robot_execution": "NOT_RUN",
+      "time_s_is_assumed_cost": true,
+      "mode": "learned_rollout",
+      "planner_calls": 8,
+      "model_statuses": {
+        "PROVIDED": 8
+      },
+      "planner_mean_sec": 0.5407416693751657,
+      "planner_max_sec": 0.8796801739999864
+    }
+  ],
+  "benchmark_time_scope": "includes world initialization and first option evaluation"
+}

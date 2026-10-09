@@ -1,0 +1,48 @@
+{
+  "mode": "dblf",
+  "scenario_id": "S0012",
+  "seed": 203,
+  "variant": "nominal",
+  "inventory_group": "6667ff1d30da7d520f0d82544aefa1445df24401ea3475cb1cdb4f1aec602c08",
+  "family": "repeated_sku",
+  "stream_sha256": "61db28b584fe8ee26348cb56239412f1216f21c2db09e0db676a5528a6dfb78f",
+  "outcome_sha256": "de84c54ccecd7b34081055d5b1d22c241dbb30fd8d3da878e1b29cd3a0d2e385",
+  "placed": 24,
+  "pallets": 3,
+  "fill_true_mean": 0.23276008230452674,
+  "time_s": 439.6,
+  "placed_volume_m3": 1.1312140000000004,
+  "pallet_equivalent": 2.3017197530864193,
+  "L4": 0,
+  "final_audit_issues": 2,
+  "final_audit_codes": {
+    "OVERLOADED": 2
+  },
+  "executability_rate": 0.9433962264150944,
+  "ems_verified": false,
+  "model_fallback_calls": 0,
+  "inspection": 0,
+  "missing": 0,
+  "stage6": {
+    "calls": 53,
+    "robot_rejected": 115,
+    "code:ROBOT_COLLISION": 115,
+    "fell_back": 15,
+    "no_executable": 3
+  },
+  "decisions": {
+    "PLACE_CURRENT": 17,
+    "L0": 24,
+    "BUFFER_CURRENT": 7,
+    "PALLET_CLOSE": 2,
+    "RETRIEVE_BUFFER": 7
+  },
+  "ranker_provenance": {},
+  "wall_time_sec": 17.40294807700002,
+  "planner_mean_sec": 0.0,
+  "planner_p95_sec": 0.0,
+  "scope": "PYTHON_RUNTIME_SIMULATION",
+  "robot_execution": "NOT_RUN",
+  "evaluation_digest": "ba64c2c101f2165372238ca52722e13af143d5f39851587fbcdeb5ba89245d61",
+  "episode_sha256": "80a6430df50eb99fe88a207a2020727d24bff9e6ba948cc5f96f56a18cf625c6"
+}

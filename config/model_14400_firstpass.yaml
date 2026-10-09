@@ -1,0 +1,29 @@
+# First complete pass over all 14,400 source boxes. The larger three-stream
+# benchmark remains in model_benchmark.yaml; this pass is independently pinned.
+schema_version: 1
+data:
+  sample_per_family: 30
+  boxes_per_scenario: 80
+  seed: 20261019
+collection:
+  workers: 6
+  episode_seeds: [7]
+  mixed_behaviour: false
+  spec_mismatch_probability: 0.02
+  missing_probability: 0.02
+training:
+  model_seeds: [7, 17, 29]
+  epochs: 200
+  hidden: 128
+  batch_queries: 16
+  patience: 30
+  learning_rate: 0.001
+evaluation:
+  robot_config: robot_check_gazebo.yaml
+  episode_seeds: [101]
+  variants: [clean, nominal, noisy3mm]
+planning:
+  top_k: 4
+  scenario_count: 7
+  horizon: 3
+  rollout_candidate_limit: 16

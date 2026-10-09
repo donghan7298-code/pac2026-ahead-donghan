@@ -1,0 +1,10 @@
+{
+  "scope": "REAL_FINISHED_CHECKPOINT_RELOAD_NOT_NEW_TRAINING",
+  "exit_code": 0,
+  "relocated_completed_shards": 180,
+  "initial_model_sha256": "004a06e61cf1d321b88f334f2e56ba986b8440442eb9533d12d6c8783c8c8a59",
+  "resumed_model_sha256": "004a06e61cf1d321b88f334f2e56ba986b8440442eb9533d12d6c8783c8c8a59",
+  "selected_model_bytes_equal": true,
+  "live_run_unchanged": true,
+  "robot_execution_verified": false
+}

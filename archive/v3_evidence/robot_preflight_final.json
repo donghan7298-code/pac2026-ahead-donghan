@@ -1,0 +1,53 @@
+{
+  "scope": "PREREQUISITES_ONLY",
+  "status": "BLOCKED",
+  "checks": [
+    {
+      "name": "ubuntu_22_04",
+      "passed": false,
+      "detail": "Ubuntu 22.04 is the target; this check does not install or change the OS"
+    },
+    {
+      "name": "ros_humble_sourced",
+      "passed": false,
+      "detail": "not sourced"
+    },
+    {
+      "name": "ros2",
+      "passed": false,
+      "detail": "not installed/on PATH"
+    },
+    {
+      "name": "colcon",
+      "passed": false,
+      "detail": "not installed/on PATH"
+    },
+    {
+      "name": "ign",
+      "passed": false,
+      "detail": "not installed/on PATH"
+    },
+    {
+      "name": "rclpy",
+      "passed": false,
+      "detail": "import availability only"
+    },
+    {
+      "name": "xacro",
+      "passed": false,
+      "detail": "import availability only"
+    },
+    {
+      "name": "moveit_msgs",
+      "passed": false,
+      "detail": "import availability only"
+    },
+    {
+      "name": "ament_index_python",
+      "passed": false,
+      "detail": "import availability only"
+    }
+  ],
+  "robot_execution_verified": false,
+  "physics_verified": false
+}

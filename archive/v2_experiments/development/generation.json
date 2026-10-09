@@ -1,0 +1,7 @@
+{
+  "generator_ref": "cc4c075daa3dd4c7f80510042732763fc9502933",
+  "default_config_sha256": "e6078a5280d03bf8447b30d9590ce9340b5a96c070bb253456768e81c24be554",
+  "sample_per_family": 6,
+  "boxes_per_scenario": 24,
+  "seed": 20261009
+}

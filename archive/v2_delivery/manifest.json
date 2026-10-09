@@ -1,0 +1,23 @@
+{
+  "name": "PAC2026_Donghan_Model_v2_20261009",
+  "own_remote_base": "7860043228c81aec517c5a1966d475d36e12f68a",
+  "own_final_local_commit": "705b5bb86042da1c828f1f2b3843f39152e5670f",
+  "team_base": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+  "upload_files": 44,
+  "team_files": 8,
+  "model_deployment": "KEEP_BASELINE",
+  "github_writes": false,
+  "ros2_moveit_physics_execution": "NOT_RUN",
+  "experiments": {
+    "development_source_boxes": 864,
+    "train_candidate_labels": 12011,
+    "runtime_test_episodes": 216,
+    "fresh_source_boxes": 288,
+    "runtime_fresh_episodes": 144
+  },
+  "patches": {
+    "donghan_after_0536.patch": "92f2ffe797d5bd104ef9c3ba89fa09d563b8cd3471b2b9d638eb3e26e16b0297",
+    "donghan_after_remote_786004.patch": "50f4287a36fc827b4edcb85b5b8304f7368d02d5502faecfc69b66818dba8ca5",
+    "team_runtime_after_81d0333.patch": "0616d19899ab3626a301cd2fd1f53caa8981205fb15bdab4b1b5f93554c262b2"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "scope": "PYTHON_RUNTIME_SIMULATION",
+  "source_scenario": "S0001",
+  "source_boxes": 80,
+  "executed_boxes": 8,
+  "placed": 8,
+  "queries": 8,
+  "candidate_labels": 164,
+  "wall_time_sec": 12.342262435000066,
+  "timings": [
+    {
+      "box_id": "S0001-B001",
+      "state_version": 1,
+      "candidates": 10,
+      "teacher_sec": 0.2590636140000697,
+      "legacy_sec": 0.45618447399999695,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B002",
+      "state_version": 3,
+      "candidates": 20,
+      "teacher_sec": 0.80841571499991,
+      "legacy_sec": 1.4344389670000055,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B003",
+      "state_version": 5,
+      "candidates": 8,
+      "teacher_sec": 0.26294979599992985,
+      "legacy_sec": 0.5546023140000216,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B004",
+      "state_version": 7,
+      "candidates": 25,
+      "teacher_sec": 0.9920003650000808,
+      "legacy_sec": 1.8082096680000177,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B005",
+      "state_version": 9,
+      "candidates": 23,
+      "teacher_sec": 1.1088459549999925,
+      "legacy_sec": 1.6339633200000208,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B006",
+      "state_version": 11,
+      "candidates": 26,
+      "teacher_sec": 0.7542697489999455,
+      "legacy_sec": 1.061282265999921,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B007",
+      "state_version": 13,
+      "candidates": 24,
+      "teacher_sec": 0.2517209049999565,
+      "legacy_sec": 0.1882123230000161,
+      "parity": true
+    },
+    {
+      "box_id": "S0001-B008",
+      "state_version": 15,
+      "candidates": 28,
+      "teacher_sec": 0.015575636999983544,
+      "legacy_sec": 0.019443154999976286,
+      "parity": true
+    }
+  ],
+  "robot_execution_verified": false,
+  "physics_verified": false
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "OFFLINE_TEACHER_QUERY_DIAGNOSTIC",
+  "selection": "FROZEN_BEFORE_TEST",
+  "model_sha256": "54b446300f28184b634de12859ac66ad9dd27f5a2513e1810febf0349608d48f",
+  "splits": {
+    "train": {
+      "heuristic_static": {
+        "queries": 883,
+        "candidates": 12011,
+        "teacher_best_top_k_recall": 0.9954699886749717,
+        "teacher_top1_relevance_regret": 0.009088297054964715,
+        "future_output_mse": {
+          "mean": 0.0013692053477839608,
+          "cvar": 0.0006887185327855008,
+          "blocking_rate": 0.25706066337769534,
+          "failure_rate": 0.11287801158281084
+        }
+      },
+      "learned_ranking": {
+        "queries": 883,
+        "candidates": 12011,
+        "teacher_best_top_k_recall": 0.9852774631936579,
+        "teacher_top1_relevance_regret": 0.018579273572189487,
+        "future_output_mse": {
+          "mean": 0.0005041415031468206,
+          "cvar": 0.0003883595601816765,
+          "blocking_rate": 0.030704877613271925,
+          "failure_rate": 0.013595598702353207
+        }
+      }
+    },
+    "val": {
+      "heuristic_static": {
+        "queries": 195,
+        "candidates": 3008,
+        "teacher_best_top_k_recall": 0.9846153846153847,
+        "teacher_top1_relevance_regret": 0.023731525127704326,
+        "future_output_mse": {
+          "mean": 0.0017886524145678704,
+          "cvar": 0.0010174776426045648,
+          "blocking_rate": 0.23352541968481838,
+          "failure_rate": 0.08500480366789298
+        }
+      },
+      "learned_ranking": {
+        "queries": 195,
+        "candidates": 3008,
+        "teacher_best_top_k_recall": 0.9743589743589743,
+        "teacher_top1_relevance_regret": 0.03927048016817142,
+        "future_output_mse": {
+          "mean": 0.0007334016056738042,
+          "cvar": 0.0006721706574792091,
+          "blocking_rate": 0.039573397338049036,
+          "failure_rate": 0.014200591956121576
+        }
+      }
+    },
+    "test": {
+      "heuristic_static": {
+        "queries": 222,
+        "candidates": 3328,
+        "teacher_best_top_k_recall": 0.9864864864864865,
+        "teacher_top1_relevance_regret": 0.01372218246127034,
+        "future_output_mse": {
+          "mean": 0.0023894680619278674,
+          "cvar": 0.0016800730464524689,
+          "blocking_rate": 0.2907986161398552,
+          "failure_rate": 0.1509999351165036
+        }
+      },
+      "learned_ranking": {
+        "queries": 222,
+        "candidates": 3328,
+        "teacher_best_top_k_recall": 0.990990990990991,
+        "teacher_top1_relevance_regret": 0.02205487434659992,
+        "future_output_mse": {
+          "mean": 0.00106124323609729,
+          "cvar": 0.001052189538802585,
+          "blocking_rate": 0.03172680708972531,
+          "failure_rate": 0.013258387221896893
+        }
+      }
+    }
+  }
+}

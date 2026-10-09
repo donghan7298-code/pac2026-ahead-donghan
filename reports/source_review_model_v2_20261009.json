@@ -1,0 +1,118 @@
+{
+  "review_context_kst": "2026-10-09T06:26:48+09:00",
+  "previous_review": "2026-10-09T05:36:14+09:00",
+  "branches": [
+    {
+      "key": "shared/donghan",
+      "branch": "feature/donghan-placement-planner",
+      "sha": "7860043228c81aec517c5a1966d475d36e12f68a",
+      "date": "2026-10-08T11:21:59Z",
+      "message": "Add files via upload",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/7860043228c81aec517c5a1966d475d36e12f68a",
+      "isError": false,
+      "previous": "7860043228c81aec517c5a1966d475d36e12f68a",
+      "changed": false
+    },
+    {
+      "key": "shared/generator",
+      "branch": "feature/jaesung-dataset-generator",
+      "sha": "cc4c075daa3dd4c7f80510042732763fc9502933",
+      "date": "2026-10-07T17:16:58Z",
+      "message": "feat: add AHEAD dataset generator",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/cc4c075daa3dd4c7f80510042732763fc9502933",
+      "isError": false,
+      "previous": "cc4c075daa3dd4c7f80510042732763fc9502933",
+      "changed": false
+    },
+    {
+      "key": "shared/physics",
+      "branch": "feature/jaesung-physics-simulator",
+      "sha": "7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "date": "2026-10-07T17:06:53Z",
+      "message": "feat: add AHEAD live physics simulator",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "isError": false,
+      "previous": "7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "changed": false
+    },
+    {
+      "key": "shared/main",
+      "branch": "main",
+      "sha": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "date": "2026-10-07T08:11:51Z",
+      "message": "Initial commit",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "isError": false,
+      "previous": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "changed": false
+    },
+    {
+      "key": "ahead/fix",
+      "branch": "fix/hyundai-submodule-init",
+      "sha": "0c8fb80f5674e6202489209a743f8b82ce915262",
+      "date": "2026-10-08T05:52:59Z",
+      "message": "fix: initialize pinned Hyundai submodules safely",
+      "url": "https://github.com/dlwotjd1289-cloud/pac2026-ahead/commit/0c8fb80f5674e6202489209a743f8b82ce915262",
+      "isError": false,
+      "previous": "0c8fb80f5674e6202489209a743f8b82ce915262",
+      "changed": false
+    },
+    {
+      "key": "shared/team",
+      "branch": "claude/pensive-pasteur-dwbu3g",
+      "sha": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+      "date": "2026-10-08T20:43:51Z",
+      "message": "Gazebo: HDR50-22 on a 0.5 m pedestal so the whole pallet up to 1.35 m is reachable",
+      "previous": "0df9ccb630083d23db76d54e84fff6bd48d8d572",
+      "changed": true
+    },
+    {
+      "key": "ahead/main",
+      "branch": "main",
+      "sha": "fa3115a903117eeb57009defd12a201d5290345d",
+      "url": "https://github.com/dlwotjd1289-cloud/pac2026-ahead/commit/fa3115a903117eeb57009defd12a201d5290345d",
+      "date": "2026-10-07T16:01:18Z",
+      "message": "fix: make Hyundai dependencies reproducible with submodules",
+      "previous": "fa3115a903117eeb57009defd12a201d5290345d",
+      "changed": false
+    }
+  ],
+  "meaningful_change": "Team Gazebo robot pedestal pose and matching kinematic robot config.",
+  "integration_review": {
+    "coordinates": {
+      "robot_world_m": [
+        1.35,
+        0.15,
+        0.5
+      ],
+      "pallet_world_xy_m": [
+        1.35,
+        -1
+      ],
+      "deck_m": 0.15,
+      "base_from_pallet_center": [
+        0,
+        1.15,
+        0.35,
+        0
+      ],
+      "pick_point_base_m": [
+        -1.35,
+        1.05,
+        0.4
+      ]
+    },
+    "package_resolution": "Donghan pac_common/pac_planning + team candidates/highlevel/robot_check/runtime; generator isolated subprocess.",
+    "ems": "Training rows require EMS_SUPPLIED; runtime provenance and candidate source/config fingerprints recorded.",
+    "state_version_buffer": "Existing stale-result rejection and delayed ROS snapshot planning kept; full ordered candidates required by stage6.",
+    "ppo": "Rule used to isolate the low-level comparison; proxy + DBLF value-provider and 4 slots preserved. No PPO retraining or model replacement.",
+    "moveit": "No MoveIt action integration/robot execution verified; team Gazebo driver still timed JointTrajectory and spawn-at-place.",
+    "remote_write": "No remote write attempted; patches supplied.",
+    "ros2_humble": "NOT_RUN",
+    "gazebo_physics": "NOT_RUN",
+    "robot_motion": "NOT_RUN"
+  },
+  "last_checked_kst": "2026-10-09T06:59:14+09:00",
+  "changes_since_0626_review": []
+}

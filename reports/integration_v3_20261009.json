@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "verified_date_kst": "2026-10-09",
+  "status": "MEASURED_BULLET_LOOP_VERIFIED_ROS_BUILD_AND_EXECUTION_UNVERIFIED",
+  "branch_check": {
+    "checked_date_kst": "2026-10-09",
+    "comparison": "UNCHANGED_FROM_MOST_RECENT_INSPECTION",
+    "repositories": {
+      "yang8988/pac-mission1-shared": [
+        {
+          "branch": "claude/pensive-pasteur-dwbu3g",
+          "sha": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c"
+        },
+        {
+          "branch": "feature/donghan-placement-planner",
+          "sha": "7860043228c81aec517c5a1966d475d36e12f68a"
+        },
+        {
+          "branch": "feature/jaesung-dataset-generator",
+          "sha": "cc4c075daa3dd4c7f80510042732763fc9502933"
+        },
+        {
+          "branch": "feature/jaesung-physics-simulator",
+          "sha": "7f4ae37621ea20527c09a707390db9b0f1317aa3"
+        },
+        {
+          "branch": "main",
+          "sha": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4"
+        }
+      ],
+      "dlwotjd1289-cloud/pac2026-ahead": [
+        {
+          "branch": "fix/hyundai-submodule-init",
+          "sha": "0c8fb80f5674e6202489209a743f8b82ce915262"
+        },
+        {
+          "branch": "main",
+          "sha": "fa3115a903117eeb57009defd12a201d5290345d"
+        }
+      ]
+    }
+  },
+  "tests": {
+    "donghan": {
+      "passed": 98,
+      "skipped": 0,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 1.651,
+      "modules": {
+        "tests.test_checkpoint_relocation": 2,
+        "tests.test_contracts": 13,
+        "tests.test_execution": 11,
+        "tests.test_highlevel_handoff": 2,
+        "tests.test_learning": 4,
+        "tests.test_meeting_regressions": 2,
+        "tests.test_planning": 11,
+        "tests.test_regressions": 4,
+        "tests.test_rollout": 6,
+        "tests.test_runtime_teacher": 1,
+        "tests.test_scalable_training": 9,
+        "tests.test_team_bridge": 21,
+        "tests.test_team_load_regression": 2,
+        "tests.test_team_order_visibility": 2,
+        "tests.test_team_physics": 3,
+        "tests.test_team_training": 5
+      },
+      "evidence": "tests_donghan_v3_final.xml"
+    },
+    "team": {
+      "passed": 202,
+      "skipped": 4,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 15.618,
+      "modules": {
+        "tests.taehyeon.test_th_candidates": 30,
+        "tests.taehyeon.test_th_geometry": 47,
+        "tests.taehyeon.test_th_hard_mask": 43,
+        "tests.taehyeon.test_th_highlevel": 20,
+        "tests.taehyeon.test_th_highlevel_runtime": 10,
+        "tests.taehyeon.test_th_planner_integration": 8,
+        "tests.taehyeon.test_th_robot_check": 9,
+        "tests.taehyeon.test_th_runtime": 18,
+        "tests.taehyeon.test_th_strength": 6,
+        "tests.taehyeon.test_th_virtual_data": 10,
+        "tests.taehyeon.test_th_visualize": 1
+      },
+      "evidence": "tests_team_v3.xml"
+    }
+  },
+  "test_environment": {
+    "ubuntu": "24.04",
+    "python": "3.12.14",
+    "target_ubuntu_22_04_python_3_10": "NOT_RUN"
+  },
+  "training": {
+    "snapshot_at_utc": "2026-10-09T04:00:14.333377+00:00",
+    "phase": "EVALUATING",
+    "generated_scenarios": 180,
+    "generated_source_boxes": 14400,
+    "completed_collection_shards": 180,
+    "completed_collection_source_boxes": 14400,
+    "queries": 26906,
+    "candidate_labels": 377767,
+    "counts_by_split": {
+      "train": {
+        "scenarios": 126,
+        "queries": 18718,
+        "candidate_labels": 258586
+      },
+      "val": {
+        "scenarios": 27,
+        "queries": 4058,
+        "candidate_labels": 59713
+      },
+      "test": {
+        "scenarios": 27,
+        "queries": 4130,
+        "candidate_labels": 59468
+      }
+    },
+    "collection_digest": "a55ac9411d2a8749a09bc7437cd210c3666794f02bad91dddd6209b9ea3164a4",
+    "dataset_sha256": "3b28a01f21a41f510e1e61ea233c42ce73bbff097c7d18bbc8649c0c07506676",
+    "frozen_sources_match": {
+      "planner_source_sha256": true,
+      "runtime_source_sha256": true,
+      "backend_source_sha256": true
+    },
+    "model_checkpoints": {
+      "seed_17": {
+        "epoch": 40,
+        "best_epoch": 10,
+        "completed_model": true
+      },
+      "seed_29": {
+        "epoch": 47,
+        "best_epoch": 17,
+        "completed_model": true
+      },
+      "seed_7": {
+        "epoch": 65,
+        "best_epoch": 35,
+        "completed_model": true
+      }
+    },
+    "selected_model_available": true,
+    "heldout_runtime_report_available": false,
+    "selected_seed": 7,
+    "selected_epoch": 35,
+    "selected_validation_objective": 0.0458260770310097,
+    "completed_heldout_episodes": 74,
+    "completed_heldout_by_method": {
+      "dblf": 74
+    },
+    "planned_heldout_episodes": 324,
+    "model_promoted": false,
+    "ppo_trained": false,
+    "training_contract": {
+      "size_tolerance_m": 0.002,
+      "tcp_offset_m": 0.22
+    },
+    "deployment_contract": {
+      "size_tolerance_m": 0.003,
+      "tcp_offset_m": 0.1525
+    },
+    "deployment_contract_training_run": false,
+    "scope": "PYTHON_RUNTIME_TEACHER_AND_OFFLINE_TRAINING"
+  },
+  "physics": [
+    {
+      "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+      "status": "PASS_MEASURED_LOOP",
+      "deck": "solid",
+      "ranker": "donghan",
+      "original_boxes": 6,
+      "measured_and_committed": 6,
+      "errors": [],
+      "robot_execution_verified": false,
+      "gazebo_verified": false,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+      "evidence": "original6_closed_loop_donghan_h3_solid.json"
+    },
+    {
+      "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+      "status": "PASS_MEASURED_LOOP",
+      "deck": "slatted",
+      "ranker": "donghan",
+      "original_boxes": 6,
+      "measured_and_committed": 6,
+      "errors": [],
+      "robot_execution_verified": false,
+      "gazebo_verified": false,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+      "evidence": "original6_closed_loop_donghan_h3_slatted.json"
+    },
+    {
+      "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+      "status": "PASS_MEASURED_LOOP",
+      "deck": "solid",
+      "ranker": "dblf",
+      "original_boxes": 8,
+      "measured_and_committed": 8,
+      "errors": [],
+      "robot_execution_verified": false,
+      "gazebo_verified": false,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+      "evidence": "original8_closed_loop_solid_final.json"
+    },
+    {
+      "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+      "status": "PASS_MEASURED_LOOP",
+      "deck": "slatted",
+      "ranker": "dblf",
+      "original_boxes": 8,
+      "measured_and_committed": 8,
+      "errors": [],
+      "robot_execution_verified": false,
+      "gazebo_verified": false,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+      "evidence": "original8_closed_loop_slatted_final.json"
+    },
+    {
+      "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+      "status": "BLOCKED",
+      "deck": "solid",
+      "ranker": "donghan",
+      "original_boxes": 8,
+      "measured_and_committed": 6,
+      "errors": [
+        {
+          "box_id": "S0001-B007",
+          "reason": "CELL_ACTUATOR_REQUIRED: BUFFER_CURRENT",
+          "outstanding_action": "BUFFER_CURRENT"
+        }
+      ],
+      "robot_execution_verified": false,
+      "gazebo_verified": false,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+      "evidence": "original8_closed_loop_donghan_h3_after_floor.json"
+    }
+  ],
+  "robot_execution": "NOT_RUN",
+  "ros2_humble": "NOT_RUN",
+  "moveit": "NOT_RUN",
+  "gazebo_physics": "NOT_RUN",
+  "new_cpp_plugin_build": "NOT_RUN",
+  "prerequisites": {
+    "scope": "PREREQUISITES_ONLY",
+    "status": "BLOCKED",
+    "checks": [
+      {
+        "name": "ubuntu_22_04",
+        "passed": false,
+        "detail": "Ubuntu 22.04 is the target; this check does not install or change the OS"
+      },
+      {
+        "name": "ros_humble_sourced",
+        "passed": false,
+        "detail": "not sourced"
+      },
+      {
+        "name": "ros2",
+        "passed": false,
+        "detail": "not installed/on PATH"
+      },
+      {
+        "name": "colcon",
+        "passed": false,
+        "detail": "not installed/on PATH"
+      },
+      {
+        "name": "ign",
+        "passed": false,
+        "detail": "not installed/on PATH"
+      },
+      {
+        "name": "rclpy",
+        "passed": false,
+        "detail": "import availability only"
+      },
+      {
+        "name": "xacro",
+        "passed": false,
+        "detail": "import availability only"
+      },
+      {
+        "name": "moveit_msgs",
+        "passed": false,
+        "detail": "import availability only"
+      },
+      {
+        "name": "ament_index_python",
+        "passed": false,
+        "detail": "import availability only"
+      }
+    ],
+    "robot_execution_verified": false,
+    "physics_verified": false
+  },
+  "execution_trace": {
+    "scope": "OFFLINE_EXECUTION_LOG_CHECK",
+    "status": "INCOMPLETE",
+    "reason": "[Errno 2] No such file or directory: 'config/demo_original6/execution_trace.jsonl'"
+  },
+  "contract": {
+    "units": [
+      "m",
+      "kg",
+      "N",
+      "rad"
+    ],
+    "pallet_size_m": [
+      1.2,
+      1.0,
+      1.35
+    ],
+    "pallet_world_min_corner_m": [
+      0.75,
+      -1.5,
+      0.15
+    ],
+    "robot_base_world_m": [
+      1.35,
+      0.15,
+      0.5
+    ],
+    "conveyor_top_world_z_m": 0.85,
+    "measured_floor_projection_limit_m": 0.0005,
+    "measured_orientation_projection_limit_rad": 0.001,
+    "highlevel_value_provider": "proxy + DBLF",
+    "buffer_slots": 4,
+    "top_load_zero": "NO_STACK",
+    "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+    "ems_evidence": "CURRENT_PLACEMENT_RETAINS_FULL_EMS"
+  },
+  "changes": {
+    "own": [
+      "look-ahead duplicate-work optimization",
+      "14,400 first-pass preset",
+      "real MoveIt/trajectory/scene execution path",
+      "confirmed Gazebo grasp plugin source",
+      "source gating and measured-result commit",
+      "bounded measured-coordinate conversion",
+      "closed-loop Bullet checker",
+      "execution-evidence checker",
+      "unique-package workspace staging",
+      "checkpoint relocation without changing immutable data"
+    ],
+    "team_patch_files": 9,
+    "physics_optional_patch_files": 2
+  },
+  "remaining": [
+    "Ubuntu 22.04/Humble build, especially pac_gazebo_grasp",
+    "Gazebo/MoveIt single-box pick/place with actual payload and measured state commit",
+    "Gazebo/MoveIt six-box run and ordered trace acceptance",
+    "held-out DBLF/heuristic/learned comparisons before promoting any model",
+    "new deployment-contract training before loading a learned model into this demo",
+    "physical buffer/NG/pallet-change/repack actuator and scene contracts",
+    "camera and scale integration",
+    "measured box strength and deformable/suction physics"
+  ],
+  "github_write_attempted": false,
+  "unpublished_changes": true
+}

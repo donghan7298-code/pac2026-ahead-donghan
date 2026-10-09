@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="vacuum_gripper_v1" params="parent prefix:='vacuum_' mount_xyz:='0 0 0' mount_rpy:='0 0 0'">
+    <link name="${prefix}tool_base">
+      <visual>
+        <geometry><box size="0.34 0.26 0.07"/></geometry>
+        <material name="vacuum_dark"><color rgba="0.12 0.12 0.14 1"/></material>
+      </visual>
+      <collision>
+        <geometry><box size="0.34 0.26 0.07"/></geometry>
+      </collision>
+      <!-- Inertia intentionally omitted until a real EOAT is selected. -->
+    </link>
+
+    <joint name="${prefix}mount_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${prefix}tool_base"/>
+      <origin xyz="${mount_xyz}" rpy="${mount_rpy}"/>
+    </joint>
+
+    <link name="${prefix}cup_plate">
+      <visual><geometry><box size="0.32 0.24 0.025"/></geometry></visual>
+      <collision><geometry><box size="0.32 0.24 0.025"/></geometry></collision>
+    </link>
+    <joint name="${prefix}plate_joint" type="fixed">
+      <parent link="${prefix}tool_base"/>
+      <child link="${prefix}cup_plate"/>
+      <origin xyz="0 0 0.105" rpy="0 0 0"/>
+    </joint>
+
+    <xacro:macro name="cup" params="name x y">
+      <link name="${prefix}${name}">
+        <visual>
+          <geometry><cylinder radius="0.035" length="0.035"/></geometry>
+          <material name="rubber"><color rgba="0.05 0.05 0.05 1"/></material>
+        </visual>
+        <collision><geometry><cylinder radius="0.035" length="0.035"/></geometry></collision>
+      </link>
+      <joint name="${prefix}${name}_joint" type="fixed">
+        <parent link="${prefix}cup_plate"/>
+        <child link="${prefix}${name}"/>
+        <origin xyz="${x} ${y} 0.03" rpy="0 0 0"/>
+      </joint>
+    </xacro:macro>
+
+    <xacro:cup name="cup_1" x="0.07" y="0.05"/>
+    <xacro:cup name="cup_2" x="0.07" y="-0.05"/>
+    <xacro:cup name="cup_3" x="-0.07" y="0.05"/>
+    <xacro:cup name="cup_4" x="-0.07" y="-0.05"/>
+
+    <link name="${prefix}tcp"/>
+    <joint name="${prefix}tcp_joint" type="fixed">
+      <parent link="${prefix}cup_plate"/>
+      <child link="${prefix}tcp"/>
+      <origin xyz="0 0 0.115" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+</robot>

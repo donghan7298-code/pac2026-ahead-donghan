@@ -1,0 +1,183 @@
+{
+  "scenario_id": "S0002",
+  "seed": 201,
+  "variant": "nominal",
+  "mode": "learned_ranking",
+  "total_profile_sec": 72.81429882799998,
+  "scope": "PROFILED_PYTHON_RUNTIME_SIMULATION",
+  "under_parallel_worker_load": true,
+  "stream_exactly_equal": true,
+  "outcome_exactly_equal": true,
+  "top_cumulative_functions": [
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/model_pipeline.py",
+      "line": 112,
+      "function": "_run_runtime",
+      "calls": 1,
+      "self_sec": 0.000123546,
+      "cumulative_sec": 78.073022038
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_bridge.py",
+      "line": 163,
+      "function": "__call__",
+      "calls": 58,
+      "self_sec": 0.006865861,
+      "cumulative_sec": 66.50819868500001
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_bridge.py",
+      "line": 34,
+      "function": "plan_with_backend",
+      "calls": 58,
+      "self_sec": 0.007420948,
+      "cumulative_sec": 66.495759147
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planner.py",
+      "line": 174,
+      "function": "plan",
+      "calls": 58,
+      "self_sec": 0.005191221,
+      "cumulative_sec": 66.284173974
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planner.py",
+      "line": 115,
+      "function": "_rows",
+      "calls": 58,
+      "self_sec": 0.013740487000000001,
+      "cumulative_sec": 66.216604559
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+      "line": 186,
+      "function": "compute_features",
+      "calls": 1046,
+      "self_sec": 0.168838745,
+      "cumulative_sec": 66.139691317
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+      "line": 168,
+      "function": "has_placement",
+      "calls": 8076,
+      "self_sec": 0.108861284,
+      "cumulative_sec": 63.72037628500001
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+      "line": 258,
+      "function": "generate_with_report",
+      "calls": 8259,
+      "self_sec": 1.9857894260000002,
+      "cumulative_sec": 57.061973671000004
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+      "line": 306,
+      "function": "generate_candidates",
+      "calls": 8076,
+      "self_sec": 0.20279648700000003,
+      "cumulative_sec": 55.696478411
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+      "line": 216,
+      "function": "_kept_raws",
+      "calls": 8259,
+      "self_sec": 1.015900024,
+      "cumulative_sec": 43.344146041
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 308,
+      "function": "raw_candidates",
+      "calls": 8201,
+      "self_sec": 3.27409416,
+      "cumulative_sec": 27.859748313
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/hard_mask.py",
+      "line": 75,
+      "function": "evaluate",
+      "calls": 45236,
+      "self_sec": 1.863161727,
+      "cumulative_sec": 11.000647717000001
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+      "line": 224,
+      "function": "<genexpr>",
+      "calls": 2056,
+      "self_sec": 0.0042380970000000006,
+      "cumulative_sec": 10.506828682
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+      "line": 198,
+      "function": "validate_constraints",
+      "calls": 31544,
+      "self_sec": 0.07508100300000001,
+      "cumulative_sec": 9.874567225
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 370,
+      "function": "deduplicate",
+      "calls": 8201,
+      "self_sec": 1.7772869260000002,
+      "cumulative_sec": 9.317098414
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+      "line": 157,
+      "function": "_verdict_entry",
+      "calls": 31544,
+      "self_sec": 0.26295158500000004,
+      "cumulative_sec": 7.920260407000001
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 392,
+      "function": "conflicts",
+      "calls": 1125361,
+      "self_sec": 3.8102672290000004,
+      "cumulative_sec": 6.074841775
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 96,
+      "function": "_balance_raw",
+      "calls": 16332,
+      "self_sec": 0.9726004100000001,
+      "cumulative_sec": 6.0040245940000005
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 274,
+      "function": "_lowest_valid_z",
+      "calls": 16332,
+      "self_sec": 0.352770807,
+      "cumulative_sec": 4.861479577
+    },
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "line": 165,
+      "function": "_ems_raw",
+      "calls": 16402,
+      "self_sec": 0.613103751,
+      "cumulative_sec": 4.359115116
+    }
+  ],
+  "model_predict": [
+    {
+      "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/model.py",
+      "line": 66,
+      "function": "predict",
+      "calls": 58,
+      "self_sec": 0.009519018,
+      "cumulative_sec": 0.026796755000000002
+    }
+  ]
+}

@@ -1,0 +1,439 @@
+{
+  "scope": "PYTHON_RUNTIME_SIMULATION",
+  "original_boxes": 8,
+  "fixture_sha256": "a606d96767769883f462c76ac055822de6acd374f3d70a5780b1009c7bb2e16d",
+  "robot_config_sha256": "a63acf2a12e1d397a858982bb1d040dd8525ab3f3df5d3337e393db4d16665d4",
+  "candidate_config_sha256": "b0e2a191434b561a56c4869e11f4b70784b7c569320e17fc6068dfab9e1dc477",
+  "audit_candidate_config_sha256": "c9d562e2e4f670332dc1e3478b32680d3725a6b9d29a76e0fe771160b5fa07df",
+  "ranker": "donghan",
+  "robot_checks_per_option": 12,
+  "source_ground_truth_sha256": "1db9b5e74a676c2736e1944cc3cee83ec84dd87cf085240070e6662e81476ee1",
+  "analytical_fixture_gate": "BLOCKED",
+  "unsupported_cell_actions": true,
+  "hard_mask_rejections": [],
+  "robot_execution_verified": false,
+  "physics_verified": false,
+  "outcome": {
+    "boxes_in_stream": 8,
+    "expected": 8,
+    "placed": 8,
+    "pallets": 2,
+    "fill_true_mean": 0.08054074074074073,
+    "time_s": 173.1,
+    "inspection": [],
+    "missing": {},
+    "decisions": {
+      "PLACE_CURRENT": 7,
+      "L0": 8,
+      "BUFFER_CURRENT": 1,
+      "PALLET_CLOSE": 1,
+      "RETRIEVE_BUFFER": 1
+    },
+    "anomalies": {
+      "OK": 8
+    },
+    "stage6": {
+      "calls": 11,
+      "robot_rejected": 17,
+      "code:ROBOT_COLLISION": 17,
+      "fell_back": 3,
+      "no_executable": 3
+    },
+    "supervisor_time_s": {
+      "PALLET_CHANGE": 60.0
+    },
+    "supervisor_log": [
+      {
+        "t": 100.12,
+        "from": "NORMAL",
+        "to": "PALLET_CHANGE",
+        "reason": "PALLET_CLOSE"
+      },
+      {
+        "t": 160.12,
+        "from": "PALLET_CHANGE",
+        "to": "NORMAL",
+        "reason": "new pallet in place"
+      }
+    ],
+    "pallet_list": [
+      {
+        "pallet_id": "DEMO-01",
+        "boxes": 7,
+        "fill_true": 0.15875925925925924,
+        "pallet_size": [
+          1.2,
+          1.0,
+          1.35
+        ],
+        "layout": [
+          {
+            "box_id": "S0001-B001",
+            "size": [
+              0.34,
+              0.25,
+              0.21
+            ],
+            "mass_kg": 4.800477,
+            "pose": [
+              0.0030000000000000027,
+              0.0030000000000000027,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "box_id": "S0001-B002",
+            "size": [
+              0.52,
+              0.48,
+              0.4
+            ],
+            "mass_kg": 13.087056,
+            "pose": [
+              0.0030000000000000027,
+              0.263,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "box_id": "S0001-B003",
+            "size": [
+              0.52,
+              0.48,
+              0.4
+            ],
+            "mass_kg": 28.486273,
+            "pose": [
+              0.533,
+              0.263,
+              0.0,
+              1.5707963267948966
+            ]
+          },
+          {
+            "box_id": "S0001-B004",
+            "size": [
+              0.27,
+              0.18,
+              0.15
+            ],
+            "mass_kg": 1.394617,
+            "pose": [
+              0.0030000000000000027,
+              0.0030000000000000027,
+              0.21,
+              0.0
+            ]
+          },
+          {
+            "box_id": "S0001-B005",
+            "size": [
+              0.34,
+              0.25,
+              0.21
+            ],
+            "mass_kg": 1.741063,
+            "pose": [
+              0.42999999999999994,
+              0.375,
+              0.4,
+              0.0
+            ]
+          },
+          {
+            "box_id": "S0001-B006",
+            "size": [
+              0.27,
+              0.2,
+              0.13
+            ],
+            "mass_kg": 0.860186,
+            "pose": [
+              0.0030000000000000027,
+              0.263,
+              0.4,
+              0.0
+            ]
+          },
+          {
+            "box_id": "S0001-B008",
+            "size": [
+              0.25,
+              0.2,
+              0.15
+            ],
+            "mass_kg": 3.446461,
+            "pose": [
+              0.0030000000000000027,
+              0.4730000000000001,
+              0.4,
+              0.0
+            ]
+          }
+        ]
+      },
+      {
+        "pallet_id": "DEMO-02",
+        "boxes": 1,
+        "fill_true": 0.002322222222222222,
+        "pallet_size": [
+          1.2,
+          1.0,
+          1.35
+        ],
+        "layout": [
+          {
+            "box_id": "S0001-B007",
+            "size": [
+              0.22,
+              0.19,
+              0.09
+            ],
+            "mass_kg": 28.67967,
+            "pose": [
+              0.49,
+              0.405,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "t": 0.0,
+        "v": 1,
+        "event": "ARRIVE",
+        "box": "S0001-B001",
+        "sku": "K08",
+        "anomaly": "OK"
+      },
+      {
+        "t": 11.55,
+        "v": 2,
+        "event": "PLACE",
+        "box": "S0001-B001",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 11.55,
+        "pose": [
+          0.003,
+          0.003,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "t": 11.55,
+        "v": 3,
+        "event": "ARRIVE",
+        "box": "S0001-B002",
+        "sku": "K13",
+        "anomaly": "OK"
+      },
+      {
+        "t": 20.01,
+        "v": 4,
+        "event": "PLACE",
+        "box": "S0001-B002",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 8.461,
+        "pose": [
+          0.003,
+          0.263,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "t": 20.01,
+        "v": 5,
+        "event": "ARRIVE",
+        "box": "S0001-B003",
+        "sku": "K13",
+        "anomaly": "OK"
+      },
+      {
+        "t": 28.58,
+        "v": 6,
+        "event": "PLACE",
+        "box": "S0001-B003",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 1.570796,
+        "cycle_s": 8.569,
+        "pose": [
+          0.533,
+          0.263,
+          0.0,
+          1.5708
+        ]
+      },
+      {
+        "t": 28.58,
+        "v": 7,
+        "event": "ARRIVE",
+        "box": "S0001-B004",
+        "sku": "K03",
+        "anomaly": "OK"
+      },
+      {
+        "t": 40.15,
+        "v": 8,
+        "event": "PLACE",
+        "box": "S0001-B004",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 11.57,
+        "pose": [
+          0.003,
+          0.003,
+          0.21,
+          0.0
+        ]
+      },
+      {
+        "t": 40.15,
+        "v": 9,
+        "event": "ARRIVE",
+        "box": "S0001-B005",
+        "sku": "K08",
+        "anomaly": "OK"
+      },
+      {
+        "t": 48.9,
+        "v": 10,
+        "event": "PLACE",
+        "box": "S0001-B005",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 8.751,
+        "pose": [
+          0.43,
+          0.375,
+          0.4,
+          0.0
+        ]
+      },
+      {
+        "t": 48.9,
+        "v": 11,
+        "event": "ARRIVE",
+        "box": "S0001-B006",
+        "sku": "K04",
+        "anomaly": "OK"
+      },
+      {
+        "t": 57.32,
+        "v": 12,
+        "event": "PLACE",
+        "box": "S0001-B006",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 8.419,
+        "pose": [
+          0.003,
+          0.263,
+          0.4,
+          0.0
+        ]
+      },
+      {
+        "t": 57.32,
+        "v": 13,
+        "event": "ARRIVE",
+        "box": "S0001-B007",
+        "sku": "K01",
+        "anomaly": "OK"
+      },
+      {
+        "t": 61.32,
+        "v": 14,
+        "event": "BUFFER",
+        "box": "S0001-B007",
+        "slot": 0
+      },
+      {
+        "t": 61.32,
+        "v": 15,
+        "event": "ARRIVE",
+        "box": "S0001-B008",
+        "sku": "K02",
+        "anomaly": "OK"
+      },
+      {
+        "t": 100.12,
+        "v": 16,
+        "event": "PLACE",
+        "box": "S0001-B008",
+        "action": "PLACE_CURRENT",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 8.8,
+        "pose": [
+          0.003,
+          0.473,
+          0.4,
+          0.0
+        ]
+      },
+      {
+        "t": 100.12,
+        "v": 16,
+        "event": "CLOSE",
+        "pallet": "DEMO-01",
+        "reason": "NO_FEASIBLE_ACTION",
+        "boxes": 7
+      },
+      {
+        "t": 173.13,
+        "v": 18,
+        "event": "PLACE",
+        "box": "S0001-B007",
+        "action": "RETRIEVE_BUFFER",
+        "level": "L0",
+        "dxy_mm": 0.0,
+        "dz_mm": 0.0,
+        "issues": [],
+        "gripper_yaw": 0.0,
+        "cycle_s": 9.006,
+        "pose": [
+          0.49,
+          0.405,
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  }
+}

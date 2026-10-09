@@ -1,0 +1,5 @@
+{
+  "scope": "OFFLINE_EXECUTION_LOG_CHECK",
+  "status": "INCOMPLETE",
+  "reason": "[Errno 2] No such file or directory: 'config/demo_original6/execution_trace.jsonl'"
+}

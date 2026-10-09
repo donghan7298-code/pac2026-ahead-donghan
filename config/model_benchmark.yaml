@@ -1,0 +1,27 @@
+schema_version: 1
+data:
+  sample_per_family: 30             # 180 independent source scenarios, 14,400 source boxes
+  boxes_per_scenario: 80
+  seed: 20261019
+collection:
+  workers: 4
+  episode_seeds: [7, 17, 29]
+  mixed_behaviour: true             # train behaviour: teacher, DBLF, teacher
+  spec_mismatch_probability: 0.02
+  missing_probability: 0.02
+training:
+  model_seeds: [7, 17, 29]
+  epochs: 200
+  hidden: 128
+  batch_queries: 16
+  patience: 30
+  learning_rate: 0.001
+evaluation:
+  robot_config: robot_check_gazebo.yaml
+  episode_seeds: [101, 102, 103]
+  variants: [clean, nominal, noisy3mm]
+planning:
+  top_k: 4
+  scenario_count: 7
+  horizon: 3
+  rollout_candidate_limit: 16

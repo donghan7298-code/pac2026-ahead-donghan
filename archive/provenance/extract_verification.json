@@ -1,0 +1,51 @@
+{
+ "01_github_branch_snapshot": {
+  "zip": "pac-mission1-shared-feature-donghan-placement-planner.zip",
+  "zip_files": 86,
+  "disk_files": 86,
+  "mismatched": 0,
+  "bytes": 788219
+ },
+ "02_planner_5_3_to_5_6": {
+  "zip": "PAC2026_Donghan_Planner_5_3_to_5_6.zip",
+  "zip_files": 57,
+  "disk_files": 57,
+  "mismatched": 0,
+  "bytes": 303176
+ },
+ "03_ahead_dataset_adapter": {
+  "zip": "PAC2026_AHEAD_Dataset_Adapter.zip",
+  "zip_files": 24,
+  "disk_files": 24,
+  "mismatched": 0,
+  "bytes": 92891
+ },
+ "04_team_integration_1008": {
+  "zip": "PAC2026_Donghan_Team_Integration_20261008.zip",
+  "zip_files": 26,
+  "disk_files": 26,
+  "mismatched": 0,
+  "bytes": 216558
+ },
+ "05_generator_model_training_1008": {
+  "zip": "PAC2026_Generator_Model_Training_20261008.zip",
+  "zip_files": 141,
+  "disk_files": 141,
+  "mismatched": 0,
+  "bytes": 1396139
+ },
+ "06_model_v2_1009": {
+  "zip": "PAC2026_Donghan_Model_v2_20261009.zip",
+  "zip_files": 1174,
+  "disk_files": 1174,
+  "mismatched": 0,
+  "bytes": 20310849
+ },
+ "07_v3_code_1009": {
+  "zip": "PAC2026_Donghan_v3_20261009_code.zip",
+  "zip_files": 431,
+  "disk_files": 431,
+  "mismatched": 0,
+  "bytes": 4494001
+ }
+}

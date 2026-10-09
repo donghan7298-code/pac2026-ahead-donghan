@@ -1,0 +1,219 @@
+{
+  "scope": "BULLET_RIGID_SETTLEMENT_ONLY",
+  "deck": "slatted",
+  "boxes": 8,
+  "status": "REJECT_SETTLEMENT",
+  "fixture_sha256": "a606d96767769883f462c76ac055822de6acd374f3d70a5780b1009c7bb2e16d",
+  "runtime_report_sha256": "bd95f119134f719452a42b6da2d839522f36d7b0bce2e4152b2d07a554793d11",
+  "simulator_source_sha256": {
+    "pac_simulation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pac_simulation/ahead_sim/__init__.py": "814c3e63506a01c203e6c6d052a011e43eb4b68c633808c10b3ccb4aecdb6a40",
+    "pac_simulation/ahead_sim/config.py": "35969ee6907ea09092883d9691982fe691b35e978f531e6a94c36b3e2c9a7773",
+    "pac_simulation/ahead_sim/contact_graph.py": "fe284f105c2d8354f522108fcde5f5f795c2d2c13b043d7979a34106966e87bb",
+    "pac_simulation/ahead_sim/force_window.py": "46fd49fcb3bbd83e772777f71cb856e31cb1d351e9eeee366ba984e131cd7516",
+    "pac_simulation/ahead_sim/metrics.py": "23257d496dc5d3fb0d1d66f2296a2b91cea48fe110f3d415d4c9ee9e199b0d3f",
+    "pac_simulation/ahead_sim/models.py": "e19f7db0bef4adb36aec10d51d6b6bbddf33649ec9bea7a642391c0ffbddb1d4",
+    "pac_simulation/ahead_sim/server.py": "fbdf2051d85852e95cdceb16715f0b45cfb2ea999719a4e21a1c892d98476b4b",
+    "pac_simulation/ahead_sim/simulator.py": "7c0f69461757732f1fb0d54a1d2275ac7bfd13d4de373b868f3a041269d32023",
+    "pac_simulation/ahead_sim/strength.py": "bd20fb31ce45b5e29445621d299cbd53be0da23e40fea20685a653d11716e30b",
+    "pac_simulation/ahead_sim/world.py": "2f5ad9d75d8394772548b33bad78d311e49fc416984888dec95017d0685239ea"
+  },
+  "simulation_time_s": 18.0,
+  "errors": [
+    {
+      "box_id": "S0001-B001",
+      "reason": "Measured hard-mask rejection: OUT_OF_BOUND"
+    },
+    {
+      "box_id": "S0001-B003",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    },
+    {
+      "box_id": "S0001-B004",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    },
+    {
+      "box_id": "S0001-B005",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    },
+    {
+      "box_id": "S0001-B006",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    },
+    {
+      "box_id": "S0001-B007",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    },
+    {
+      "box_id": "S0001-B008",
+      "reason": "Measured hard-mask rejection: INVALID_STATE"
+    }
+  ],
+  "measured_boxes": {
+    "S0001-B001": {
+      "center": [
+        -0.428001583522697,
+        -0.37300025510948404,
+        0.10498780419521295
+      ],
+      "quaternion": [
+        1.7124873139768271e-06,
+        -7.694875654405722e-06,
+        -1.2134842029875106e-07,
+        0.9999999999689207
+      ],
+      "displacement_m": 1.2300824337613346e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 33.800185282810354,
+        "max_top_load_n": 436.566,
+        "utilization": 0.07742285309165248
+      }
+    },
+    "S0001-B002": {
+      "center": [
+        0.010000069272815227,
+        -0.25799998913115485,
+        0.1999899243213127
+      ],
+      "quaternion": [
+        -2.461839662225624e-08,
+        1.7651514438233006e-07,
+        -2.5371577032439758e-09,
+        0.9999999999999841
+      ],
+      "displacement_m": 1.007592268054896e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 568.36,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B003": {
+      "center": [
+        -0.3379988626530527,
+        0.2299987325115732,
+        0.19998885019435883
+      ],
+      "quaternion": [
+        5.581923478714458e-06,
+        1.6637400142905098e-06,
+        -9.760201474409607e-07,
+        0.9999999999825607
+      ],
+      "displacement_m": 1.1279106827520058e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 281.2792892361658,
+        "max_top_load_n": 568.36,
+        "utilization": 0.49489634956042966
+      }
+    },
+    "S0001-B004": {
+      "center": [
+        0.5080005413396836,
+        -0.3629983546917916,
+        0.0749874293528523
+      ],
+      "quaternion": [
+        1.1251616125499621e-05,
+        1.2425808655000747e-05,
+        0.7070972410349513,
+        0.7071163210107376
+      ],
+      "displacement_m": 1.2689415174292162e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 381.268,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B005": {
+      "center": [
+        0.4380013613500672,
+        0.13900102475935566,
+        0.10498858861460632
+      ],
+      "quaternion": [
+        2.7853744192559697e-06,
+        6.721415427475493e-06,
+        0.7071053992292716,
+        0.7071081631036915
+      ],
+      "displacement_m": 1.1537899390499525e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 436.566,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B006": {
+      "center": [
+        0.11749922825419959,
+        0.2440023241978579,
+        0.06498955763287163
+      ],
+      "quaternion": [
+        2.8631645207504606e-06,
+        -7.474279946039213e-06,
+        0.7071200253798868,
+        0.7070935366998385
+      ],
+      "displacement_m": 1.0725694313507456e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 389.648,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B007": {
+      "center": [
+        -0.48797059693605316,
+        0.08498471746959861,
+        0.44497590486129623
+      ],
+      "quaternion": [
+        1.5490646926967856e-05,
+        1.1506748949341003e-06,
+        9.530074420093899e-05,
+        0.999999995338242
+      ],
+      "displacement_m": 4.0971595210386476e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 363.928,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B008": {
+      "center": [
+        -0.4730039404711455,
+        -0.39799374093309653,
+        0.284976256598173
+      ],
+      "quaternion": [
+        6.386447008773923e-06,
+        -7.023560562422561e-06,
+        2.063627821306953e-05,
+        0.9999999997420135
+      ],
+      "displacement_m": 2.4868702452455317e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 381.268,
+        "utilization": 0.0
+      }
+    }
+  },
+  "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+  "robot_execution_verified": false,
+  "gazebo_verified": false,
+  "physics_engine": "pybullet",
+  "limitation": "Rigid drop and contact forces only; no carton crushing, vacuum or robot motion"
+}

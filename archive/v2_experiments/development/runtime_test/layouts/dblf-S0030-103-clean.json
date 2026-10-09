@@ -1,0 +1,942 @@
+{
+  "events": [
+    {
+      "t": 0.0,
+      "v": 1,
+      "event": "ARRIVE",
+      "box": "S0030-B001",
+      "sku": "K03",
+      "anomaly": "OK"
+    },
+    {
+      "t": 11.51,
+      "v": 2,
+      "event": "PLACE",
+      "box": "S0030-B001",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 11.509,
+      "pose": [
+        0.002,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 11.51,
+      "v": 3,
+      "event": "ARRIVE",
+      "box": "S0030-B002",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 20.0,
+      "v": 4,
+      "event": "PLACE",
+      "box": "S0030-B002",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.487,
+      "pose": [
+        0.28,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 20.0,
+      "v": 5,
+      "event": "ARRIVE",
+      "box": "S0030-B003",
+      "sku": "K01",
+      "anomaly": "OK"
+    },
+    {
+      "t": 30.68,
+      "v": 6,
+      "event": "PLACE",
+      "box": "S0030-B003",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 10.682,
+      "pose": [
+        0.978,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 30.68,
+      "v": 7,
+      "event": "ARRIVE",
+      "box": "S0030-B004",
+      "sku": "K04",
+      "anomaly": "OK"
+    },
+    {
+      "t": 39.15,
+      "v": 8,
+      "event": "PLACE",
+      "box": "S0030-B004",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 1.570796,
+      "cycle_s": 8.469,
+      "pose": [
+        0.77,
+        0.002,
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "t": 39.15,
+      "v": 9,
+      "event": "ARRIVE",
+      "box": "S0030-B005",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 48.05,
+      "v": 10,
+      "event": "PLACE",
+      "box": "S0030-B005",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 1.570796,
+      "cycle_s": 8.904,
+      "pose": [
+        0.002,
+        0.19,
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "t": 48.05,
+      "v": 11,
+      "event": "ARRIVE",
+      "box": "S0030-B006",
+      "sku": "K03",
+      "anomaly": "OK"
+    },
+    {
+      "t": 56.9,
+      "v": 12,
+      "event": "PLACE",
+      "box": "S0030-B006",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 1.570796,
+      "cycle_s": 8.845,
+      "pose": [
+        0.978,
+        0.2,
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "t": 56.9,
+      "v": 13,
+      "event": "INSPECTION",
+      "box": "S0030-B007",
+      "reason": "DAMAGED"
+    },
+    {
+      "t": 56.9,
+      "v": 14,
+      "event": "ARRIVE",
+      "box": "S0030-B008",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 66.07,
+      "v": 15,
+      "event": "PLACE",
+      "box": "S0030-B008",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.175,
+      "pose": [
+        0.27,
+        0.27,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 66.07,
+      "v": 16,
+      "event": "INSPECTION",
+      "box": "S0030-B009",
+      "reason": "DAMAGED"
+    },
+    {
+      "t": 66.07,
+      "v": 17,
+      "event": "ARRIVE",
+      "box": "S0030-B010",
+      "sku": "K04",
+      "anomaly": "OK"
+    },
+    {
+      "t": 75.53,
+      "v": 18,
+      "event": "PLACE",
+      "box": "S0030-B010",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 1.570796,
+      "cycle_s": 9.459,
+      "pose": [
+        0.694,
+        0.399,
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "t": 75.53,
+      "v": 19,
+      "event": "ARRIVE",
+      "box": "S0030-B011",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 85.07,
+      "v": 20,
+      "event": "PLACE",
+      "box": "S0030-B011",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.538,
+      "pose": [
+        0.002,
+        0.538,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 85.07,
+      "v": 21,
+      "event": "ARRIVE",
+      "box": "S0030-B012",
+      "sku": "K12",
+      "anomaly": "OK"
+    },
+    {
+      "t": 89.07,
+      "v": 22,
+      "event": "BUFFER",
+      "box": "S0030-B012",
+      "slot": 0
+    },
+    {
+      "t": 89.07,
+      "v": 23,
+      "event": "ARRIVE",
+      "box": "S0030-B013",
+      "sku": "K04",
+      "anomaly": "OK"
+    },
+    {
+      "t": 98.67,
+      "v": 24,
+      "event": "PLACE",
+      "box": "S0030-B013",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.604,
+      "pose": [
+        0.902,
+        0.598,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 98.67,
+      "v": 25,
+      "event": "ARRIVE",
+      "box": "S0030-B014",
+      "sku": "K10",
+      "anomaly": "OK"
+    },
+    {
+      "t": 111.34,
+      "v": 26,
+      "event": "PLACE",
+      "box": "S0030-B012",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.667,
+      "pose": [
+        0.002,
+        0.19,
+        0.15,
+        0.0
+      ]
+    },
+    {
+      "t": 115.34,
+      "v": 27,
+      "event": "BUFFER",
+      "box": "S0030-B014",
+      "slot": 0
+    },
+    {
+      "t": 115.34,
+      "v": 28,
+      "event": "ARRIVE",
+      "box": "S0030-B015",
+      "sku": "K10",
+      "anomaly": "OK"
+    },
+    {
+      "t": 119.34,
+      "v": 29,
+      "event": "BUFFER",
+      "box": "S0030-B015",
+      "slot": 1
+    },
+    {
+      "t": 119.34,
+      "v": 30,
+      "event": "ARRIVE",
+      "box": "S0030-B016",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 124.34,
+      "v": 31,
+      "event": "BUFFER",
+      "box": "S0030-B016",
+      "slot": 2
+    },
+    {
+      "t": 124.34,
+      "v": 32,
+      "event": "ARRIVE",
+      "box": "S0030-B017",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 129.34,
+      "v": 33,
+      "event": "BUFFER",
+      "box": "S0030-B017",
+      "slot": 3
+    },
+    {
+      "t": 129.34,
+      "v": 34,
+      "event": "INSPECTION",
+      "box": "S0030-B019",
+      "reason": "DAMAGED"
+    },
+    {
+      "t": 129.34,
+      "v": 35,
+      "event": "ARRIVE",
+      "box": "S0030-B020",
+      "sku": "K07",
+      "anomaly": "OK"
+    },
+    {
+      "t": 129.34,
+      "v": 35,
+      "event": "CLOSE",
+      "pallet": "P001-01",
+      "reason": "NO_FEASIBLE_ACTION",
+      "boxes": 11
+    },
+    {
+      "t": 197.72,
+      "v": 37,
+      "event": "PLACE",
+      "box": "S0030-B020",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.378,
+      "pose": [
+        0.002,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 197.72,
+      "v": 38,
+      "event": "ARRIVE",
+      "box": "S0030-B021",
+      "sku": "K08",
+      "anomaly": "OK"
+    },
+    {
+      "t": 210.31,
+      "v": 39,
+      "event": "PLACE",
+      "box": "S0030-B014",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.598,
+      "pose": [
+        0.35,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 222.77,
+      "v": 40,
+      "event": "PLACE",
+      "box": "S0030-B015",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.453,
+      "pose": [
+        0.758,
+        0.002,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 236.8,
+      "v": 41,
+      "event": "PLACE",
+      "box": "S0030-B016",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.028,
+      "pose": [
+        0.002,
+        0.27,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 251.07,
+      "v": 42,
+      "event": "PLACE",
+      "box": "S0030-B017",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.277,
+      "pose": [
+        0.35,
+        0.31,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 260.2,
+      "v": 43,
+      "event": "PLACE",
+      "box": "S0030-B021",
+      "action": "PLACE_CURRENT",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 9.126,
+      "pose": [
+        0.698,
+        0.31,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "t": 260.2,
+      "v": 44,
+      "event": "ARRIVE",
+      "box": "S0030-B022",
+      "sku": "K12",
+      "anomaly": "OK"
+    },
+    {
+      "t": 264.2,
+      "v": 45,
+      "event": "BUFFER",
+      "box": "S0030-B022",
+      "slot": 0
+    },
+    {
+      "t": 264.2,
+      "v": 46,
+      "event": "INSPECTION",
+      "box": "S0030-B023",
+      "reason": "DAMAGED"
+    },
+    {
+      "t": 264.2,
+      "v": 47,
+      "event": "ARRIVE",
+      "box": "S0030-B024",
+      "sku": "K12",
+      "anomaly": "OK"
+    },
+    {
+      "t": 294.2,
+      "v": 48,
+      "event": "MISSING",
+      "by_sku": {
+        "K10": 1
+      }
+    },
+    {
+      "t": 306.77,
+      "v": 49,
+      "event": "PLACE",
+      "box": "S0030-B022",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 1.570796,
+      "cycle_s": 8.575,
+      "pose": [
+        0.122,
+        0.082,
+        0.15,
+        1.5708
+      ]
+    },
+    {
+      "t": 310.77,
+      "v": 50,
+      "event": "BUFFER",
+      "box": "S0030-B024",
+      "slot": 0
+    },
+    {
+      "t": 310.77,
+      "v": 50,
+      "event": "CLOSE",
+      "pallet": "P001-02",
+      "reason": "NO_FEASIBLE_ACTION",
+      "boxes": 7
+    },
+    {
+      "t": 383.35,
+      "v": 52,
+      "event": "PLACE",
+      "box": "S0030-B024",
+      "action": "RETRIEVE_BUFFER",
+      "level": "L0",
+      "dxy_mm": 0.0,
+      "dz_mm": 0.0,
+      "issues": [],
+      "gripper_yaw": 0.0,
+      "cycle_s": 8.58,
+      "pose": [
+        0.002,
+        0.002,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "pallets": [
+    {
+      "pallet_id": "P001-01",
+      "boxes": 11,
+      "fill_true": 0.11918055555555557,
+      "pallet_size": [
+        1.2,
+        0.8,
+        1.35
+      ],
+      "layout": [
+        {
+          "box_id": "S0030-B001",
+          "size": [
+            0.27,
+            0.18,
+            0.15
+          ],
+          "mass_kg": 0.439622,
+          "pose": [
+            0.0020000000000000018,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B002",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 1.025823,
+          "pose": [
+            0.28,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B003",
+          "size": [
+            0.22,
+            0.19,
+            0.09
+          ],
+          "mass_kg": 1.537947,
+          "pose": [
+            0.9780000000000001,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B004",
+          "size": [
+            0.27,
+            0.2,
+            0.13
+          ],
+          "mass_kg": 1.817849,
+          "pose": [
+            0.77,
+            0.0020000000000000018,
+            0.0,
+            1.5707963267948966
+          ]
+        },
+        {
+          "box_id": "S0030-B005",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 1.823667,
+          "pose": [
+            0.0020000000000000018,
+            0.18999999999999997,
+            0.0,
+            1.5707963267948966
+          ]
+        },
+        {
+          "box_id": "S0030-B006",
+          "size": [
+            0.27,
+            0.18,
+            0.15
+          ],
+          "mass_kg": 2.359833,
+          "pose": [
+            0.9780000000000001,
+            0.2,
+            0.0,
+            1.5707963267948966
+          ]
+        },
+        {
+          "box_id": "S0030-B008",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 2.48247,
+          "pose": [
+            0.27,
+            0.27,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B010",
+          "size": [
+            0.27,
+            0.2,
+            0.13
+          ],
+          "mass_kg": 3.304367,
+          "pose": [
+            0.6940000000000001,
+            0.399,
+            0.0,
+            1.5707963267948966
+          ]
+        },
+        {
+          "box_id": "S0030-B011",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 3.752302,
+          "pose": [
+            0.0020000000000000018,
+            0.538,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B013",
+          "size": [
+            0.27,
+            0.2,
+            0.13
+          ],
+          "mass_kg": 4.953426,
+          "pose": [
+            0.9020000000000001,
+            0.5980000000000001,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B012",
+          "size": [
+            0.48,
+            0.38,
+            0.34
+          ],
+          "mass_kg": 3.875623,
+          "pose": [
+            0.0020000000000000018,
+            0.19,
+            0.15,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "pallet_id": "P001-02",
+      "boxes": 7,
+      "fill_true": 0.11639351851851852,
+      "pallet_size": [
+        1.2,
+        0.8,
+        1.35
+      ],
+      "layout": [
+        {
+          "box_id": "S0030-B020",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 9.736748,
+          "pose": [
+            0.0020000000000000018,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B014",
+          "size": [
+            0.4,
+            0.3,
+            0.13
+          ],
+          "mass_kg": 5.179748,
+          "pose": [
+            0.35000000000000003,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B015",
+          "size": [
+            0.4,
+            0.3,
+            0.13
+          ],
+          "mass_kg": 6.042754,
+          "pose": [
+            0.758,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B016",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 6.997609,
+          "pose": [
+            0.0020000000000000018,
+            0.27,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B017",
+          "size": [
+            0.34,
+            0.26,
+            0.15
+          ],
+          "mass_kg": 8.044083,
+          "pose": [
+            0.35,
+            0.31,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B021",
+          "size": [
+            0.34,
+            0.25,
+            0.21
+          ],
+          "mass_kg": 10.802944,
+          "pose": [
+            0.698,
+            0.31,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "box_id": "S0030-B022",
+          "size": [
+            0.48,
+            0.38,
+            0.34
+          ],
+          "mass_kg": 19.794168,
+          "pose": [
+            0.122,
+            0.08200000000000002,
+            0.15,
+            1.5707963267948966
+          ]
+        }
+      ]
+    },
+    {
+      "pallet_id": "P001-03",
+      "boxes": 1,
+      "fill_true": 0.047851851851851854,
+      "pallet_size": [
+        1.2,
+        0.8,
+        1.35
+      ],
+      "layout": [
+        {
+          "box_id": "S0030-B024",
+          "size": [
+            0.48,
+            0.38,
+            0.34
+          ],
+          "mass_kg": 23.648611,
+          "pose": [
+            0.0020000000000000018,
+            0.0020000000000000018,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "audit": {}
+}

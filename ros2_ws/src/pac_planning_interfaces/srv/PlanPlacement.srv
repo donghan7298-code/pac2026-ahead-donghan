@@ -1,0 +1,12 @@
+# JSON schema: pac_common plain(SystemState), plain(PlanningContext).
+# Positions are lower-AABB-corner in pallet frame. SI: m, kg, N, rad, s.
+string state_json
+string context_json
+string box_id
+uint64 expected_state_version
+uint32 seed
+---
+bool success
+string error
+string result_json
+bool robot_validation_required

@@ -1,0 +1,15 @@
+schema_version: 1
+scope: OFFLINE_SIMULATION
+# Explicit integration assumptions; these are NOT measured hardware limits.
+# above_pallet: max_height_m is cargo height above the pallet top.
+# floor: max_height_m includes the physical pallet thickness.
+height_reference: above_pallet
+# Required fallback while the generator's pallet.max_load_kg is null.
+pallet_max_weight_kg: 150.0
+# Unknown box strength: no box may carry another until a capacity is supplied.
+default_top_load_capacity_n: 0.0
+top_load_capacity_n_by_sku: {}
+# Use a conservative catalog bound for unseen individual weights.
+# Current observed boxes always retain their individually measured weight.
+unseen_weight_policy: upper_bound
+allow_identity_measurement: true

@@ -1,0 +1,1000 @@
+{
+  "schema_version": "pac-planning-log-v1",
+  "run_id": "demo-42",
+  "scenario_id": "scenario_002_partial_pallet",
+  "git_commit": "UNCOMMITTED_WORKTREE",
+  "timestamp": 123.0,
+  "state_version": 20,
+  "box_id": "B001",
+  "candidate_id": "S0020-B001-C0018",
+  "constraint_result": "PASS",
+  "reject_codes": {
+    "S0020-B001-C0000": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0001": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0002": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0003": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0004": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0005": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0006": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0007": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0008": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0009": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0010": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0011": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0012": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ],
+    "S0020-B001-C0013": [
+      "OUT_OF_BOUND"
+    ],
+    "S0020-B001-C0017": [
+      "BOX_COLLISION",
+      "APPROACH_FAIL"
+    ]
+  },
+  "score": 0.37296825995279775,
+  "score_detail": {
+    "safety": 0.15,
+    "space": 0.2064829392631243,
+    "future": 0.026857142857142857,
+    "risk": -0.0027142857142857142,
+    "time": -0.007657536453183663
+  },
+  "robot_validation": "NOT_CHECKED",
+  "execution_result": null,
+  "planning_time_sec": 0.2657552400005443,
+  "seed": 42,
+  "config": {
+    "top_k": 4,
+    "scenario_count": 7,
+    "horizon": 3,
+    "rollout_candidate_limit": 16,
+    "timeout_sec": 1.0,
+    "cvar_alpha": 0.2,
+    "grid_side": 12,
+    "target_support": 0.95,
+    "target_cog_margin": 0.2,
+    "target_load_margin": 0.2,
+    "min_cog_margin": 0.02,
+    "time_reference_sec": 20.0,
+    "base_handling_sec": 2.0,
+    "travel_speed_m_s": 0.5,
+    "rotation_sec_per_rad": 0.5,
+    "weights": {
+      "safety": 0.15,
+      "space": 0.3,
+      "future": 0.4,
+      "risk": 0.1,
+      "time": 0.05
+    }
+  },
+  "result": {
+    "base_state_version": 20,
+    "ranked": [
+      {
+        "candidate_id": "S0020-B001-C0018",
+        "box_id": "B001",
+        "target_pose": {
+          "frame_id": "pallet",
+          "x": 0.0,
+          "y": 0.4,
+          "z": 0,
+          "roll": 0.0,
+          "pitch": 0.0,
+          "yaw": 0
+        },
+        "base_state_version": 20,
+        "score": 0.37296825995279775,
+        "score_detail": {
+          "safety": 0.15,
+          "space": 0.2064829392631243,
+          "future": 0.026857142857142857,
+          "risk": -0.0027142857142857142,
+          "time": -0.007657536453183663
+        }
+      },
+      {
+        "candidate_id": "S0020-B001-C0023",
+        "box_id": "B001",
+        "target_pose": {
+          "frame_id": "pallet",
+          "x": 0,
+          "y": 0.8,
+          "z": 0,
+          "roll": 0.0,
+          "pitch": 0.0,
+          "yaw": 0
+        },
+        "base_state_version": 20,
+        "score": 0.37103640646831,
+        "score_detail": {
+          "safety": 0.15,
+          "space": 0.2064829392631243,
+          "future": 0.026857142857142857,
+          "risk": -0.0027142857142857142,
+          "time": -0.009589389937671456
+        }
+      },
+      {
+        "candidate_id": "S0020-B001-C0019",
+        "box_id": "B001",
+        "target_pose": {
+          "frame_id": "pallet",
+          "x": 0.0,
+          "y": 0.4,
+          "z": 0,
+          "roll": 0.0,
+          "pitch": 0.0,
+          "yaw": 1.5707963267948966
+        },
+        "base_state_version": 20,
+        "score": 0.37083063880869116,
+        "score_detail": {
+          "safety": 0.15,
+          "space": 0.2064907312472278,
+          "future": 0.026857142857142857,
+          "risk": -0.0027142857142857142,
+          "time": -0.009802949581393758
+        }
+      },
+      {
+        "candidate_id": "S0020-B001-C0021",
+        "box_id": "B001",
+        "target_pose": {
+          "frame_id": "pallet",
+          "x": 0,
+          "y": 0.7,
+          "z": 0,
+          "roll": 0.0,
+          "pitch": 0.0,
+          "yaw": 1.5707963267948966
+        },
+        "base_state_version": 20,
+        "score": 0.3693616709966878,
+        "score_detail": {
+          "safety": 0.15,
+          "space": 0.2064907312472278,
+          "future": 0.026857142857142857,
+          "risk": -0.0027142857142857142,
+          "time": -0.011271917393397142
+        }
+      }
+    ],
+    "evaluations": [
+      {
+        "candidate": {
+          "candidate_id": "S0020-B001-C0018",
+          "box_id": "B001",
+          "target_pose": {
+            "frame_id": "pallet",
+            "x": 0.0,
+            "y": 0.4,
+            "z": 0,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 0
+          },
+          "base_state_version": 20,
+          "score": 0.37296825995279775,
+          "score_detail": {
+            "safety": 0.15,
+            "space": 0.2064829392631243,
+            "future": 0.026857142857142857,
+            "risk": -0.0027142857142857142,
+            "time": -0.007657536453183663
+          }
+        },
+        "features": {
+          "names": [
+            "x_m",
+            "y_m",
+            "z_m",
+            "extent_x_m",
+            "extent_y_m",
+            "extent_z_m",
+            "footprint_x_m",
+            "footprint_y_m",
+            "support_ratio",
+            "support_centering",
+            "top_height_ratio",
+            "max_load_ratio",
+            "fragility_feasible",
+            "side_support",
+            "placement_effort",
+            "x_norm",
+            "y_norm",
+            "z_norm",
+            "extent_x_norm",
+            "extent_y_norm",
+            "extent_z_norm",
+            "footprint_x_norm",
+            "footprint_y_norm",
+            "box_height_norm",
+            "box_weight_norm",
+            "remaining_probe_fit",
+            "buffer_probe_fit",
+            "buffer_occupancy",
+            "dependency_norm",
+            "access_clearance_proxy",
+            "cog_shift_norm",
+            "cog_height_shift_norm",
+            "load_increment_norm",
+            "compactness",
+            "largest_free_patch",
+            "fragmentation",
+            "height_variation",
+            "safety_saturated",
+            "load_margin",
+            "balance",
+            "time_cost",
+            "ems_known",
+            "observed_preview_ratio",
+            "remaining_volume_ratio",
+            "sensor_uncertain"
+          ],
+          "values": [
+            0.0,
+            0.4,
+            0.0,
+            0.3,
+            0.20000000000000007,
+            1.0,
+            0.3,
+            0.2,
+            1.0,
+            0.5,
+            0.2,
+            0.0,
+            1.0,
+            0.3333333333333333,
+            1.2,
+            0.0,
+            0.4,
+            0.0,
+            0.25,
+            0.20000000000000007,
+            1.0,
+            0.25,
+            0.2,
+            0.2,
+            0.016,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            0.8,
+            0.07216290298970264,
+            -0.0025000000000000022,
+            0.016,
+            0.32,
+            1.0,
+            0.0,
+            0.11149023859723836,
+            1.0,
+            1.0,
+            0.601388888888889,
+            0.15315072906367325,
+            0.0,
+            0.0,
+            0.12000000000000002,
+            0.0
+          ],
+          "metrics": {
+            "safety": 1.0,
+            "space": 0.6882764642104143,
+            "time": 0.15315072906367325,
+            "estimated_time_sec": 3.063014581273465,
+            "balance": 0.601388888888889,
+            "support_ratio": 1.0,
+            "load_margin": 1.0,
+            "cog_margin": 0.4666666666666667,
+            "remaining_probe_fit": 0.5,
+            "buffer_probe_fit": 1.0,
+            "compactness": 0.32,
+            "volume_utilization": 0.08
+          },
+          "geometry_source": "FOOTPRINT_COLUMN_PROXY",
+          "time_source": "GEOMETRIC_PROXY"
+        },
+        "rank_logit": 3.0806272592408512,
+        "future": {
+          "mean": 0.06714285714285714,
+          "worst": 0.04,
+          "cvar": 0.04,
+          "blocking_rate": 0.0,
+          "failure_rate": 0.0,
+          "scenario_values": [
+            0.08,
+            0.08,
+            0.08,
+            0.06999999999999999,
+            0.04,
+            0.04,
+            0.08
+          ]
+        },
+        "future_source": "ROLLOUT"
+      },
+      {
+        "candidate": {
+          "candidate_id": "S0020-B001-C0023",
+          "box_id": "B001",
+          "target_pose": {
+            "frame_id": "pallet",
+            "x": 0,
+            "y": 0.8,
+            "z": 0,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 0
+          },
+          "base_state_version": 20,
+          "score": 0.37103640646831,
+          "score_detail": {
+            "safety": 0.15,
+            "space": 0.2064829392631243,
+            "future": 0.026857142857142857,
+            "risk": -0.0027142857142857142,
+            "time": -0.009589389937671456
+          }
+        },
+        "features": {
+          "names": [
+            "x_m",
+            "y_m",
+            "z_m",
+            "extent_x_m",
+            "extent_y_m",
+            "extent_z_m",
+            "footprint_x_m",
+            "footprint_y_m",
+            "support_ratio",
+            "support_centering",
+            "top_height_ratio",
+            "max_load_ratio",
+            "fragility_feasible",
+            "side_support",
+            "placement_effort",
+            "x_norm",
+            "y_norm",
+            "z_norm",
+            "extent_x_norm",
+            "extent_y_norm",
+            "extent_z_norm",
+            "footprint_x_norm",
+            "footprint_y_norm",
+            "box_height_norm",
+            "box_weight_norm",
+            "remaining_probe_fit",
+            "buffer_probe_fit",
+            "buffer_occupancy",
+            "dependency_norm",
+            "access_clearance_proxy",
+            "cog_shift_norm",
+            "cog_height_shift_norm",
+            "load_increment_norm",
+            "compactness",
+            "largest_free_patch",
+            "fragmentation",
+            "height_variation",
+            "safety_saturated",
+            "load_margin",
+            "balance",
+            "time_cost",
+            "ems_known",
+            "observed_preview_ratio",
+            "remaining_volume_ratio",
+            "sensor_uncertain"
+          ],
+          "values": [
+            0.0,
+            0.8,
+            0.0,
+            0.3,
+            0.19999999999999996,
+            1.0,
+            0.3,
+            0.2,
+            1.0,
+            0.5,
+            0.2,
+            0.0,
+            1.0,
+            0.0,
+            1.2,
+            0.0,
+            0.8,
+            0.0,
+            0.25,
+            0.19999999999999996,
+            1.0,
+            0.25,
+            0.2,
+            0.2,
+            0.016,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            0.8,
+            0.129472159646222,
+            -0.0025000000000000022,
+            0.016,
+            0.32,
+            1.0,
+            0.0,
+            0.11149023859723835,
+            1.0,
+            1.0,
+            0.6680555555555556,
+            0.1917877987534291,
+            0.0,
+            0.0,
+            0.12000000000000002,
+            0.0
+          ],
+          "metrics": {
+            "safety": 1.0,
+            "space": 0.6882764642104143,
+            "time": 0.1917877987534291,
+            "estimated_time_sec": 3.835755975068582,
+            "balance": 0.6680555555555556,
+            "support_ratio": 1.0,
+            "load_margin": 1.0,
+            "cog_margin": 0.6000000000000001,
+            "remaining_probe_fit": 0.5,
+            "buffer_probe_fit": 1.0,
+            "compactness": 0.32,
+            "volume_utilization": 0.08
+          },
+          "geometry_source": "FOOTPRINT_COLUMN_PROXY",
+          "time_source": "GEOMETRIC_PROXY"
+        },
+        "rank_logit": 3.2348990749482196,
+        "future": {
+          "mean": 0.06714285714285714,
+          "worst": 0.04,
+          "cvar": 0.04,
+          "blocking_rate": 0.0,
+          "failure_rate": 0.0,
+          "scenario_values": [
+            0.08,
+            0.08,
+            0.08,
+            0.06999999999999999,
+            0.04,
+            0.04,
+            0.08
+          ]
+        },
+        "future_source": "ROLLOUT"
+      },
+      {
+        "candidate": {
+          "candidate_id": "S0020-B001-C0019",
+          "box_id": "B001",
+          "target_pose": {
+            "frame_id": "pallet",
+            "x": 0.0,
+            "y": 0.4,
+            "z": 0,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 1.5707963267948966
+          },
+          "base_state_version": 20,
+          "score": 0.37083063880869116,
+          "score_detail": {
+            "safety": 0.15,
+            "space": 0.2064907312472278,
+            "future": 0.026857142857142857,
+            "risk": -0.0027142857142857142,
+            "time": -0.009802949581393758
+          }
+        },
+        "features": {
+          "names": [
+            "x_m",
+            "y_m",
+            "z_m",
+            "extent_x_m",
+            "extent_y_m",
+            "extent_z_m",
+            "footprint_x_m",
+            "footprint_y_m",
+            "support_ratio",
+            "support_centering",
+            "top_height_ratio",
+            "max_load_ratio",
+            "fragility_feasible",
+            "side_support",
+            "placement_effort",
+            "x_norm",
+            "y_norm",
+            "z_norm",
+            "extent_x_norm",
+            "extent_y_norm",
+            "extent_z_norm",
+            "footprint_x_norm",
+            "footprint_y_norm",
+            "box_height_norm",
+            "box_weight_norm",
+            "remaining_probe_fit",
+            "buffer_probe_fit",
+            "buffer_occupancy",
+            "dependency_norm",
+            "access_clearance_proxy",
+            "cog_shift_norm",
+            "cog_height_shift_norm",
+            "load_increment_norm",
+            "compactness",
+            "largest_free_patch",
+            "fragmentation",
+            "height_variation",
+            "safety_saturated",
+            "load_margin",
+            "balance",
+            "time_cost",
+            "ems_known",
+            "observed_preview_ratio",
+            "remaining_volume_ratio",
+            "sensor_uncertain"
+          ],
+          "values": [
+            0.0,
+            0.4,
+            0.0,
+            0.2,
+            0.29999999999999993,
+            1.0,
+            0.2,
+            0.3,
+            1.0,
+            0.5,
+            0.2,
+            0.0,
+            1.0,
+            0.3333333333333333,
+            1.45,
+            0.0,
+            0.4,
+            0.0,
+            0.16666666666666669,
+            0.29999999999999993,
+            1.0,
+            0.16666666666666669,
+            0.3,
+            0.2,
+            0.016,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            0.8,
+            0.08300118993643527,
+            -0.0025000000000000022,
+            0.016,
+            0.32,
+            1.0,
+            0.0,
+            0.11131708339493789,
+            1.0,
+            1.0,
+            0.6027777777777779,
+            0.19605899162787516,
+            0.0,
+            0.0,
+            0.12000000000000002,
+            0.0
+          ],
+          "metrics": {
+            "safety": 1.0,
+            "space": 0.6883024374907594,
+            "time": 0.19605899162787516,
+            "estimated_time_sec": 3.9211798325575034,
+            "balance": 0.6027777777777779,
+            "support_ratio": 1.0,
+            "load_margin": 1.0,
+            "cog_margin": 0.4833333333333334,
+            "remaining_probe_fit": 0.5,
+            "buffer_probe_fit": 1.0,
+            "compactness": 0.32,
+            "volume_utilization": 0.08
+          },
+          "geometry_source": "FOOTPRINT_COLUMN_PROXY",
+          "time_source": "GEOMETRIC_PROXY"
+        },
+        "rank_logit": 2.401622913534657,
+        "future": {
+          "mean": 0.06714285714285714,
+          "worst": 0.04,
+          "cvar": 0.04,
+          "blocking_rate": 0.0,
+          "failure_rate": 0.0,
+          "scenario_values": [
+            0.08,
+            0.08,
+            0.08,
+            0.06999999999999999,
+            0.04,
+            0.04,
+            0.08
+          ]
+        },
+        "future_source": "ROLLOUT"
+      },
+      {
+        "candidate": {
+          "candidate_id": "S0020-B001-C0021",
+          "box_id": "B001",
+          "target_pose": {
+            "frame_id": "pallet",
+            "x": 0,
+            "y": 0.7,
+            "z": 0,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 1.5707963267948966
+          },
+          "base_state_version": 20,
+          "score": 0.3693616709966878,
+          "score_detail": {
+            "safety": 0.15,
+            "space": 0.2064907312472278,
+            "future": 0.026857142857142857,
+            "risk": -0.0027142857142857142,
+            "time": -0.011271917393397142
+          }
+        },
+        "features": {
+          "names": [
+            "x_m",
+            "y_m",
+            "z_m",
+            "extent_x_m",
+            "extent_y_m",
+            "extent_z_m",
+            "footprint_x_m",
+            "footprint_y_m",
+            "support_ratio",
+            "support_centering",
+            "top_height_ratio",
+            "max_load_ratio",
+            "fragility_feasible",
+            "side_support",
+            "placement_effort",
+            "x_norm",
+            "y_norm",
+            "z_norm",
+            "extent_x_norm",
+            "extent_y_norm",
+            "extent_z_norm",
+            "footprint_x_norm",
+            "footprint_y_norm",
+            "box_height_norm",
+            "box_weight_norm",
+            "remaining_probe_fit",
+            "buffer_probe_fit",
+            "buffer_occupancy",
+            "dependency_norm",
+            "access_clearance_proxy",
+            "cog_shift_norm",
+            "cog_height_shift_norm",
+            "load_increment_norm",
+            "compactness",
+            "largest_free_patch",
+            "fragmentation",
+            "height_variation",
+            "safety_saturated",
+            "load_margin",
+            "balance",
+            "time_cost",
+            "ems_known",
+            "observed_preview_ratio",
+            "remaining_volume_ratio",
+            "sensor_uncertain"
+          ],
+          "values": [
+            0.0,
+            0.7,
+            0.0,
+            0.2,
+            0.30000000000000004,
+            1.0,
+            0.2,
+            0.3,
+            1.0,
+            0.5,
+            0.2,
+            0.0,
+            1.0,
+            0.0,
+            1.45,
+            0.0,
+            0.7,
+            0.0,
+            0.16666666666666669,
+            0.30000000000000004,
+            1.0,
+            0.16666666666666669,
+            0.3,
+            0.2,
+            0.016,
+            0.5,
+            1.0,
+            0.0,
+            0.0,
+            0.8,
+            0.12472315020689169,
+            -0.0025000000000000022,
+            0.016,
+            0.32,
+            1.0,
+            0.0,
+            0.11131708339493789,
+            1.0,
+            1.0,
+            0.6527777777777779,
+            0.22543834786794284,
+            0.0,
+            0.0,
+            0.12000000000000002,
+            0.0
+          ],
+          "metrics": {
+            "safety": 1.0,
+            "space": 0.6883024374907594,
+            "time": 0.22543834786794284,
+            "estimated_time_sec": 4.508766957358857,
+            "balance": 0.6527777777777779,
+            "support_ratio": 1.0,
+            "load_margin": 1.0,
+            "cog_margin": 0.5833333333333334,
+            "remaining_probe_fit": 0.5,
+            "buffer_probe_fit": 1.0,
+            "compactness": 0.32,
+            "volume_utilization": 0.08
+          },
+          "geometry_source": "FOOTPRINT_COLUMN_PROXY",
+          "time_source": "GEOMETRIC_PROXY"
+        },
+        "rank_logit": 2.29908848349865,
+        "future": {
+          "mean": 0.06714285714285714,
+          "worst": 0.04,
+          "cvar": 0.04,
+          "blocking_rate": 0.0,
+          "failure_rate": 0.0,
+          "scenario_values": [
+            0.08,
+            0.08,
+            0.08,
+            0.06999999999999999,
+            0.04,
+            0.04,
+            0.08
+          ]
+        },
+        "future_source": "ROLLOUT"
+      }
+    ],
+    "rejected": {
+      "S0020-B001-C0000": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0001": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0002": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0003": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0004": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0005": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0006": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0007": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0008": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0009": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0010": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0011": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0012": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0013": {
+        "success": false,
+        "codes": [
+          "OUT_OF_BOUND"
+        ],
+        "details": {}
+      },
+      "S0020-B001-C0017": {
+        "success": false,
+        "codes": [
+          "BOX_COLLISION",
+          "APPROACH_FAIL"
+        ],
+        "details": {}
+      }
+    },
+    "diagnostics": {
+      "algorithm_version": "0.1.0",
+      "feature_schema": "ahead-features-v1-45",
+      "mode": "ahead",
+      "seed": 42,
+      "generated_count": 43,
+      "valid_count": 28,
+      "masked_count": 15,
+      "robot_validation": "NOT_CHECKED",
+      "budget_kind": "SOFT_SAFETY_NEVER_SKIPPED",
+      "model_status": "TRAINED_DUAL_HEAD",
+      "distribution_status": "IN_DISTRIBUTION",
+      "pre_ranking": [
+        "S0020-B001-C0023",
+        "S0020-B001-C0018",
+        "S0020-B001-C0019",
+        "S0020-B001-C0021",
+        "S0020-B001-C0020",
+        "S0020-B001-C0015",
+        "S0020-B001-C0016",
+        "S0020-B001-C0024",
+        "S0020-B001-C0022",
+        "S0020-B001-C0025",
+        "S0020-B001-C0041",
+        "S0020-B001-C0033",
+        "S0020-B001-C0014",
+        "S0020-B001-C0042",
+        "S0020-B001-C0031",
+        "S0020-B001-C0026",
+        "S0020-B001-C0038",
+        "S0020-B001-C0034",
+        "S0020-B001-C0027",
+        "S0020-B001-C0030",
+        "S0020-B001-C0032",
+        "S0020-B001-C0039",
+        "S0020-B001-C0029",
+        "S0020-B001-C0028",
+        "S0020-B001-C0037",
+        "S0020-B001-C0035",
+        "S0020-B001-C0040",
+        "S0020-B001-C0036"
+      ],
+      "top_k": 4,
+      "requested_scenarios": 7,
+      "horizon": 3,
+      "scenario_kinds": [
+        "random_mixed",
+        "large_late",
+        "heavy_late",
+        "small_early",
+        "sku_run",
+        "fragmentation",
+        "stress"
+      ],
+      "common_scenario_ids": [
+        "scenario-000",
+        "scenario-001",
+        "scenario-002",
+        "scenario-003",
+        "scenario-004",
+        "scenario-005",
+        "scenario-006"
+      ],
+      "completed_scenarios": 7,
+      "interrupted_round_discarded": false,
+      "degradation": [],
+      "planning_time_sec": 0.2657552400005443,
+      "budget_exceeded": false,
+      "no_rollout_fallback": false
+    },
+    "requires_robot_validation": true,
+    "state_mode": "PLANNED"
+  }
+}

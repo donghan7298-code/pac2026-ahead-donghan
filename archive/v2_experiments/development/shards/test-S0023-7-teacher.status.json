@@ -1,0 +1,91 @@
+{
+  "task": "test-S0023-7-teacher",
+  "split": "test",
+  "scenario_id": "S0023",
+  "seed": 7,
+  "behaviour": "teacher",
+  "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0023-7-teacher.jsonl.gz",
+  "shard_sha256": "2559439fe7b216ad04f0c950fb55c55e771a194d358e1ef5c28c09b04b1c91b8",
+  "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+  "inventory_group": "767e31b629cf5fc310ae6d373ad4741ccf1c9fa337c70e544bf678f7d2d66c57",
+  "backend_contract": {
+    "backend": "pac_candidates.backend.CandidateBackend",
+    "source_sha256": {
+      "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+      "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+      "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+      "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+      "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+      "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+      "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+      "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+      "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+    },
+    "candidate_config": {
+      "generation": {
+        "yaw_set_rad": [
+          0.0,
+          1.5707963267948966
+        ],
+        "use_ems": true,
+        "use_extreme_points": true,
+        "ems_anchors": [
+          "corner_ll",
+          "corner_lr",
+          "corner_ul",
+          "corner_ur",
+          "center"
+        ],
+        "dedup_distance_m": 0.08,
+        "dedup_mode": "support_aware",
+        "order": "likely_valid_first",
+        "max_candidates": 0,
+        "balance_anchors": true,
+        "balance_step_m": 0.04
+      },
+      "uncertainty": {
+        "lateral_clearance_m": 0.004,
+        "size_tolerance_m": 0.002,
+        "height_tolerance_m": 0.003,
+        "cog_uncertainty_ratio": 0.05,
+        "cog_uncertainty_min_m": 0.005,
+        "uncertain_policy": "robust",
+        "uncertain_multiplier": 2.0
+      },
+      "constraints": {
+        "min_support_ratio": 0.7,
+        "min_lbcp_margin_m": 0.0,
+        "pallet_overhang_m": 0.0,
+        "heavy_on_light": {
+          "enabled": true,
+          "mode": "share",
+          "max_weight_ratio": 1.0,
+          "tolerance_kg": 0.5,
+          "min_share": 0.1
+        },
+        "load_model": {
+          "ect_n_per_m": 5000.0,
+          "board_thickness_m": 0.003,
+          "safety_factor": 4.0,
+          "share_model": "lever"
+        },
+        "pallet_cog": {
+          "enabled": true,
+          "final_half_extent_ratio": 0.5,
+          "ramp_mass_kg": 150.0,
+          "allow_improving": true
+        },
+        "default_pallet_max_weight_kg": 1000.0
+      },
+      "cache_size": 256,
+      "collect_all_reasons": false
+    }
+  },
+  "queries": 37,
+  "candidates": 736,
+  "placed": 24,
+  "boxes": 24,
+  "stream_sha256": "6799fcdeaf40c7e9bf07b0e4c7659548152d2533eff2f53a314e3df4a5d05682",
+  "feature_rejects": {},
+  "wall_time_sec": 41.92922111400003
+}

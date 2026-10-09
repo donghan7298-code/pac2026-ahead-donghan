@@ -1,0 +1,2495 @@
+{
+  "schema_version": 1,
+  "verified_date_kst": "2026-10-09",
+  "status": "TRAINING_PIPELINE_VALIDATED_CANDIDATE_NOT_PROMOTED",
+  "scope": "PYTHON_TRAINING_AND_RUNTIME_SIMULATION",
+  "robot_execution": "NOT_RUN",
+  "ros2_humble": "NOT_RUN",
+  "moveit": "NOT_RUN",
+  "gazebo_physics": "NOT_RUN",
+  "sources": [
+    {
+      "key": "shared/donghan",
+      "branch": "feature/donghan-placement-planner",
+      "sha": "7860043228c81aec517c5a1966d475d36e12f68a",
+      "date": "2026-10-08T11:21:59Z",
+      "message": "Add files via upload",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/7860043228c81aec517c5a1966d475d36e12f68a",
+      "isError": false,
+      "previous": "7860043228c81aec517c5a1966d475d36e12f68a",
+      "changed": false
+    },
+    {
+      "key": "shared/generator",
+      "branch": "feature/jaesung-dataset-generator",
+      "sha": "cc4c075daa3dd4c7f80510042732763fc9502933",
+      "date": "2026-10-07T17:16:58Z",
+      "message": "feat: add AHEAD dataset generator",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/cc4c075daa3dd4c7f80510042732763fc9502933",
+      "isError": false,
+      "previous": "cc4c075daa3dd4c7f80510042732763fc9502933",
+      "changed": false
+    },
+    {
+      "key": "shared/physics",
+      "branch": "feature/jaesung-physics-simulator",
+      "sha": "7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "date": "2026-10-07T17:06:53Z",
+      "message": "feat: add AHEAD live physics simulator",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "isError": false,
+      "previous": "7f4ae37621ea20527c09a707390db9b0f1317aa3",
+      "changed": false
+    },
+    {
+      "key": "shared/main",
+      "branch": "main",
+      "sha": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "date": "2026-10-07T08:11:51Z",
+      "message": "Initial commit",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "isError": false,
+      "previous": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4",
+      "changed": false
+    },
+    {
+      "key": "ahead/fix",
+      "branch": "fix/hyundai-submodule-init",
+      "sha": "0c8fb80f5674e6202489209a743f8b82ce915262",
+      "date": "2026-10-08T05:52:59Z",
+      "message": "fix: initialize pinned Hyundai submodules safely",
+      "url": "https://github.com/dlwotjd1289-cloud/pac2026-ahead/commit/0c8fb80f5674e6202489209a743f8b82ce915262",
+      "isError": false,
+      "previous": "0c8fb80f5674e6202489209a743f8b82ce915262",
+      "changed": false
+    },
+    {
+      "key": "shared/team",
+      "branch": "claude/pensive-pasteur-dwbu3g",
+      "sha": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+      "url": "https://github.com/yang8988/pac-mission1-shared/commit/81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+      "date": "2026-10-08T20:43:51Z",
+      "message": "Gazebo: HDR50-22 on a 0.5 m pedestal so the whole pallet up to 1.35 m is reachable",
+      "previous": "0df9ccb630083d23db76d54e84fff6bd48d8d572",
+      "changed": true
+    },
+    {
+      "key": "ahead/main",
+      "branch": "main",
+      "sha": "fa3115a903117eeb57009defd12a201d5290345d",
+      "url": "https://github.com/dlwotjd1289-cloud/pac2026-ahead/commit/fa3115a903117eeb57009defd12a201d5290345d",
+      "date": "2026-10-07T16:01:18Z",
+      "message": "fix: make Hyundai dependencies reproducible with submodules",
+      "previous": "fa3115a903117eeb57009defd12a201d5290345d",
+      "changed": false
+    }
+  ],
+  "source_review": "source_review_model_v2_20261009.json",
+  "generated": {
+    "development_scenarios": 36,
+    "development_source_boxes": 864,
+    "fresh_scenarios": 12,
+    "fresh_source_boxes": 288,
+    "development_inventory_split": {
+      "train": 25,
+      "val": 5,
+      "test": 6
+    },
+    "evaluation_distinct_inventories": 18,
+    "benchmark_14400_source_boxes": "CONFIGURED_NOT_RUN"
+  },
+  "collected": {
+    "train": {
+      "queries": 883,
+      "candidate_labels": 12011
+    },
+    "val": {
+      "queries": 195,
+      "candidate_labels": 3008
+    },
+    "test": {
+      "queries": 222,
+      "candidate_labels": 3328
+    },
+    "all_queries": 1300,
+    "all_candidate_labels": 18347,
+    "episode_shards": 36
+  },
+  "training": {
+    "selection": "VALIDATION_ONLY",
+    "model_sha256": "54b446300f28184b634de12859ac66ad9dd27f5a2513e1810febf0349608d48f",
+    "selected_seed": 17,
+    "selected_epoch": 10,
+    "hidden": 64,
+    "features": 45,
+    "training_settings": "config/model_development.yaml",
+    "model_selection": {
+      "selection": "VALIDATION_ONLY",
+      "selected": {
+        "seed": 17,
+        "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_17/model.json",
+        "selected_epoch": 10,
+        "validation_objective": 0.05306537055750232,
+        "validation": {
+          "queries": 195,
+          "candidates": 3008,
+          "teacher_best_top_k_recall": 0.9743589743589743,
+          "teacher_top1_relevance_regret": 0.03927048016817142,
+          "future_output_mse": {
+            "mean": 0.0007334016056738042,
+            "cvar": 0.0006721706574792091,
+            "blocking_rate": 0.039573397338049036,
+            "failure_rate": 0.014200591956121576
+          }
+        }
+      },
+      "seeds": [
+        {
+          "seed": 7,
+          "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_7/model.json",
+          "selected_epoch": 13,
+          "validation_objective": 0.053118708969056405,
+          "validation": {
+            "queries": 195,
+            "candidates": 3008,
+            "teacher_best_top_k_recall": 0.9743589743589743,
+            "teacher_top1_relevance_regret": 0.04020173030021863,
+            "future_output_mse": {
+              "mean": 0.00043918259476589814,
+              "cvar": 0.0004766666211233769,
+              "blocking_rate": 0.03580953922609533,
+              "failure_rate": 0.01494252623336647
+            }
+          }
+        },
+        {
+          "seed": 17,
+          "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_17/model.json",
+          "selected_epoch": 10,
+          "validation_objective": 0.05306537055750232,
+          "validation": {
+            "queries": 195,
+            "candidates": 3008,
+            "teacher_best_top_k_recall": 0.9743589743589743,
+            "teacher_top1_relevance_regret": 0.03927048016817142,
+            "future_output_mse": {
+              "mean": 0.0007334016056738042,
+              "cvar": 0.0006721706574792091,
+              "blocking_rate": 0.039573397338049036,
+              "failure_rate": 0.014200591956121576
+            }
+          }
+        }
+      ],
+      "default_replaced": false,
+      "ros_robot_execution": "NOT_RUN"
+    },
+    "epochs_completed": {
+      "7": 33,
+      "17": 30
+    },
+    "default_changed": false
+  },
+  "offline_diagnostics": {
+    "scope": "OFFLINE_TEACHER_QUERY_DIAGNOSTIC",
+    "selection": "FROZEN_BEFORE_TEST",
+    "model_sha256": "54b446300f28184b634de12859ac66ad9dd27f5a2513e1810febf0349608d48f",
+    "splits": {
+      "train": {
+        "heuristic_static": {
+          "queries": 883,
+          "candidates": 12011,
+          "teacher_best_top_k_recall": 0.9954699886749717,
+          "teacher_top1_relevance_regret": 0.009088297054964715,
+          "future_output_mse": {
+            "mean": 0.0013692053477839608,
+            "cvar": 0.0006887185327855008,
+            "blocking_rate": 0.25706066337769534,
+            "failure_rate": 0.11287801158281084
+          }
+        },
+        "learned_ranking": {
+          "queries": 883,
+          "candidates": 12011,
+          "teacher_best_top_k_recall": 0.9852774631936579,
+          "teacher_top1_relevance_regret": 0.018579273572189487,
+          "future_output_mse": {
+            "mean": 0.0005041415031468206,
+            "cvar": 0.0003883595601816765,
+            "blocking_rate": 0.030704877613271925,
+            "failure_rate": 0.013595598702353207
+          }
+        }
+      },
+      "val": {
+        "heuristic_static": {
+          "queries": 195,
+          "candidates": 3008,
+          "teacher_best_top_k_recall": 0.9846153846153847,
+          "teacher_top1_relevance_regret": 0.023731525127704326,
+          "future_output_mse": {
+            "mean": 0.0017886524145678704,
+            "cvar": 0.0010174776426045648,
+            "blocking_rate": 0.23352541968481838,
+            "failure_rate": 0.08500480366789298
+          }
+        },
+        "learned_ranking": {
+          "queries": 195,
+          "candidates": 3008,
+          "teacher_best_top_k_recall": 0.9743589743589743,
+          "teacher_top1_relevance_regret": 0.03927048016817142,
+          "future_output_mse": {
+            "mean": 0.0007334016056738042,
+            "cvar": 0.0006721706574792091,
+            "blocking_rate": 0.039573397338049036,
+            "failure_rate": 0.014200591956121576
+          }
+        }
+      },
+      "test": {
+        "heuristic_static": {
+          "queries": 222,
+          "candidates": 3328,
+          "teacher_best_top_k_recall": 0.9864864864864865,
+          "teacher_top1_relevance_regret": 0.01372218246127034,
+          "future_output_mse": {
+            "mean": 0.0023894680619278674,
+            "cvar": 0.0016800730464524689,
+            "blocking_rate": 0.2907986161398552,
+            "failure_rate": 0.1509999351165036
+          }
+        },
+        "learned_ranking": {
+          "queries": 222,
+          "candidates": 3328,
+          "teacher_best_top_k_recall": 0.990990990990991,
+          "teacher_top1_relevance_regret": 0.02205487434659992,
+          "future_output_mse": {
+            "mean": 0.00106124323609729,
+            "cvar": 0.001052189538802585,
+            "blocking_rate": 0.03172680708972531,
+            "failure_rate": 0.013258387221896893
+          }
+        }
+      }
+    }
+  },
+  "nontrivial_query_diagnostics": {
+    "val": {
+      "all_queries": 195,
+      "more_than_top_k_queries": 163,
+      "top_k": 4,
+      "heuristic_static": {
+        "queries": 163,
+        "candidates": 2928,
+        "teacher_best_top_k_recall": 0.9815950920245399,
+        "teacher_top1_relevance_regret": 0.003850597545413152,
+        "future_output_mse": {
+          "mean": 0.0018257259146687245,
+          "cvar": 0.0010342352331034167,
+          "blocking_rate": 0.22613084990515378,
+          "failure_rate": 0.07829576678309447
+        }
+      },
+      "learned_ranking": {
+        "queries": 163,
+        "candidates": 2928,
+        "teacher_best_top_k_recall": 0.9693251533742331,
+        "teacher_top1_relevance_regret": 0.02244014498646274,
+        "future_output_mse": {
+          "mean": 0.0007428618558875514,
+          "cvar": 0.0006808921992964636,
+          "blocking_rate": 0.03998071601215764,
+          "failure_rate": 0.014159158067905303
+        }
+      }
+    },
+    "test": {
+      "all_queries": 222,
+      "more_than_top_k_queries": 185,
+      "top_k": 4,
+      "heuristic_static": {
+        "queries": 185,
+        "candidates": 3244,
+        "teacher_best_top_k_recall": 0.9837837837837838,
+        "teacher_top1_relevance_regret": 0.011061213548119004,
+        "future_output_mse": {
+          "mean": 0.0024334955764688903,
+          "cvar": 0.0017068643853028825,
+          "blocking_rate": 0.27911358211633047,
+          "failure_rate": 0.14405226933201196
+        }
+      },
+      "learned_ranking": {
+        "queries": 185,
+        "candidates": 3244,
+        "teacher_best_top_k_recall": 0.9891891891891892,
+        "teacher_top1_relevance_regret": 0.0210604438105145,
+        "future_output_mse": {
+          "mean": 0.0010771512131001143,
+          "cvar": 0.0010681275873809903,
+          "blocking_rate": 0.029974434084001213,
+          "failure_rate": 0.012486880603440692
+        }
+      }
+    }
+  },
+  "runtime": {
+    "runtime_test": {
+      "episodes": 216,
+      "independent_inventories": 6,
+      "summary": {
+        "clean": {
+          "dblf": {
+            "placed": 22.333333333333332,
+            "pallets": 2.5,
+            "pallet_equivalent": 2.120215173763448,
+            "placed_volume_m3": 0.5779734055555557,
+            "fill_true_mean": 0.15799584971488168,
+            "time_s": 409.15,
+            "executability_rate": 0.9971509971509972,
+            "planner_p95_sec": 0.0,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "heuristic_rollout": {
+            "placed": 22.333333333333332,
+            "pallets": 2.3333333333333335,
+            "pallet_equivalent": 1.9535485070967813,
+            "placed_volume_m3": 0.5779734055555557,
+            "fill_true_mean": 0.1661084183019873,
+            "time_s": 387.2222222222223,
+            "executability_rate": 0.8878625068067758,
+            "planner_p95_sec": 2.058831245969489,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "learned_ranking": {
+            "placed": 22.333333333333332,
+            "pallets": 2.5,
+            "pallet_equivalent": 2.120215173763448,
+            "placed_volume_m3": 0.5779734055555557,
+            "fill_true_mean": 0.15413620751094934,
+            "time_s": 392.93888888888887,
+            "executability_rate": 0.9180208937995824,
+            "planner_p95_sec": 1.1853360692388453,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "learned_rollout": {
+            "placed": 22.333333333333332,
+            "pallets": 2.5555555555555554,
+            "pallet_equivalent": 2.1757707293190034,
+            "placed_volume_m3": 0.5779734055555557,
+            "fill_true_mean": 0.15112798848945871,
+            "time_s": 398.0277777777778,
+            "executability_rate": 0.9008719077840526,
+            "planner_p95_sec": 1.6738029488750545,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          }
+        },
+        "nominal": {
+          "dblf": {
+            "placed": 22.38888888888889,
+            "pallets": 2.388888888888889,
+            "pallet_equivalent": 2.0088031367264114,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.16642947740120997,
+            "time_s": 408.49444444444447,
+            "executability_rate": 0.9963768115942029,
+            "planner_p95_sec": 0.0,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "heuristic_rollout": {
+            "placed": 22.38888888888889,
+            "pallets": 2.5,
+            "pallet_equivalent": 2.1199142478375226,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.15690857262297497,
+            "time_s": 400.15000000000003,
+            "executability_rate": 0.8928294284623289,
+            "planner_p95_sec": 1.9862241580666387,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "learned_ranking": {
+            "placed": 22.38888888888889,
+            "pallets": 2.611111111111111,
+            "pallet_equivalent": 2.2310253589486333,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.14874697568653236,
+            "time_s": 402.9055555555555,
+            "executability_rate": 0.9160059792575339,
+            "planner_p95_sec": 1.500047087244305,
+            "L4": 0.0,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "learned_rollout": {
+            "placed": 22.38888888888889,
+            "pallets": 2.611111111111111,
+            "pallet_equivalent": 2.2310253589486333,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.15042563366549894,
+            "time_s": 406.36666666666673,
+            "executability_rate": 0.9127551933112308,
+            "planner_p95_sec": 1.9225788094389697,
+            "L4": 0.0,
+            "final_audit_issues": 0.05555555555555555,
+            "episodes": 18
+          }
+        },
+        "noisy3mm": {
+          "dblf": {
+            "placed": 22.38888888888889,
+            "pallets": 2.4444444444444446,
+            "pallet_equivalent": 2.064358692281967,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.1622551661300623,
+            "time_s": 510.4166666666666,
+            "executability_rate": 0.9963768115942029,
+            "planner_p95_sec": 0.0,
+            "L4": 0.8333333333333334,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "heuristic_rollout": {
+            "placed": 22.38888888888889,
+            "pallets": 2.611111111111111,
+            "pallet_equivalent": 2.2310253589486333,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.14836307079398547,
+            "time_s": 574.9611111111111,
+            "executability_rate": 0.867162328401401,
+            "planner_p95_sec": 2.290139747183331,
+            "L4": 1.3888888888888888,
+            "final_audit_issues": 0.05555555555555555,
+            "episodes": 18
+          },
+          "learned_ranking": {
+            "placed": 22.38888888888889,
+            "pallets": 2.5555555555555554,
+            "pallet_equivalent": 2.175469803393078,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.15310010211543038,
+            "time_s": 593.3333333333333,
+            "executability_rate": 0.9259769787534354,
+            "planner_p95_sec": 1.3616318155944982,
+            "L4": 1.6111111111111112,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          },
+          "learned_rollout": {
+            "placed": 22.38888888888889,
+            "pallets": 2.5555555555555554,
+            "pallet_equivalent": 2.175469803393078,
+            "placed_volume_m3": 0.5783634055555555,
+            "fill_true_mean": 0.15428768784931238,
+            "time_s": 564.5388888888889,
+            "executability_rate": 0.8999404721920331,
+            "planner_p95_sec": 1.7532062697695507,
+            "L4": 1.3333333333333333,
+            "final_audit_issues": 0.0,
+            "episodes": 18
+          }
+        }
+      },
+      "paired": {
+        "clean": {
+          "heuristic_rollout": {
+            "baseline": "dblf",
+            "mode": "heuristic_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": -0.16666666666666666,
+                "ci95": [
+                  -0.5,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 5,
+                "worse": 0
+              },
+              "pallets": {
+                "mean_delta": -0.16666666666666666,
+                "ci95": [
+                  -0.5,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 5,
+                "worse": 0
+              },
+              "fill_true_mean": {
+                "mean_delta": 0.008112568587105622,
+                "ci95": [
+                  -7.709882115452476e-18,
+                  0.024337705761316872
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 5,
+                "worse": 0
+              },
+              "time_s": {
+                "mean_delta": -21.927777777777766,
+                "ci95": [
+                  -36.18888888888887,
+                  -6.638888888888882
+                ],
+                "preferred_direction": "lower",
+                "better": 4,
+                "equal": 0,
+                "worse": 2
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 1.2335811384723961e-17,
+                "ci95": [
+                  0.0,
+                  3.700743415417188e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.10928849034422126,
+                "ci95": [
+                  -0.18974336646750434,
+                  -0.03382563901930099
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 2,
+                "worse": 4
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_ranking": {
+            "baseline": "dblf",
+            "mode": "learned_ranking",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  -0.4444444444444445,
+                  0.3333333333333333
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  -0.4444444444444445,
+                  0.38888888888888884
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.003859642203932331,
+                "ci95": [
+                  -0.024784115797896657,
+                  0.02396366040809323
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": -16.2111111111111,
+                "ci95": [
+                  -29.994444444444436,
+                  -3.1
+                ],
+                "preferred_direction": "lower",
+                "better": 5,
+                "equal": 0,
+                "worse": 1
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": -6.1679056923619804e-18,
+                "ci95": [
+                  -1.850371707708594e-17,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.07913010335141481,
+                "ci95": [
+                  -0.1245320162533277,
+                  -0.026910933632245084
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 0,
+                "worse": 5
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_rollout": {
+            "baseline": "dblf",
+            "mode": "learned_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.05555555555555556,
+                "ci95": [
+                  -0.27777777777777773,
+                  0.38888888888888884
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.05555555555555556,
+                "ci95": [
+                  -0.2777777777777778,
+                  0.38888888888888884
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.006867861225422951,
+                "ci95": [
+                  -0.028520701874714213,
+                  0.013405372656607226
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": -11.122222222222213,
+                "ci95": [
+                  -21.455555555555552,
+                  -2.1888888888888753
+                ],
+                "preferred_direction": "lower",
+                "better": 5,
+                "equal": 0,
+                "worse": 1
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.09627908936694467,
+                "ci95": [
+                  -0.16521579417089755,
+                  -0.03976109711897831
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 1,
+                "worse": 5
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          }
+        },
+        "nominal": {
+          "heuristic_rollout": {
+            "baseline": "dblf",
+            "mode": "heuristic_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.11111111111111109,
+                "ci95": [
+                  -0.11111111111111112,
+                  0.3333333333333333
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.11111111111111112,
+                "ci95": [
+                  -0.1111111111111111,
+                  0.38888888888888884
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.00952090477823503,
+                "ci95": [
+                  -0.028252800640146323,
+                  0.005348936899862822
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": -8.344444444444454,
+                "ci95": [
+                  -29.725555555555566,
+                  15.09777777777763
+                ],
+                "preferred_direction": "lower",
+                "better": 4,
+                "equal": 0,
+                "worse": 2
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 2.7755575615628914e-17,
+                "ci95": [
+                  3.0839528461809902e-18,
+                  6.167905692361981e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.10354738313187407,
+                "ci95": [
+                  -0.1925528730118569,
+                  -0.025485874574233625
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 3,
+                "worse": 3
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_ranking": {
+            "baseline": "dblf",
+            "mode": "learned_ranking",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.2222222222222222,
+                "ci95": [
+                  -0.05555555555555556,
+                  0.49999999999999994
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "pallets": {
+                "mean_delta": 0.2222222222222222,
+                "ci95": [
+                  -0.05555555555555556,
+                  0.5
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.01768250171467765,
+                "ci95": [
+                  -0.037632818930041154,
+                  0.002681950874485553
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "time_s": {
+                "mean_delta": -5.588888888888891,
+                "ci95": [
+                  -23.355555555555554,
+                  13.41666666666667
+                ],
+                "preferred_direction": "lower",
+                "better": 4,
+                "equal": 0,
+                "worse": 2
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 1.850371707708594e-17,
+                "ci95": [
+                  0.0,
+                  5.551115123125783e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.08037083233666907,
+                "ci95": [
+                  -0.10657382679390809,
+                  -0.05383282036467072
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 0,
+                "worse": 6
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_rollout": {
+            "baseline": "dblf",
+            "mode": "learned_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.22222222222222218,
+                "ci95": [
+                  -2.4671622769447922e-17,
+                  0.4444444444444444
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.2222222222222222,
+                "ci95": [
+                  0.0,
+                  0.4444444444444444
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.01600384373571102,
+                "ci95": [
+                  -0.03333327617741198,
+                  -1.5419764230904951e-18
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": -2.127777777777784,
+                "ci95": [
+                  -25.79444444444444,
+                  18.083333333333325
+                ],
+                "preferred_direction": "lower",
+                "better": 2,
+                "equal": 0,
+                "worse": 4
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 1.541976423090495e-17,
+                "ci95": [
+                  0.0,
+                  4.0091387000352874e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.05555555555555555,
+                "ci95": [
+                  0.0,
+                  0.16666666666666666
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 5,
+                "worse": 1
+              },
+              "executability_rate": {
+                "mean_delta": -0.0836216182829721,
+                "ci95": [
+                  -0.14584134893151726,
+                  -0.02687102772832832
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 2,
+                "worse": 4
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          }
+        },
+        "noisy3mm": {
+          "heuristic_rollout": {
+            "baseline": "dblf",
+            "mode": "heuristic_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.16666666666666666,
+                "ci95": [
+                  -0.11111111111111109,
+                  0.4444444444444444
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "pallets": {
+                "mean_delta": 0.16666666666666666,
+                "ci95": [
+                  -0.1111111111111111,
+                  0.3888888888888889
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.01389209533607682,
+                "ci95": [
+                  -0.03172187357110197,
+                  0.004214934842249656
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 2,
+                "worse": 3
+              },
+              "time_s": {
+                "mean_delta": 64.54444444444444,
+                "ci95": [
+                  40.22222222222222,
+                  93.30277777777741
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 0,
+                "worse": 6
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 9.25185853854297e-18,
+                "ci95": [
+                  0.0,
+                  2.158766992326693e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.5555555555555556,
+                "ci95": [
+                  0.3333333333333333,
+                  0.7777777777777778
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 0,
+                "worse": 6
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.05555555555555555,
+                "ci95": [
+                  0.0,
+                  0.16666666666666666
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 5,
+                "worse": 1
+              },
+              "executability_rate": {
+                "mean_delta": -0.12921448319280193,
+                "ci95": [
+                  -0.21395785065997833,
+                  -0.04414367338794956
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 2,
+                "worse": 4
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_ranking": {
+            "baseline": "dblf",
+            "mode": "learned_ranking",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.11111111111111109,
+                "ci95": [
+                  -0.11111111111111115,
+                  0.3333333333333333
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.11111111111111112,
+                "ci95": [
+                  -0.1111111111111111,
+                  0.38888888888888884
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.009155064014631922,
+                "ci95": [
+                  -0.027170581847279385,
+                  0.005348936899862824
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 3,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": 82.91666666666667,
+                "ci95": [
+                  41.47222222222223,
+                  129.17777777777778
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 0,
+                "worse": 5
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 1.850371707708594e-17,
+                "ci95": [
+                  0.0,
+                  5.551115123125783e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.7777777777777778,
+                "ci95": [
+                  0.5,
+                  1.0555555555555556
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 0,
+                "worse": 6
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.07039983284076755,
+                "ci95": [
+                  -0.10019415494285912,
+                  -0.0448502369427853
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 0,
+                "worse": 6
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_rollout": {
+            "baseline": "dblf",
+            "mode": "learned_rollout",
+            "episodes": 18,
+            "independent_inventory_groups": 6,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.11111111111111112,
+                "ci95": [
+                  -2.4671622769447922e-17,
+                  0.2222222222222223
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "pallets": {
+                "mean_delta": 0.1111111111111111,
+                "ci95": [
+                  0.0,
+                  0.2222222222222222
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.007967478280749887,
+                "ci95": [
+                  -0.016636031092821222,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 4,
+                "worse": 2
+              },
+              "time_s": {
+                "mean_delta": 54.122222222222234,
+                "ci95": [
+                  2.466666666666676,
+                  104.31111111111113
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 0,
+                "worse": 5
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 1.2335811384723961e-17,
+                "ci95": [
+                  0.0,
+                  3.700743415417188e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.5,
+                "ci95": [
+                  0.2222222222222222,
+                  0.8888888888888888
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 1,
+                "worse": 5
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 6,
+                "worse": 0
+              },
+              "executability_rate": {
+                "mean_delta": -0.09643633940216978,
+                "ci95": [
+                  -0.16453145479145723,
+                  -0.0313893078598961
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 2,
+                "worse": 4
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "TOO_FEW_INDEPENDENT_INVENTORIES_FOR_PROMOTION",
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          }
+        }
+      },
+      "counts": {
+        "clean": {
+          "dblf": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 0,
+            "model_fallback_calls": 0
+          },
+          "heuristic_rollout": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_ranking": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_rollout": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          }
+        },
+        "nominal": {
+          "dblf": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 0,
+            "model_fallback_calls": 0
+          },
+          "heuristic_rollout": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_ranking": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_rollout": {
+            "episodes": 18,
+            "L4_total": 0,
+            "final_audit_total": 1,
+            "final_audit_codes": {
+              "OVERLOADED": 1
+            },
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          }
+        },
+        "noisy3mm": {
+          "dblf": {
+            "episodes": 18,
+            "L4_total": 15,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 0,
+            "model_fallback_calls": 0
+          },
+          "heuristic_rollout": {
+            "episodes": 18,
+            "L4_total": 25,
+            "final_audit_total": 1,
+            "final_audit_codes": {
+              "OVERLOADED": 1
+            },
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_ranking": {
+            "episodes": 18,
+            "L4_total": 29,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          },
+          "learned_rollout": {
+            "episodes": 18,
+            "L4_total": 24,
+            "final_audit_total": 0,
+            "final_audit_codes": {},
+            "ems_verified_episodes": 18,
+            "model_fallback_calls": 0
+          }
+        }
+      },
+      "report_sha256": "f4ec797f5b1f1cf1205a1ab06717897c71eed809cffae6e8630afc4437ee79c4"
+    },
+    "runtime_fresh": {
+      "episodes": 144,
+      "independent_inventories": 12,
+      "summary": {
+        "nominal": {
+          "dblf": {
+            "placed": 22.88888888888889,
+            "pallets": 2.1944444444444446,
+            "pallet_equivalent": 1.7849304141017355,
+            "placed_volume_m3": 0.6662453597222223,
+            "fill_true_mean": 0.18614324816156325,
+            "time_s": 401.28333333333336,
+            "executability_rate": 0.9451943167109488,
+            "planner_p95_sec": 0.0,
+            "L4": 0.0,
+            "final_audit_issues": 0.1111111111111111,
+            "episodes": 36
+          },
+          "heuristic_rollout": {
+            "placed": 22.88888888888889,
+            "pallets": 2.4166666666666665,
+            "pallet_equivalent": 2.0071526363239576,
+            "placed_volume_m3": 0.6662453597222223,
+            "fill_true_mean": 0.17200068627846926,
+            "time_s": 393.05833333333334,
+            "executability_rate": 0.9149841916057133,
+            "planner_p95_sec": 3.1666020314832872,
+            "L4": 0.0,
+            "final_audit_issues": 0.1388888888888889,
+            "episodes": 36
+          },
+          "learned_ranking": {
+            "placed": 22.88888888888889,
+            "pallets": 2.5833333333333335,
+            "pallet_equivalent": 2.1738193029906245,
+            "placed_volume_m3": 0.6662453597222223,
+            "fill_true_mean": 0.1611262167456457,
+            "time_s": 403.9861111111111,
+            "executability_rate": 0.8877086180551463,
+            "planner_p95_sec": 2.58906270940411,
+            "L4": 0.0,
+            "final_audit_issues": 0.1111111111111111,
+            "episodes": 36
+          },
+          "learned_rollout": {
+            "placed": 22.88888888888889,
+            "pallets": 2.5833333333333335,
+            "pallet_equivalent": 2.1738193029906245,
+            "placed_volume_m3": 0.6662453597222223,
+            "fill_true_mean": 0.16005575053872997,
+            "time_s": 401.48888888888894,
+            "executability_rate": 0.8936633971504211,
+            "planner_p95_sec": 2.417958662851477,
+            "L4": 0.0,
+            "final_audit_issues": 0.1388888888888889,
+            "episodes": 36
+          }
+        }
+      },
+      "paired": {
+        "nominal": {
+          "heuristic_rollout": {
+            "baseline": "dblf",
+            "mode": "heuristic_rollout",
+            "episodes": 36,
+            "independent_inventory_groups": 12,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.2222222222222222,
+                "ci95": [
+                  0.02777777777777775,
+                  0.4444444444444444
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 6,
+                "worse": 5
+              },
+              "pallets": {
+                "mean_delta": 0.2222222222222222,
+                "ci95": [
+                  0.027777777777777776,
+                  0.4444444444444444
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 6,
+                "worse": 5
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.014142561883093934,
+                "ci95": [
+                  -0.027642846141544275,
+                  -0.0019345789320912115
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 6,
+                "worse": 5
+              },
+              "time_s": {
+                "mean_delta": -8.225,
+                "ci95": [
+                  -25.98402777777777,
+                  10.032152777777764
+                ],
+                "preferred_direction": "lower",
+                "better": 8,
+                "equal": 0,
+                "worse": 4
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 3.546545773108139e-17,
+                "ci95": [
+                  3.0839528461809902e-18,
+                  7.555684473143428e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.027777777777777776,
+                "ci95": [
+                  -0.05555555555555555,
+                  0.16666666666666666
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 10,
+                "worse": 1
+              },
+              "executability_rate": {
+                "mean_delta": -0.03021012510523553,
+                "ci95": [
+                  -0.08850580989099281,
+                  0.032248645444706465
+                ],
+                "preferred_direction": "higher",
+                "better": 4,
+                "equal": 1,
+                "worse": 7
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_ranking": {
+            "baseline": "dblf",
+            "mode": "learned_ranking",
+            "episodes": 36,
+            "independent_inventory_groups": 12,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.38888888888888884,
+                "ci95": [
+                  0.19444444444444442,
+                  0.5833333333333334
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 5,
+                "worse": 7
+              },
+              "pallets": {
+                "mean_delta": 0.38888888888888884,
+                "ci95": [
+                  0.19444444444444442,
+                  0.5833333333333334
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 5,
+                "worse": 7
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.025017031415917493,
+                "ci95": [
+                  -0.03850851794134999,
+                  -0.011494311625124713
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 4,
+                "worse": 8
+              },
+              "time_s": {
+                "mean_delta": 2.7027777777777744,
+                "ci95": [
+                  -14.097291666666672,
+                  20.504513888888876
+                ],
+                "preferred_direction": "lower",
+                "better": 6,
+                "equal": 0,
+                "worse": 6
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 3.854941057726237e-17,
+                "ci95": [
+                  6.167905692361981e-18,
+                  8.018277400070576e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  -0.08333333333333333,
+                  0.08333333333333333
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 10,
+                "worse": 1
+              },
+              "executability_rate": {
+                "mean_delta": -0.05748569865580242,
+                "ci95": [
+                  -0.13749420987687003,
+                  0.016296296639458155
+                ],
+                "preferred_direction": "higher",
+                "better": 4,
+                "equal": 0,
+                "worse": 8
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          },
+          "learned_rollout": {
+            "baseline": "dblf",
+            "mode": "learned_rollout",
+            "episodes": 36,
+            "independent_inventory_groups": 12,
+            "uncertainty": "95% percentile bootstrap of inventory-cluster mean deltas",
+            "delta_direction": "mode minus baseline",
+            "metrics": {
+              "pallet_equivalent": {
+                "mean_delta": 0.38888888888888884,
+                "ci95": [
+                  0.13888888888888887,
+                  0.638888888888889
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 4,
+                "worse": 7
+              },
+              "pallets": {
+                "mean_delta": 0.38888888888888884,
+                "ci95": [
+                  0.13888888888888887,
+                  0.638888888888889
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 4,
+                "worse": 7
+              },
+              "fill_true_mean": {
+                "mean_delta": -0.026087497622833262,
+                "ci95": [
+                  -0.048085244332441275,
+                  -0.008348419297580892
+                ],
+                "preferred_direction": "higher",
+                "better": 1,
+                "equal": 4,
+                "worse": 7
+              },
+              "time_s": {
+                "mean_delta": 0.20555555555555616,
+                "ci95": [
+                  -20.017638888888886,
+                  23.50152777777777
+                ],
+                "preferred_direction": "lower",
+                "better": 6,
+                "equal": 0,
+                "worse": 6
+              },
+              "placed": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "placed_volume_m3": {
+                "mean_delta": 2.929755203871941e-17,
+                "ci95": [
+                  0.0,
+                  6.938893903907228e-17
+                ],
+                "preferred_direction": "higher",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "L4": {
+                "mean_delta": 0.0,
+                "ci95": [
+                  0.0,
+                  0.0
+                ],
+                "preferred_direction": "lower",
+                "better": 0,
+                "equal": 12,
+                "worse": 0
+              },
+              "final_audit_issues": {
+                "mean_delta": 0.027777777777777776,
+                "ci95": [
+                  -0.05555555555555555,
+                  0.16666666666666666
+                ],
+                "preferred_direction": "lower",
+                "better": 1,
+                "equal": 10,
+                "worse": 1
+              },
+              "executability_rate": {
+                "mean_delta": -0.05153091956052755,
+                "ci95": [
+                  -0.1303454121172768,
+                  0.031026728458323296
+                ],
+                "preferred_direction": "higher",
+                "better": 3,
+                "equal": 0,
+                "worse": 9
+              }
+            },
+            "deployment_gate": {
+              "status": "KEEP_BASELINE",
+              "reasons": [
+                "SIMULATED_SAFETY_ISSUES",
+                "PALLET_ADVANTAGE_NOT_ESTABLISHED"
+              ],
+              "automatic_default_change": false,
+              "ros_robot_execution_verified": false
+            }
+          }
+        }
+      },
+      "counts": {
+        "nominal": {
+          "dblf": {
+            "episodes": 36,
+            "L4_total": 0,
+            "final_audit_total": 4,
+            "final_audit_codes": {
+              "OVERLOADED": 4
+            },
+            "ems_verified_episodes": 0,
+            "model_fallback_calls": 0
+          },
+          "heuristic_rollout": {
+            "episodes": 36,
+            "L4_total": 0,
+            "final_audit_total": 5,
+            "final_audit_codes": {
+              "OVERLOADED": 5
+            },
+            "ems_verified_episodes": 36,
+            "model_fallback_calls": 0
+          },
+          "learned_ranking": {
+            "episodes": 36,
+            "L4_total": 0,
+            "final_audit_total": 4,
+            "final_audit_codes": {
+              "OVERLOADED": 4
+            },
+            "ems_verified_episodes": 36,
+            "model_fallback_calls": 0
+          },
+          "learned_rollout": {
+            "episodes": 36,
+            "L4_total": 0,
+            "final_audit_total": 5,
+            "final_audit_codes": {
+              "OVERLOADED": 5
+            },
+            "ems_verified_episodes": 36,
+            "model_fallback_calls": 0
+          }
+        }
+      },
+      "report_sha256": "2c7f97b15a87587201032fee4739775baed073a86735bf08a6875be37346f060"
+    }
+  },
+  "evaluation_total_episodes": 360,
+  "evaluation_total_paired_streams": 90,
+  "stream_pairing_exact": true,
+  "tests": {
+    "donghan": {
+      "passed": 74,
+      "skipped": 1,
+      "seconds": 2.36,
+      "skip_reason": "pac_simulation unavailable"
+    },
+    "team": {
+      "passed": 202,
+      "skipped": 4,
+      "seconds": 70.57,
+      "skip_reason": "gymnasium/torch unavailable"
+    }
+  },
+  "test_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pyyaml": "6.0.3",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "target_ubuntu_22_04_python_3_10": "NOT_RUN"
+  },
+  "contract": {
+    "units": "m/kg/N/rad",
+    "pallet_m": [
+      1.2,
+      1.0,
+      1.35
+    ],
+    "highlevel_policy_during_comparison": "rule",
+    "ppo_training_changed": false,
+    "stage4_value_provider": "proxy + DBLF",
+    "buffer_slots": 4,
+    "stage6_validation_retained": true,
+    "model_planner_config": "config/candidate_runtime_v2.yaml"
+  },
+  "final_code_evidence": {
+    "executed_vs_final_planner_source_changes": {
+      "runtime_test": {
+        "training_data.py": {
+          "executed_sha256": "da043ab327e9a56089d44d9a4728bee2085b79921fee345bf823ea1a04b78fee",
+          "final_sha256": "c46a6299dcebd3984218c39813c32edbd95808611342c17852f3bd42167cf80e"
+        }
+      },
+      "runtime_fresh": {
+        "training_data.py": {
+          "executed_sha256": "da043ab327e9a56089d44d9a4728bee2085b79921fee345bf823ea1a04b78fee",
+          "final_sha256": "c46a6299dcebd3984218c39813c32edbd95808611342c17852f3bd42167cf80e"
+        }
+      }
+    },
+    "note": "Only pack deduplication helper changed after the runs. Inference and teacher source files are unchanged; original manifests are preserved. Final-code repack matches every original array and metadata byte; runtime teacher replay also matches. Use a new output for a new-source collection/evaluation run.",
+    "repack": {
+      "train": {
+        "queries": 883,
+        "candidates": 12011,
+        "storage_dtype": "float32",
+        "byte_equal": {
+          "features.npy": true,
+          "future.npy": true,
+          "relevance.npy": true,
+          "offsets.npy": true,
+          "metadata.json": true
+        }
+      },
+      "val": {
+        "queries": 195,
+        "candidates": 3008,
+        "storage_dtype": "float32",
+        "byte_equal": {
+          "features.npy": true,
+          "future.npy": true,
+          "relevance.npy": true,
+          "offsets.npy": true,
+          "metadata.json": true
+        }
+      },
+      "test": {
+        "queries": 222,
+        "candidates": 3328,
+        "storage_dtype": "float32",
+        "byte_equal": {
+          "features.npy": true,
+          "future.npy": true,
+          "relevance.npy": true,
+          "offsets.npy": true,
+          "metadata.json": true
+        }
+      }
+    },
+    "teacher_replay": {
+      "scenario_id": "S0036",
+      "seed": 7,
+      "queries": 32,
+      "candidate_labels": 182,
+      "labels_exactly_equal": true,
+      "stream_exactly_equal": true,
+      "old_label_sha256": "dc2c5b9180720324e8e9bded0adce189dc27d56df2de5aafb968b6b4036ba938",
+      "replay_label_sha256": "dc2c5b9180720324e8e9bded0adce189dc27d56df2de5aafb968b6b4036ba938",
+      "original_collector_source_sha256": {
+        "__init__.py": "4e060b69eeb8d50241011d3296a3f15bafceb1a8b8e27c179a4caf1111c6ada2",
+        "config.py": "1ee2eca31787bbaaaf130d90b91c6b782b11db2fedf0c6d9fecff109e6e845e5",
+        "demo.py": "a60ee88aeab93d672e17d591a546e76c3b8201595eb827bccfb58f563472f686",
+        "evaluation.py": "041dd42f78ced715fa7892f9198436489a88f06c9e91afbea1e8a02f1c3e6fec",
+        "experiment.py": "c5e631821751222d4cea4805bf49add4faa925e29106b91b940a5202fbe95926",
+        "features.py": "401e89f02302998822f1f530234e4aa4669104a282c2922ad709f98667fc1400",
+        "geometry.py": "f529415074a30cc6d3047af7f1113d6654c31c9e5b99403261d02250e07a15d4",
+        "model.py": "b2caa0029118971e1bccc6c384320868f9ea5dc4e4f273464e20eacff3b0bcd4",
+        "model_pipeline.py": "c20bd9c2f518377999ba1dae9446b7b04169d1d6c136a666f05c8de25b7402b1",
+        "planner.py": "04cf9239b691a06a5e16e20f4a2833158e89424a658c944b9d945656c95d0c13",
+        "planning_service.py": "1913b66545cb37b7775306c98ad1edddce726120eeee4817314c6965d77c5fbc",
+        "reference_backend.py": "a4e2a530cc069ebf19236c8d608eddfc7e5055b1efb7ef2828768a4c9208d25e",
+        "rollout.py": "6b705db59ccffeaafcb11a93a04ef935ed87214274fdf051d5d777f0a2019597",
+        "scenarios.py": "b583d361ec69f16df4072e3008f8194d2b4b4fc6e0a031e39b72293fca5e502f",
+        "scene_bridge.py": "6099a03321a34dc80e61c21fe9b8bae7941a028705c9c1b8e13e96137b57ba3b",
+        "scoring.py": "53c472e18951a802561b326e27add724f10496d6fffafc6037c633ee1440bf7d",
+        "team_bridge.py": "9445935feb4f4bff39dc9700248ff05eff00a8bb36a585b69e05d28187c3483c",
+        "team_training.py": "fdc22d488cac998fafcaab520d346dfbe865b24a2945471473286edb2c6d6a64",
+        "training.py": "5b0da5a450db5d449f5701047db5cb6b63c10cf5bcc153c378088d9c122f19ae",
+        "training_data.py": "382e8afb6624647501bc066c1cd0b19ca10206a9f9fb6d26813964ecc5591ba6"
+      },
+      "final_planner_source_sha256": {
+        "__init__.py": "4e060b69eeb8d50241011d3296a3f15bafceb1a8b8e27c179a4caf1111c6ada2",
+        "config.py": "1ee2eca31787bbaaaf130d90b91c6b782b11db2fedf0c6d9fecff109e6e845e5",
+        "demo.py": "a60ee88aeab93d672e17d591a546e76c3b8201595eb827bccfb58f563472f686",
+        "evaluation.py": "f0c8f3a396047e3971133e5eb298bf38ee9f90275d1ef4da8c2326f56d1f70e5",
+        "experiment.py": "c5e631821751222d4cea4805bf49add4faa925e29106b91b940a5202fbe95926",
+        "features.py": "401e89f02302998822f1f530234e4aa4669104a282c2922ad709f98667fc1400",
+        "geometry.py": "f529415074a30cc6d3047af7f1113d6654c31c9e5b99403261d02250e07a15d4",
+        "model.py": "b2caa0029118971e1bccc6c384320868f9ea5dc4e4f273464e20eacff3b0bcd4",
+        "model_pipeline.py": "a86b5c631d034b98a2c5cc531b83fd77867d3b649597ff57e40065d876066684",
+        "planner.py": "04cf9239b691a06a5e16e20f4a2833158e89424a658c944b9d945656c95d0c13",
+        "planning_service.py": "1913b66545cb37b7775306c98ad1edddce726120eeee4817314c6965d77c5fbc",
+        "reference_backend.py": "a4e2a530cc069ebf19236c8d608eddfc7e5055b1efb7ef2828768a4c9208d25e",
+        "rollout.py": "6b705db59ccffeaafcb11a93a04ef935ed87214274fdf051d5d777f0a2019597",
+        "scenarios.py": "b583d361ec69f16df4072e3008f8194d2b4b4fc6e0a031e39b72293fca5e502f",
+        "scene_bridge.py": "6099a03321a34dc80e61c21fe9b8bae7941a028705c9c1b8e13e96137b57ba3b",
+        "scoring.py": "53c472e18951a802561b326e27add724f10496d6fffafc6037c633ee1440bf7d",
+        "team_bridge.py": "9445935feb4f4bff39dc9700248ff05eff00a8bb36a585b69e05d28187c3483c",
+        "team_training.py": "f634e0c697bd9b0ffc30863735c2f5b73296bac4b5429b2c8e6e8d8eb1b1d5a1",
+        "training.py": "5ace81d00f004e189299bcd243681b39ec962c02dc1b118823f1a0c49c1fda4c",
+        "training_data.py": "da043ab327e9a56089d44d9a4728bee2085b79921fee345bf823ea1a04b78fee"
+      },
+      "scope": "PYTHON_RUNTIME_SIMULATION",
+      "ros2": "NOT_RUN"
+    }
+  },
+  "performance_profile": {
+    "scenario_id": "S0002",
+    "seed": 201,
+    "variant": "nominal",
+    "mode": "learned_ranking",
+    "total_profile_sec": 72.81429882799998,
+    "scope": "PROFILED_PYTHON_RUNTIME_SIMULATION",
+    "under_parallel_worker_load": true,
+    "stream_exactly_equal": true,
+    "outcome_exactly_equal": true,
+    "top_cumulative_functions": [
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/model_pipeline.py",
+        "line": 112,
+        "function": "_run_runtime",
+        "calls": 1,
+        "self_sec": 0.000123546,
+        "cumulative_sec": 78.073022038
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_bridge.py",
+        "line": 163,
+        "function": "__call__",
+        "calls": 58,
+        "self_sec": 0.006865861,
+        "cumulative_sec": 66.50819868500001
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_bridge.py",
+        "line": 34,
+        "function": "plan_with_backend",
+        "calls": 58,
+        "self_sec": 0.007420948,
+        "cumulative_sec": 66.495759147
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planner.py",
+        "line": 174,
+        "function": "plan",
+        "calls": 58,
+        "self_sec": 0.005191221,
+        "cumulative_sec": 66.284173974
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planner.py",
+        "line": 115,
+        "function": "_rows",
+        "calls": 58,
+        "self_sec": 0.013740487000000001,
+        "cumulative_sec": 66.216604559
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+        "line": 186,
+        "function": "compute_features",
+        "calls": 1046,
+        "self_sec": 0.168838745,
+        "cumulative_sec": 66.139691317
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+        "line": 168,
+        "function": "has_placement",
+        "calls": 8076,
+        "self_sec": 0.108861284,
+        "cumulative_sec": 63.72037628500001
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+        "line": 258,
+        "function": "generate_with_report",
+        "calls": 8259,
+        "self_sec": 1.9857894260000002,
+        "cumulative_sec": 57.061973671000004
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+        "line": 306,
+        "function": "generate_candidates",
+        "calls": 8076,
+        "self_sec": 0.20279648700000003,
+        "cumulative_sec": 55.696478411
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+        "line": 216,
+        "function": "_kept_raws",
+        "calls": 8259,
+        "self_sec": 1.015900024,
+        "cumulative_sec": 43.344146041
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 308,
+        "function": "raw_candidates",
+        "calls": 8201,
+        "self_sec": 3.27409416,
+        "cumulative_sec": 27.859748313
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/hard_mask.py",
+        "line": 75,
+        "function": "evaluate",
+        "calls": 45236,
+        "self_sec": 1.863161727,
+        "cumulative_sec": 11.000647717000001
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+        "line": 224,
+        "function": "<genexpr>",
+        "calls": 2056,
+        "self_sec": 0.0042380970000000006,
+        "cumulative_sec": 10.506828682
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+        "line": 198,
+        "function": "validate_constraints",
+        "calls": 31544,
+        "self_sec": 0.07508100300000001,
+        "cumulative_sec": 9.874567225
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 370,
+        "function": "deduplicate",
+        "calls": 8201,
+        "self_sec": 1.7772869260000002,
+        "cumulative_sec": 9.317098414
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/backend.py",
+        "line": 157,
+        "function": "_verdict_entry",
+        "calls": 31544,
+        "self_sec": 0.26295158500000004,
+        "cumulative_sec": 7.920260407000001
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 392,
+        "function": "conflicts",
+        "calls": 1125361,
+        "self_sec": 3.8102672290000004,
+        "cumulative_sec": 6.074841775
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 96,
+        "function": "_balance_raw",
+        "calls": 16332,
+        "self_sec": 0.9726004100000001,
+        "cumulative_sec": 6.0040245940000005
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 274,
+        "function": "_lowest_valid_z",
+        "calls": 16332,
+        "self_sec": 0.352770807,
+        "cumulative_sec": 4.861479577
+      },
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/team/ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+        "line": 165,
+        "function": "_ems_raw",
+        "calls": 16402,
+        "self_sec": 0.613103751,
+        "cumulative_sec": 4.359115116
+      }
+    ],
+    "model_predict": [
+      {
+        "file": "/workspace/scratch/1486a29040a3/model_scale_20261009/donghan/pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/model.py",
+        "line": 66,
+        "function": "predict",
+        "calls": 58,
+        "self_sec": 0.009519018,
+        "cumulative_sec": 0.026796755000000002
+      }
+    ]
+  },
+  "remaining": [
+    "candidate model has no DBLF pallet advantage",
+    "shared simulated overload/noisy-placement safety issues",
+    "per-candidate feature feasibility probes are the latency bottleneck",
+    "ROS2/MoveIt action execution and gripper physics unverified",
+    "large benchmark preset not run",
+    "full-scale warm-start not run; small compatibility/resume regressions passed"
+  ],
+  "evidence_in_zip": "experiments/development/ and experiments/fresh/"
+}

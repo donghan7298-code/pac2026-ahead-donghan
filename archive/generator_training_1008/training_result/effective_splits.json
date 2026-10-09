@@ -1,0 +1,25 @@
+{
+  "splits": {
+    "train": [
+      "S0012",
+      "S0011",
+      "S0003",
+      "S0001",
+      "S0005",
+      "S0002",
+      "S0007",
+      "S0008"
+    ],
+    "val": [
+      "S0010",
+      "S0009"
+    ],
+    "test": [
+      "S0006",
+      "S0004"
+    ]
+  },
+  "policy": "generator_split_with_inventory_leakage_guard",
+  "repartitioned": false,
+  "colliding_inventory_groups": 0
+}

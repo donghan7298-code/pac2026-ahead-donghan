@@ -1,0 +1,102 @@
+{
+  "schema_version": "pac-common-v0.2+planning-v1",
+  "scenario_id": "scenario_001_basic",
+  "current_box_id": "B001",
+  "state": {
+    "state_version": 12,
+    "stamp_sec": 123.0,
+    "pallet": {
+      "pallet_id": "P001",
+      "size": {
+        "x": 1.2,
+        "y": 1.0,
+        "z": 1.0
+      },
+      "boxes": []
+    },
+    "inventory": {
+      "tracked_boxes": {
+        "B001": {
+          "box_id": "B001",
+          "sku_id": "A",
+          "size": {
+            "x": 0.4,
+            "y": 0.3,
+            "z": 0.2
+          },
+          "weight_kg": 8,
+          "pose": {
+            "frame_id": "conveyor",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "roll": 0.0,
+            "pitch": 0.0,
+            "yaw": 0.0
+          },
+          "allowed_yaws_rad": [
+            0,
+            1.5707963267948966
+          ],
+          "status": "READY_FOR_PICK",
+          "confidence": 1.0,
+          "stamp_sec": 123.0,
+          "source": "OFFLINE_FIXTURE"
+        }
+      },
+      "remaining_by_sku": {
+        "A": 2,
+        "B": 3,
+        "C": 1
+      }
+    }
+  },
+  "context": {
+    "catalog": {
+      "A": {
+        "sku_id": "A",
+        "size": {
+          "x": 0.4,
+          "y": 0.3,
+          "z": 0.2
+        },
+        "weight_kg": 8,
+        "allowed_yaws_rad": [
+          0,
+          1.5707963267948966
+        ],
+        "top_load_capacity_n": 350
+      },
+      "B": {
+        "sku_id": "B",
+        "size": {
+          "x": 0.3,
+          "y": 0.2,
+          "z": 0.2
+        },
+        "weight_kg": 4,
+        "allowed_yaws_rad": [
+          0,
+          1.5707963267948966
+        ],
+        "top_load_capacity_n": 180
+      },
+      "C": {
+        "sku_id": "C",
+        "size": {
+          "x": 0.6,
+          "y": 0.4,
+          "z": 0.25
+        },
+        "weight_kg": 12,
+        "allowed_yaws_rad": [
+          0,
+          1.5707963267948966
+        ],
+        "top_load_capacity_n": 600
+      }
+    },
+    "pallet_max_weight_kg": 250.0,
+    "buffer_capacity": 2
+  }
+}

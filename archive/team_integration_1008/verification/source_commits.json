@@ -1,0 +1,137 @@
+{
+  "checked_at": "2026-10-08",
+  "sources": [
+    {
+      "repo": "yang8988/pac-mission1-shared",
+      "branches": [
+        {
+          "name": "claude/pensive-pasteur-dwbu3g",
+          "sha": "e7ed1f93fa617d9b61006db036d0637f9252a35b"
+        },
+        {
+          "name": "feature/donghan-placement-planner",
+          "sha": "fe1e135c826cad8b134c637342e4ca5373ccdc73"
+        },
+        {
+          "name": "feature/jaesung-dataset-generator",
+          "sha": "cc4c075daa3dd4c7f80510042732763fc9502933"
+        },
+        {
+          "name": "feature/jaesung-physics-simulator",
+          "sha": "7f4ae37621ea20527c09a707390db9b0f1317aa3"
+        },
+        {
+          "name": "main",
+          "sha": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4"
+        }
+      ]
+    },
+    {
+      "repo": "dlwotjd1289-cloud/pac2026-ahead",
+      "branches": [
+        {
+          "name": "fix/hyundai-submodule-init",
+          "sha": "0c8fb80f5674e6202489209a743f8b82ce915262"
+        },
+        {
+          "name": "main",
+          "sha": "fa3115a903117eeb57009defd12a201d5290345d"
+        }
+      ]
+    }
+  ],
+  "unpublished_planner_patch": true,
+  "github_write_attempted": false,
+  "validated_candidate_commit": "e7ed1f93fa617d9b61006db036d0637f9252a35b",
+  "upstream_planner_base": "fe1e135c826cad8b134c637342e4ca5373ccdc73",
+  "tests": {
+    "planner": {
+      "passed": 57,
+      "skipped": 0,
+      "seconds": 7.37,
+      "includes_pybullet_tests": 3
+    },
+    "teammate": {
+      "passed": 160,
+      "skipped": 2,
+      "seconds": 36.21,
+      "skip_reason": "gymnasium and torch unavailable"
+    },
+    "regression_old_c0f32d6": {
+      "failed_as_expected": 2
+    },
+    "replay": {
+      "boxes": 5,
+      "placed": 5,
+      "safety_issues": 0,
+      "policy": "RULE",
+      "value_provider": "proxy",
+      "scope": "OFFLINE_SIMULATION"
+    },
+    "ros2": "NOT_RUN",
+    "moveit": "NOT_RUN",
+    "robot_pick_place": "NOT_RUN"
+  },
+  "latest_read_changed_files": [
+    {
+      "path": "config/taehyeon/highlevel.yaml",
+      "sha": "5d5004aaf7b71a3583374f3e7d7c8db8160073f4"
+    },
+    {
+      "path": "docs/taehyeon/PROGRESS.md",
+      "sha": "5f2da8c026b6ecf13309c07e0ea85b1e0597a36e"
+    },
+    {
+      "path": "docs/taehyeon/README.md",
+      "sha": "42f7ab3fe9405f179408da0790c960eee8edb659"
+    },
+    {
+      "path": "docs/taehyeon/VALIDATION.md",
+      "sha": "8d26841056687ffd5b2ec86873386513b2106bf1"
+    },
+    {
+      "path": "docs/taehyeon/algorithms.md",
+      "sha": "083d516a509b4163a51e57195b2d09358058bd74"
+    },
+    {
+      "path": "ros2_ws/src/pac_candidates/pac_candidates/candidate_generation.py",
+      "sha": "6237b406dbcf0a62be8cb4482aea002ffc2e55c1"
+    },
+    {
+      "path": "ros2_ws/src/pac_candidates/pac_candidates/config.py",
+      "sha": "85550c75447e01d89ed451e1948a08d47c944687"
+    },
+    {
+      "path": "ros2_ws/src/pac_candidates/pac_candidates/pallet_model.py",
+      "sha": "f8553fb8fb420a0782e9e8896c3ae2cc9c0fda2f"
+    },
+    {
+      "path": "ros2_ws/src/pac_highlevel/pac_highlevel/config.py",
+      "sha": "4aa88ab3e4ad2c6bcd929fef0743c7cee85058df"
+    },
+    {
+      "path": "ros2_ws/src/pac_highlevel/pac_highlevel/features.py",
+      "sha": "352d50426d5fcac581978d436315c838c80b1ce6"
+    },
+    {
+      "path": "ros2_ws/src/pac_highlevel/pac_highlevel/gym_env.py",
+      "sha": "302804def941a5c31ef61e431cd6027d2899a914"
+    },
+    {
+      "path": "ros2_ws/src/pac_highlevel/pac_highlevel/ppo.py",
+      "sha": "f16365250d3cc1fa281b15283fe0e096855f43da"
+    },
+    {
+      "path": "ros2_ws/src/pac_highlevel/pac_highlevel/world.py",
+      "sha": "1b3f68cd3508357f489abb27d17b69e128a9d60a"
+    },
+    {
+      "path": "tests/taehyeon/test_th_candidates.py",
+      "sha": "1da845c1ec87584352af56fec54df2ad8b5e2e67"
+    },
+    {
+      "path": "tests/taehyeon/test_th_highlevel.py",
+      "sha": "9fb13f0a5d7992e68012664c36897bae9b9cc153"
+    }
+  ]
+}

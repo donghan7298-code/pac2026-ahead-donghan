@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pac-mission1-shared"
+version = "0.1.0"
+description = "AHEAD low-level placement planner, stages 5-3 to 5-6"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.23,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7,<9"]
+physics = ["pybullet>=3.2.6,<4", "networkx>=3.2,<3.5", "Pillow>=10,<13"]
+
+[tool.setuptools.packages.find]
+where = ["ros2_ws/src/pac_common", "ros2_ws/src/pac_planning"]
+include = ["pac_common*", "pac_planning*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["ros2_ws/src/pac_common", "ros2_ws/src/pac_planning", "ros2_ws/src/pac_execution"]

@@ -1,0 +1,96 @@
+{
+  "source": "사용자 첨부 알고리즘.zip",
+  "count": 18,
+  "files": [
+    {
+      "file": "알고리즘/[1] Low-level Placement; 후보생성 + Ranking/Extreme point-based heuristics for 3D bin packing.pdf",
+      "bytes": 221960,
+      "sha256": "db9329e5619c53f188a4eaa90b85f82c9b254265c078644ae474d8a22ce9b466"
+    },
+    {
+      "file": "알고리즘/[1] Low-level Placement; 후보생성 + Ranking/Generalizable Online 3D Bin Packing via Transformer-based Deep Reinforcement Learning.pdf",
+      "bytes": 5526422,
+      "sha256": "ef982eed03531aa727e4fd13326fb6af9838d2ff52c399eae02c4a6656650014"
+    },
+    {
+      "file": "알고리즘/[1] Low-level Placement; 후보생성 + Ranking/Learning Efficient Online 3D Bin Packing on Packing Configuration Trees.pdf",
+      "bytes": 1168296,
+      "sha256": "c3a2e4b186aa8c3ec14ff91f5fca79c7a07cd9d59168eebafa48ffb44a3b45dc"
+    },
+    {
+      "file": "알고리즘/[1] Low-level Placement; 후보생성 + Ranking/Operationally Guided Placement-Aware Learning for Industrial Online 3D Bin Packing.pdf",
+      "bytes": 2858291,
+      "sha256": "11723b31a0b3c55fdad469b4f398d6909e4ee1a29da5ca6f294876968975f78b"
+    },
+    {
+      "file": "알고리즘/[2] AI 학습; 모방학습/A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning.pdf",
+      "bytes": 551229,
+      "sha256": "12b032cfd451b8ace4b18145dbe24382d2cbe2eda6b562331bc86799bbaafd5e"
+    },
+    {
+      "file": "알고리즘/[2] AI 학습; 모방학습/Efficient Reinforcement Learning of Task Planners for Robotic Palletization through Iterative Action Masking Learning.pdf",
+      "bytes": 5093230,
+      "sha256": "a049588df2ed54e1ca8d9c2b8a7704621a4ec1e5caafc9b4857502af4c1b03bf"
+    },
+    {
+      "file": "알고리즘/[2] AI 학습; 모방학습/From RankNet to LambdaRank to LambdaMART.pdf",
+      "bytes": 164244,
+      "sha256": "503278232a70b4ec03713f820482b7c3d7bd493a933a1c37e6ffc7f5325ca1e5"
+    },
+    {
+      "file": "알고리즘/[2] AI 학습; 모방학습/Reinforcement and Imitation Learning via Interactive No-Regret Learning.pdf",
+      "bytes": 203265,
+      "sha256": "8039a4d7d59529069668f592c37c47eac058cdbad9dfdae5a28ad8f63ff91a65"
+    },
+    {
+      "file": "알고리즘/[3] Future Rollout + 위험 평가/Learning Practically Feasible Policies for Online 3D Bin Packing.pdf",
+      "bytes": 4079596,
+      "sha256": "01e8f92f69ac28fdb08f5192b457d336a82c9e30de5c96bafc863e603d6c9531"
+    },
+    {
+      "file": "알고리즘/[3] Future Rollout + 위험 평가/Optimization of Conditional Value-at-Risk.pdf",
+      "bytes": 200088,
+      "sha256": "34aff2161733085ca8e5a067053a8f144cba52f556e253d69c932f7d22d842f4"
+    },
+    {
+      "file": "알고리즘/[3] Future Rollout + 위험 평가/Robot Packing With Known Items and Nondeterministic Arrival Order.pdf",
+      "bytes": 1300233,
+      "sha256": "eb1ae02aec71f7382b4d7e94925c03b11592d749badc777c53acb18ac70a1443"
+    },
+    {
+      "file": "알고리즘/[4] High-level PPO; Buffer 판단/A Closer Look at Invalid Action Masking in Policy Gradient Algorithms.pdf",
+      "bytes": 1010251,
+      "sha256": "a12e4130dc9705a5222462e6a40d6e3a4535c62f74e00b3484ed1780eaeeefe2"
+    },
+    {
+      "file": "알고리즘/[4] High-level PPO; Buffer 판단/Online 3D Bin Packing Reinforcement Learning Solution with Buffer.pdf",
+      "bytes": 1472725,
+      "sha256": "bb26b604284edfe28219456b02e0de4303cd447e37f1f759b277102629fdef9b"
+    },
+    {
+      "file": "알고리즘/[4] High-level PPO; Buffer 판단/Online 3D-BPP A DRL Algorithm with the Buffer Zone.pdf",
+      "bytes": 2173623,
+      "sha256": "6ec3c2e1c0bbe0a80aefb29128d0f423821edcb93fefebf12aa62a493659cc72"
+    },
+    {
+      "file": "알고리즘/[4] High-level PPO; Buffer 판단/Preference-Conditioned Reinforcement Learning for Space-Time Efficient Online 3D Bin Packing.pdf",
+      "bytes": 2254779,
+      "sha256": "8c60b06c573ed06cf9fd4aafd4782d548bde55eff35feb8991869cf0b6126743"
+    },
+    {
+      "file": "알고리즘/[5] 안정성 + 예외처리/Online 3D Bin Packing with Fast Stability Validation and Stable Rearrangement Planning.pdf",
+      "bytes": 4722927,
+      "sha256": "1a9669db5bf76bf23f3deb0b63b4410fd5725c5a211a8f6d3439d9d8d168223d"
+    },
+    {
+      "file": "알고리즘/[5] 안정성 + 예외처리/Physics-Aware Robotic Palletization with Online Masking Inference.pdf",
+      "bytes": 4841143,
+      "sha256": "d66d0d01487847c3d41d85b132c71e2af01cebfdab35cb16bd1c8a770e555137"
+    },
+    {
+      "file": "알고리즘/[5] 안정성 + 예외처리/Three-Dimensional Bin Packing and Mixed-Case Palletization.pdf",
+      "bytes": 3567297,
+      "sha256": "07e80138cc51684418f5f843063c8460fac3ceea46007a0996651eeff78f459e"
+    }
+  ]
+}

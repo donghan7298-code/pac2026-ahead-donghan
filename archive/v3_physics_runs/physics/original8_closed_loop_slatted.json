@@ -1,0 +1,995 @@
+{
+  "scope": "BULLET_MEASURED_RUNTIME_LOOP",
+  "status": "PASS_MEASURED_LOOP",
+  "deck": "slatted",
+  "ranker": "dblf",
+  "original_boxes": 8,
+  "measured_and_committed": 8,
+  "fixture_sha256": "a606d96767769883f462c76ac055822de6acd374f3d70a5780b1009c7bb2e16d",
+  "source_ground_truth_sha256": "1db9b5e74a676c2736e1944cc3cee83ec84dd87cf085240070e6662e81476ee1",
+  "candidate_config_sha256": "b0e2a191434b561a56c4869e11f4b70784b7c569320e17fc6068dfab9e1dc477",
+  "audit_candidate_config_sha256": "c9d562e2e4f670332dc1e3478b32680d3725a6b9d29a76e0fe771160b5fa07df",
+  "robot_config_sha256": "a63acf2a12e1d397a858982bb1d040dd8525ab3f3df5d3337e393db4d16665d4",
+  "simulator_source_sha256": {
+    "pac_simulation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pac_simulation/ahead_sim/__init__.py": "814c3e63506a01c203e6c6d052a011e43eb4b68c633808c10b3ccb4aecdb6a40",
+    "pac_simulation/ahead_sim/config.py": "35969ee6907ea09092883d9691982fe691b35e978f531e6a94c36b3e2c9a7773",
+    "pac_simulation/ahead_sim/contact_graph.py": "fe284f105c2d8354f522108fcde5f5f795c2d2c13b043d7979a34106966e87bb",
+    "pac_simulation/ahead_sim/force_window.py": "46fd49fcb3bbd83e772777f71cb856e31cb1d351e9eeee366ba984e131cd7516",
+    "pac_simulation/ahead_sim/metrics.py": "23257d496dc5d3fb0d1d66f2296a2b91cea48fe110f3d415d4c9ee9e199b0d3f",
+    "pac_simulation/ahead_sim/models.py": "e19f7db0bef4adb36aec10d51d6b6bbddf33649ec9bea7a642391c0ffbddb1d4",
+    "pac_simulation/ahead_sim/server.py": "fbdf2051d85852e95cdceb16715f0b45cfb2ea999719a4e21a1c892d98476b4b",
+    "pac_simulation/ahead_sim/simulator.py": "7c0f69461757732f1fb0d54a1d2275ac7bfd13d4de373b868f3a041269d32023",
+    "pac_simulation/ahead_sim/strength.py": "bd20fb31ce45b5e29445621d299cbd53be0da23e40fea20685a653d11716e30b",
+    "pac_simulation/ahead_sim/world.py": "2f5ad9d75d8394772548b33bad78d311e49fc416984888dec95017d0685239ea"
+  },
+  "release_gap_m": 0.01,
+  "simulation_time_s": 16.0,
+  "final_runtime_status": {
+    "state_version": 16,
+    "pallet_id": "DEMO-01",
+    "placed": 8,
+    "buffer": {},
+    "mode": "NORMAL",
+    "inspection": 0,
+    "counts": {
+      "PLACE_CURRENT": 8,
+      "L0": 8,
+      "stage8_reconciled": 2
+    },
+    "ranker": "dblf"
+  },
+  "errors": [],
+  "events": [
+    {
+      "box_id": "S0001-B001",
+      "before_status": {
+        "state_version": 0,
+        "pallet_id": "DEMO-01",
+        "placed": 0,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {},
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 1,
+        "box_id": "S0001-B001",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.003,
+          0.003,
+          0.0,
+          0.0
+        ],
+        "candidate_id": "S0001-S0001-B001-C000",
+        "target_center": [
+          0.17300000000000001,
+          0.128,
+          0.105,
+          0.0
+        ],
+        "robot": {
+          "gripper_yaw_rad": 0.0,
+          "q_place": [
+            -1.84432,
+            0.71989,
+            -0.29521,
+            -1e-05,
+            -0.42468,
+            1.29728
+          ],
+          "q_approach": [
+            -1.84432,
+            0.98078,
+            -0.3391,
+            -1e-05,
+            -0.64168,
+            1.29728
+          ],
+          "cycle_time_s": 11.55,
+          "arm_clearance_m": 0.2625
+        }
+      },
+      "measured_result": {
+        "state_version": 1,
+        "box_id": "S0001-B001",
+        "candidate_id": "S0001-S0001-B001-C000",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.0030000000000000304,
+          0.0030000000000000027,
+          -9.993033040223143e-06,
+          0.0
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          -0.42699999999999994,
+          -0.372,
+          0.10499000696695977
+        ],
+        "raw_quaternion": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "measured_corner": [
+          0.0030000000000000304,
+          0.0030000000000000027,
+          -9.993033040223143e-06,
+          0.0
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 436.566,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.0030000000000000304,
+        0.0030000000000000027,
+        -9.993033040223143e-06,
+        0.0
+      ],
+      "after_status": {
+        "state_version": 2,
+        "pallet_id": "DEMO-01",
+        "placed": 1,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 1,
+          "L0": 1
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B002",
+      "before_status": {
+        "state_version": 2,
+        "pallet_id": "DEMO-01",
+        "placed": 1,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 1,
+          "L0": 1
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 3,
+        "box_id": "S0001-B002",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.3530000000000001,
+          0.003,
+          0.0,
+          0.0
+        ],
+        "candidate_id": "S0003-S0001-B002-C000",
+        "target_center": [
+          0.6130000000000001,
+          0.243,
+          0.2,
+          0.0
+        ],
+        "robot": {
+          "gripper_yaw_rad": 3.141593,
+          "q_place": [
+            1.58004,
+            2.69949,
+            2.27996,
+            0.0,
+            1.30374,
+            1.58003
+          ],
+          "q_approach": [
+            1.58004,
+            2.53997,
+            2.25562,
+            0.0,
+            1.4876,
+            1.58004
+          ],
+          "cycle_time_s": 8.616,
+          "arm_clearance_m": 0.3361
+        }
+      },
+      "measured_result": {
+        "state_version": 3,
+        "box_id": "S0001-B002",
+        "candidate_id": "S0003-S0001-B002-C000",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.35299996225914965,
+          0.002999771220195846,
+          -1.0064693495237531e-05,
+          0.0
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          0.012999962259149704,
+          -0.25700022877980416,
+          0.19998993530650477
+        ],
+        "raw_quaternion": [
+          5.694042887596512e-07,
+          -9.262259305247127e-08,
+          -9.719108891211343e-11,
+          0.9999999999998336
+        ],
+        "measured_corner": [
+          0.35299996225914965,
+          0.002999771220195846,
+          -1.0064693495237531e-05,
+          0.0
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 568.36,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.35299996225914965,
+        0.002999771220195846,
+        -1.0064693495237531e-05,
+        0.0
+      ],
+      "after_status": {
+        "state_version": 4,
+        "pallet_id": "DEMO-01",
+        "placed": 2,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 2,
+          "L0": 2
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B003",
+      "before_status": {
+        "state_version": 4,
+        "pallet_id": "DEMO-01",
+        "placed": 2,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 2,
+          "L0": 2
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 5,
+        "box_id": "S0001-B003",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.003,
+          0.49299977122019584,
+          0.0,
+          0.0
+        ],
+        "candidate_id": "S0005-S0001-B003-C000",
+        "target_center": [
+          0.263,
+          0.7329997712201959,
+          0.2,
+          0.0
+        ],
+        "robot": {
+          "gripper_yaw_rad": 0.0,
+          "q_place": [
+            1.21861,
+            2.27954,
+            3.04148,
+            3.14159,
+            -0.96217,
+            1.21862
+          ],
+          "q_approach": [
+            1.21861,
+            2.06109,
+            3.02251,
+            3.14159,
+            -1.19958,
+            1.21862
+          ],
+          "cycle_time_s": 8.893,
+          "arm_clearance_m": 0.2064
+        }
+      },
+      "measured_result": {
+        "state_version": 5,
+        "box_id": "S0001-B003",
+        "candidate_id": "S0005-S0001-B003-C000",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.0029991942249477654,
+          0.4929998686326036,
+          -1.0907082076017094e-05,
+          0.0
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          -0.3370008057750522,
+          0.2329998686326036,
+          0.199989092917924
+        ],
+        "raw_quaternion": [
+          -2.250574369890539e-07,
+          -2.0092812140506896e-06,
+          -9.709195196216074e-09,
+          0.999999999997956
+        ],
+        "measured_corner": [
+          0.0029991942249477654,
+          0.4929998686326036,
+          -1.0907082076017094e-05,
+          0.0
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 568.36,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.0029991942249477654,
+        0.4929998686326036,
+        -1.0907082076017094e-05,
+        0.0
+      ],
+      "after_status": {
+        "state_version": 6,
+        "pallet_id": "DEMO-01",
+        "placed": 3,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 3,
+          "L0": 3
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B004",
+      "before_status": {
+        "state_version": 6,
+        "pallet_id": "DEMO-01",
+        "placed": 3,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 3,
+          "L0": 3
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 7,
+        "box_id": "S0001-B004",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          1.017,
+          0.003,
+          0.0,
+          1.5707963267948966
+        ],
+        "candidate_id": "S0007-S0001-B004-C002",
+        "target_center": [
+          1.107,
+          0.138,
+          0.075,
+          1.5707963267948966
+        ],
+        "robot": {
+          "gripper_yaw_rad": 1.570796,
+          "q_place": [
+            -1.24726,
+            0.65375,
+            -0.25511,
+            -0.0,
+            -0.39863,
+            0.32354
+          ],
+          "q_approach": [
+            -1.24726,
+            0.92118,
+            -0.31868,
+            -0.0,
+            -0.6025,
+            0.32354
+          ],
+          "cycle_time_s": 10.768,
+          "arm_clearance_m": 0.1198
+        }
+      },
+      "measured_result": {
+        "state_version": 7,
+        "box_id": "S0001-B004",
+        "candidate_id": "S0007-S0001-B004-C002",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          1.0170014887828593,
+          0.0030002816201979976,
+          -1.1985006572373669e-05,
+          1.5707963267948966
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          0.5070014887828596,
+          -0.361999718379802,
+          0.07498801499342762
+        ],
+        "raw_quaternion": [
+          8.46667840254631e-06,
+          8.67427191562947e-06,
+          0.7071051584532981,
+          0.7071084038121797
+        ],
+        "measured_corner": [
+          1.0170014887828593,
+          0.0030002816201979976,
+          -1.1985006572373669e-05,
+          1.5707963267948966
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 381.268,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        1.0170014887828593,
+        0.0030002816201979976,
+        -1.1985006572373669e-05,
+        1.5707963267948966
+      ],
+      "after_status": {
+        "state_version": 8,
+        "pallet_id": "DEMO-01",
+        "placed": 4,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 4,
+          "L0": 4
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B005",
+      "before_status": {
+        "state_version": 8,
+        "pallet_id": "DEMO-01",
+        "placed": 4,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 4,
+          "L0": 4
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 9,
+        "box_id": "S0001-B005",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.9149999811295748,
+          0.470000140810099,
+          0.0,
+          1.5707963267948966
+        ],
+        "candidate_id": "S0009-S0001-B005-C001",
+        "target_center": [
+          1.0399999811295748,
+          0.640000140810099,
+          0.105,
+          1.5707963267948966
+        ],
+        "robot": {
+          "gripper_yaw_rad": 1.570796,
+          "q_place": [
+            1.98165,
+            2.53765,
+            2.81621,
+            3.14159,
+            -0.92933,
+            0.41085
+          ],
+          "q_approach": [
+            1.98165,
+            2.30362,
+            2.86003,
+            3.14159,
+            -1.11954,
+            0.41085
+          ],
+          "cycle_time_s": 8.98,
+          "arm_clearance_m": 0.1292
+        }
+      },
+      "measured_result": {
+        "state_version": 9,
+        "box_id": "S0001-B005",
+        "candidate_id": "S0009-S0001-B005-C001",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.9150008326280883,
+          0.4700009810354049,
+          -1.0998647502091785e-05,
+          1.5707963267948966
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          0.44000083262808826,
+          0.1400009810354049,
+          0.1049890013524979
+        ],
+        "raw_quaternion": [
+          3.0603584161593833e-07,
+          5.484793683091996e-06,
+          0.7071065119853102,
+          0.7071070503663444
+        ],
+        "measured_corner": [
+          0.9150008326280883,
+          0.4700009810354049,
+          -1.0998647502091785e-05,
+          1.5707963267948966
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 436.566,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.9150008326280883,
+        0.4700009810354049,
+        -1.0998647502091785e-05,
+        1.5707963267948966
+      ],
+      "after_status": {
+        "state_version": 10,
+        "pallet_id": "DEMO-01",
+        "placed": 5,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 5,
+          "L0": 5
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B006",
+      "before_status": {
+        "state_version": 10,
+        "pallet_id": "DEMO-01",
+        "placed": 5,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 5,
+          "L0": 5
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 11,
+        "box_id": "S0001-B006",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.619000013426518,
+          0.6099998856100979,
+          0.0,
+          1.5707963267948966
+        ],
+        "candidate_id": "S0011-S0001-B006-C005",
+        "target_center": [
+          0.719000013426518,
+          0.7449998856100979,
+          0.065,
+          1.5707963267948966
+        ],
+        "robot": {
+          "gripper_yaw_rad": 1.570796,
+          "q_place": [
+            -1.44005,
+            0.90689,
+            -1.04461,
+            -3.14159,
+            -0.13773,
+            -3.01085
+          ],
+          "q_approach": [
+            -1.44005,
+            1.45485,
+            -1.15843,
+            -3.14159,
+            0.29642,
+            -3.01085
+          ],
+          "cycle_time_s": 11.021,
+          "arm_clearance_m": 0.0773
+        }
+      },
+      "measured_result": {
+        "state_version": 11,
+        "box_id": "S0001-B006",
+        "candidate_id": "S0011-S0001-B006-C005",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.6189995223894068,
+          0.6100001441541101,
+          -1.0560614026905446e-05,
+          1.5707963267948966
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          0.11899952238940681,
+          0.24500014415411014,
+          0.0649894393859731
+        ],
+        "raw_quaternion": [
+          3.453130349543321e-06,
+          -7.303154255337408e-06,
+          0.7071119588128068,
+          0.7071016034762297
+        ],
+        "measured_corner": [
+          0.6189995223894068,
+          0.6100001441541101,
+          -1.0560614026905446e-05,
+          1.5707963267948966
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 389.648,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.6189995223894068,
+        0.6100001441541101,
+        -1.0560614026905446e-05,
+        1.5707963267948966
+      ],
+      "after_status": {
+        "state_version": 12,
+        "pallet_id": "DEMO-01",
+        "placed": 6,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 6,
+          "L0": 6
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B007",
+      "before_status": {
+        "state_version": 12,
+        "pallet_id": "DEMO-01",
+        "placed": 6,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 6,
+          "L0": 6
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 13,
+        "box_id": "S0001-B007",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.003,
+          0.49299977122019584,
+          0.399989092917924,
+          0.0
+        ],
+        "candidate_id": "S0013-S0001-B007-C002",
+        "target_center": [
+          0.113,
+          0.5879997712201959,
+          0.444989092917924,
+          0.0
+        ],
+        "robot": {
+          "gripper_yaw_rad": 0.0,
+          "q_place": [
+            1.14084,
+            2.37994,
+            2.75279,
+            3.14159,
+            -1.15045,
+            1.14084
+          ],
+          "q_approach": [
+            1.14084,
+            2.20961,
+            2.7031,
+            3.14159,
+            -1.37048,
+            1.14084
+          ],
+          "cycle_time_s": 8.909,
+          "arm_clearance_m": 0.1425
+        }
+      },
+      "measured_result": {
+        "state_version": 13,
+        "box_id": "S0001-B007",
+        "candidate_id": "S0013-S0001-B007-C002",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.0030143605219735,
+          0.49298865097828204,
+          0.3999781807842557,
+          0.0
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          -0.4869856394780265,
+          0.08798865097828205,
+          0.44497818078425566
+        ],
+        "raw_quaternion": [
+          4.867664838334465e-06,
+          -1.245811156952651e-06,
+          3.48994185820635e-05,
+          0.9999999993783921
+        ],
+        "measured_corner": [
+          0.0030143605219735,
+          0.49298865097828204,
+          0.3999781807842557,
+          0.0
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 363.928,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.0030143605219735,
+        0.49298865097828204,
+        0.399989092917924,
+        0.0
+      ],
+      "after_status": {
+        "state_version": 14,
+        "pallet_id": "DEMO-01",
+        "placed": 7,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 7,
+          "L0": 7,
+          "stage8_reconciled": 1
+        },
+        "ranker": "dblf"
+      }
+    },
+    {
+      "box_id": "S0001-B008",
+      "before_status": {
+        "state_version": 14,
+        "pallet_id": "DEMO-01",
+        "placed": 7,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 7,
+          "L0": 7,
+          "stage8_reconciled": 1
+        },
+        "ranker": "dblf"
+      },
+      "command": {
+        "action": "PLACE_CURRENT",
+        "state_version": 15,
+        "box_id": "S0001-B008",
+        "slot": null,
+        "reason": "POLICY",
+        "decided_by": "policy:rule",
+        "target_min_corner": [
+          0.003,
+          0.003,
+          0.20999000696695977,
+          0.0
+        ],
+        "candidate_id": "S0015-S0001-B008-C002",
+        "target_center": [
+          0.128,
+          0.10300000000000001,
+          0.28499000696695975,
+          0.0
+        ],
+        "robot": {
+          "gripper_yaw_rad": 0.0,
+          "q_place": [
+            -1.86693,
+            0.82811,
+            -0.27788,
+            -1e-05,
+            -0.55022,
+            1.27467
+          ],
+          "q_approach": [
+            -1.86693,
+            1.05481,
+            -0.27211,
+            -0.0,
+            -0.78269,
+            1.27466
+          ],
+          "cycle_time_s": 11.58,
+          "arm_clearance_m": 0.1516
+        }
+      },
+      "measured_result": {
+        "state_version": 15,
+        "box_id": "S0001-B008",
+        "candidate_id": "S0015-S0001-B008-C002",
+        "ok": true,
+        "attempts": 1,
+        "measured_pose": [
+          0.0029947830395697927,
+          0.0029979180608439016,
+          0.20997575608856012,
+          0.0
+        ],
+        "measured_frame": "pallet",
+        "measurement_source": "BULLET_WORLD_POSE"
+      },
+      "measured_body": {
+        "raw_center": [
+          -0.4720052169604302,
+          -0.3970020819391561,
+          0.28497575608856013
+        ],
+        "raw_quaternion": [
+          7.148826137999506e-06,
+          -9.485188841174782e-06,
+          5.115627972148913e-06,
+          0.9999999999163779
+        ],
+        "measured_corner": [
+          0.0029947830395697927,
+          0.0029979180608439016,
+          0.20997575608856012,
+          0.0
+        ],
+        "strength": {
+          "status": "OK",
+          "load_from_above_n_avg": 0.0,
+          "max_top_load_n": 381.268,
+          "utilization": 0.0
+        }
+      },
+      "runtime_level": "L0",
+      "runtime_state_pose": [
+        0.0029947830395697927,
+        0.0029979180608439016,
+        0.20999000696695977,
+        0.0
+      ],
+      "after_status": {
+        "state_version": 16,
+        "pallet_id": "DEMO-01",
+        "placed": 8,
+        "buffer": {},
+        "mode": "NORMAL",
+        "inspection": 0,
+        "counts": {
+          "PLACE_CURRENT": 8,
+          "L0": 8,
+          "stage8_reconciled": 2
+        },
+        "ranker": "dblf"
+      }
+    }
+  ],
+  "physics_engine": "pybullet",
+  "robot_execution_verified": false,
+  "gazebo_verified": false,
+  "ppo_trained": false,
+  "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+  "limitation": "Original rigid bodies are dropped at planned positions; no pick, robot or suction simulation"
+}

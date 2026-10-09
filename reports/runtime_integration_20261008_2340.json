@@ -1,0 +1,39 @@
+{
+  "scope": "PYTHON_ONE_BOX_PLANNING_AND_STATIC_WORKSPACE_ONLY",
+  "planner_remote_sha": "7860043228c81aec517c5a1966d475d36e12f68a",
+  "team_remote_sha": "e8674da49d78b096016ef46b978524542445ada2",
+  "related_planner_tests": {"passed": 22, "seconds": 0.71},
+  "team_runtime_robot_tests_with_review_patch": {"passed": 25, "seconds": 7.37},
+  "one_box_chain": {
+    "route": "PLAN",
+    "action": "PLACE_CURRENT",
+    "command_state_version": 1,
+    "current_state_version": 1,
+    "ranked_count": 4,
+    "ems_sources": ["EMS_SUPPLIED"],
+    "robot_joint_targets_present": true,
+    "actual_state_committed": false
+  },
+  "staged_packages": [
+    "pac_candidates", "pac_common", "pac_highlevel", "pac_planning",
+    "pac_planning_interfaces", "pac_robot_check", "pac_runtime"
+  ],
+  "package_names_unique": true,
+  "python_compile": "PASS",
+  "policy_contract": {
+    "slots": 4,
+    "value_provider": "proxy",
+    "placer": "dblf",
+    "candidate_config": "candidates.yaml"
+  },
+  "default_policy": "rule",
+  "rosdep": "NOT_RUN",
+  "colcon": "NOT_RUN",
+  "ros2": "NOT_RUN",
+  "ros_runtime_donghan_ranker": "NOT_CONNECTED_DEFAULTS_TO_DBLF",
+  "moveit": "NOT_RUN",
+  "robot_execution": "NOT_RUN",
+  "new_physics_replay": "NOT_RUN",
+  "sb3_training_or_inference": "NOT_RUN",
+  "measurement_issue": "XY_MARGIN_NOT_COVERED_UNRESOLVED"
+}

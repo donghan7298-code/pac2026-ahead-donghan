@@ -1,0 +1,29 @@
+# Evaluate an independently generated dataset with the development model.
+# This profile does not collect labels or retrain from that dataset.
+schema_version: 1
+data:
+  sample_per_family: 2
+  boxes_per_scenario: 24
+  seed: 20261109
+collection:
+  workers: 4
+  episode_seeds: [7]
+  mixed_behaviour: true
+  spec_mismatch_probability: 0.02
+  missing_probability: 0.02
+training:
+  model_seeds: [7, 17]
+  epochs: 100
+  hidden: 64
+  batch_queries: 8
+  patience: 20
+  learning_rate: 0.002
+evaluation:
+  robot_config: robot_check_gazebo.yaml
+  episode_seeds: [201, 202, 203]
+  variants: [nominal]
+planning:
+  top_k: 4
+  scenario_count: 3
+  horizon: 2
+  rollout_candidate_limit: 16

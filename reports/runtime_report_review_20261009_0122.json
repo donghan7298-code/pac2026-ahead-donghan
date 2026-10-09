@@ -1,0 +1,53 @@
+{
+  "scope": "PUBLISHED_REPORT_REVIEW_AND_PROVENANCE_PATCH",
+  "team_ref": "83db160e9e6277fec8011c3005b6167b11b92784",
+  "planner_ref": "7860043228c81aec517c5a1966d475d36e12f68a",
+  "published_donghan": {
+    "episodes": 9,
+    "placed_per_episode": 74.11111111111111,
+    "pallets_per_episode": 5.555555555555555,
+    "fill_true_mean": 0.22025174187452998,
+    "time_s_per_episode": 1103.5555555555557,
+    "levels": {"L0": 641, "L1": 0, "L2": 25, "L3": 0, "L4": 1},
+    "robot_rejected": 1134,
+    "robot_collisions": 1099,
+    "repack": 14,
+    "repack_aborted_stage6": 12,
+    "adapter": "LEGACY_DIRECT_PLACEMENT_PLANNER",
+    "ems_evidence_in_report": false
+  },
+  "published_dblf": {
+    "episodes": 9,
+    "placed_per_episode": 74.11111111111111,
+    "pallets_per_episode": 5.222222222222222,
+    "fill_true_mean": 0.23371328429024624,
+    "time_s_per_episode": 1164.4777777777776,
+    "levels": {"L0": 653, "L1": 0, "L2": 14, "L3": 0, "L4": 0},
+    "robot_rejected": 1893,
+    "robot_collisions": 1883,
+    "repack": 10,
+    "repack_aborted_stage6": 4
+  },
+  "relative_change_percent": {
+    "pallets_per_episode": 6.382978723404253,
+    "fill_true_mean": -5.75985334192578,
+    "time_s_per_episode": -5.231720466017176,
+    "robot_rejected": -40.09508716323297,
+    "robot_collisions": -41.63568773234201
+  },
+  "one_box_geometry_source_check": {
+    "legacy": "FOOTPRINT_COLUMN_PROXY",
+    "team_runtime_ranker": "EMS_SUPPLIED",
+    "team_runtime_ranker_ems_verified": true
+  },
+  "tests": {
+    "planner_related": "22 passed in 0.70s",
+    "runtime_robot_with_review_patch": "25 passed in 7.00s",
+    "runtime_script_compile": "PASS"
+  },
+  "fixed_nine_scenario_rerun": "NOT_RUN_DATASET_NOT_IN_REPOSITORY",
+  "ros2": "NOT_RUN",
+  "moveit": "NOT_RUN",
+  "robot_execution": "NOT_RUN",
+  "ppo_contract_changed": false
+}

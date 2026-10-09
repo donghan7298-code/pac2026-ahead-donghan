@@ -1,0 +1,38 @@
+{
+  "train": {
+    "queries": 883,
+    "candidates": 12011,
+    "storage_dtype": "float32",
+    "byte_equal": {
+      "features.npy": true,
+      "future.npy": true,
+      "relevance.npy": true,
+      "offsets.npy": true,
+      "metadata.json": true
+    }
+  },
+  "val": {
+    "queries": 195,
+    "candidates": 3008,
+    "storage_dtype": "float32",
+    "byte_equal": {
+      "features.npy": true,
+      "future.npy": true,
+      "relevance.npy": true,
+      "offsets.npy": true,
+      "metadata.json": true
+    }
+  },
+  "test": {
+    "queries": 222,
+    "candidates": 3328,
+    "storage_dtype": "float32",
+    "byte_equal": {
+      "features.npy": true,
+      "future.npy": true,
+      "relevance.npy": true,
+      "offsets.npy": true,
+      "metadata.json": true
+    }
+  }
+}

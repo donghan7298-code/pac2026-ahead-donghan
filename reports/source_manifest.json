@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "scope": "complete delivered source/config/model/report set, excluding this manifest",
+  "github_write_status": "403_FORBIDDEN_NO_REMOTE_COMMIT",
+  "files": [
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "36d0c2475da6b57aebb912b5fbe71c34006adc40ee2a4624f7d6d63b6eabc65c",
+      "bytes": 559
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "sha256": "fee8ce151f95c15ad3c67fe59e71e0ecb038e0ecb1fc5c1275951914cc7227fa",
+      "bytes": 607
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "4476ac0441ce515d159169c8c0efbd302243ff3697eaafeaf7b52b0ed16773fc",
+      "bytes": 112
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "5657f6c14c254c3114cc8c26acfa0bef3c620e6245553ea5e34adc867c4bdbdc",
+      "bytes": 5214
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "1347f0fa3794d30852aecab0a736ab227e9e192c80747f964b00cd9b3f0b2b01",
+      "bytes": 522
+    },
+    {
+      "path": "README.md",
+      "sha256": "c97f920823ca95dce547f4ea69e351ba324c1cc1558ed0fb9338bc89ac960ba6",
+      "bytes": 4316
+    },
+    {
+      "path": "config/default.yaml",
+      "sha256": "528ba90421394534bca34afb4863cf623cb49b841a5fce5ae4510726deffed85",
+      "bytes": 449
+    },
+    {
+      "path": "config/local.example.yaml",
+      "sha256": "f66e97d8111e2a3ca0c04ffd68b9c81c3302ed37f45126ae0897d564785b80d2",
+      "bytes": 157
+    },
+    {
+      "path": "config/robot.yaml",
+      "sha256": "b7155e59ecbbad36525423f4df759d055163b0ca1b96880cee11384591e332f1",
+      "bytes": 201
+    },
+    {
+      "path": "docs/common_development_standard.md",
+      "sha256": "c1056ba70624d098b0a5ae516ff40ff12cf329e5f0e434b5017cb3817e7e5df6",
+      "bytes": 16762
+    },
+    {
+      "path": "docs/integration.md",
+      "sha256": "ddf752b3047896a36338aa4293b57c00c0ef75b729aec950103dafa296a9a9b5",
+      "bytes": 8750
+    },
+    {
+      "path": "docs/low_level_planner.md",
+      "sha256": "f22d014b1d8879950e0d57068afd3514ba1e9ea968d28e2ce5e6c01c225e4424",
+      "bytes": 6572
+    },
+    {
+      "path": "docs/paper_inventory.json",
+      "sha256": "c05874ae53574c375a0c6a5c6d71028394eb823f5b39720a06e9d5bf5ceca578",
+      "bytes": 4759
+    },
+    {
+      "path": "docs/pr_body_ko.md",
+      "sha256": "690036da9e4fd13e3f251a79555714875ce8619e53be12094ae087a46bc6b57c",
+      "bytes": 2365
+    },
+    {
+      "path": "docs/requirements_traceability.md",
+      "sha256": "2b6f8a8304c5927e58a416331e7ad846aa45d6510e7847707370540d9ee464c7",
+      "bytes": 6800
+    },
+    {
+      "path": "docs/upload_guide_ko.md",
+      "sha256": "8a4c311725c5ee790b8b1aea5536c78a59556eb9fa75b66ed290cd534f8d7b1d",
+      "bytes": 2829
+    },
+    {
+      "path": "models/dual_head_ranker.json",
+      "sha256": "103584c48a3718149c25dbc6f2ce68710f97248cae24af9222bcbabdb455ea45",
+      "bytes": 38630
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "93c0c05e4fb2101e66ab1be0afe492fa925127b772a7fe5486d0869fa218d999",
+      "bytes": 601
+    },
+    {
+      "path": "reports/VALIDATION.md",
+      "sha256": "b4eb711bf7d4e16e8f78e171410820ecc8f05c483ca946b0c3714a417c9c0a98",
+      "bytes": 4630
+    },
+    {
+      "path": "reports/benchmark.json",
+      "sha256": "3a0264f723eb82351b7bebb3c78b2eb8f06d09aed69986664ea8d5859d93f213",
+      "bytes": 14347
+    },
+    {
+      "path": "reports/demo_preview.svg",
+      "sha256": "3f42ca49eaa2510daaa4a30f40d335a24e2016ae0ad070636fd5702ec9a2836e",
+      "bytes": 1917
+    },
+    {
+      "path": "reports/demo_result.json",
+      "sha256": "dc5e13f6d10a8bce59ef19dabaee193427afb9bcf2fd46514ff29e12f9d1b732",
+      "bytes": 25127
+    },
+    {
+      "path": "reports/training_report.json",
+      "sha256": "6a604b2e58e85d03d2048026fc44af0e61d4856ba5554531cfe955fb5cf0f183",
+      "bytes": 13904
+    },
+    {
+      "path": "reports/weight_sensitivity.json",
+      "sha256": "63fbd0f0d8c84d1a7e1c6be8ce538f91b78a06c3b6359c5d8efcf60ed506c7cb",
+      "bytes": 4646
+    },
+    {
+      "path": "ros2_ws/src/pac_common/pac_common/__init__.py",
+      "sha256": "d83248dd4d5dec38893b484d4f1d667d1a7b97e93411b3d65119d9ccb3487eb5",
+      "bytes": 530
+    },
+    {
+      "path": "ros2_ws/src/pac_common/pac_common/adapters.py",
+      "sha256": "51f2d9aa5abad950608868cb3731a1530da2d8bdf106de98b0c0e3b44421015b",
+      "bytes": 3065
+    },
+    {
+      "path": "ros2_ws/src/pac_common/pac_common/models.py",
+      "sha256": "c12ae2db56bfda0c16699773425bccdc2b55b619b5e16a780ac58b1d2580940a",
+      "bytes": 9416
+    },
+    {
+      "path": "ros2_ws/src/pac_common/pac_common/planning.py",
+      "sha256": "812d2f97e0f09ef700c6cc7d4ed3e38d04c285b0b255d9b251f057c61efa08a3",
+      "bytes": 6528
+    },
+    {
+      "path": "ros2_ws/src/pac_common/package.xml",
+      "sha256": "54bb45c184328598d573be5d63d933fccd3122940ad789f6e45582df172c4a4e",
+      "bytes": 442
+    },
+    {
+      "path": "ros2_ws/src/pac_common/resource/pac_common",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "ros2_ws/src/pac_common/setup.cfg",
+      "sha256": "b9be3b373e670ed81ce71803975023bd79b5c5e674a47c95f173572a8624c3e9",
+      "bytes": 89
+    },
+    {
+      "path": "ros2_ws/src/pac_common/setup.py",
+      "sha256": "9791a4aa1ce651953646e1dea2bc691e88a3b49a2111b5447801417d31fe6694",
+      "bytes": 611
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/__init__.py",
+      "sha256": "600451f891929b8c9288a798818c34f3190306751928983823ceed050020490b",
+      "bytes": 175
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/config.py",
+      "sha256": "1ee2eca31787bbaaaf130d90b91c6b782b11db2fedf0c6d9fecff109e6e845e5",
+      "bytes": 2956
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/demo.py",
+      "sha256": "a60ee88aeab93d672e17d591a546e76c3b8201595eb827bccfb58f563472f686",
+      "bytes": 6355
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/experiment.py",
+      "sha256": "c5e631821751222d4cea4805bf49add4faa925e29106b91b940a5202fbe95926",
+      "bytes": 16433
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/features.py",
+      "sha256": "c5822e4ebc43d8b0f83b63e94279907131eb94cb72ae1a716027bca976ba8508",
+      "bytes": 10865
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/geometry.py",
+      "sha256": "f529415074a30cc6d3047af7f1113d6654c31c9e5b99403261d02250e07a15d4",
+      "bytes": 3000
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/model.py",
+      "sha256": "d067fd4512da46257e6ed97f468d8f078d51741b04bb4c5bd6ed934985c27126",
+      "bytes": 8738
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/planner.py",
+      "sha256": "f492699855218aed6e332908437fcb4fff1e04400488ad8b7eb2fe3086d408b3",
+      "bytes": 14174
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/reference_backend.py",
+      "sha256": "a4e2a530cc069ebf19236c8d608eddfc7e5055b1efb7ef2828768a4c9208d25e",
+      "bytes": 9223
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/rollout.py",
+      "sha256": "6b705db59ccffeaafcb11a93a04ef935ed87214274fdf051d5d777f0a2019597",
+      "bytes": 4783
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/scenarios.py",
+      "sha256": "b583d361ec69f16df4072e3008f8194d2b4b4fc6e0a031e39b72293fca5e502f",
+      "bytes": 3745
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/pac_planning/scoring.py",
+      "sha256": "53c472e18951a802561b326e27add724f10496d6fffafc6037c633ee1440bf7d",
+      "bytes": 709
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/package.xml",
+      "sha256": "b44c834df61e33eaa7a75412d01e4b3b380bafe9d3fb0c99710724c677b76451",
+      "bytes": 526
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/resource/pac_planning",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/setup.cfg",
+      "sha256": "7a5fd3108a14bfbaa3c65a91e931c71bd715a71d402d4cfc54c786b534c1e5bc",
+      "bytes": 93
+    },
+    {
+      "path": "ros2_ws/src/pac_planning/setup.py",
+      "sha256": "cec05dca6104eb8b4b2e28a08f742b8f10664f959b17465a264c97e935e59ded",
+      "bytes": 654
+    },
+    {
+      "path": "test_data/scenario_001_basic.json",
+      "sha256": "017079cad4619bba590fb41d718eebeb083d9f7c5cc9a2048f583904037aef02",
+      "bytes": 2040
+    },
+    {
+      "path": "test_data/scenario_002_partial_pallet.json",
+      "sha256": "7a7e40405832952a44e0e56abf8e3d0e010bc0e9e34d22da7d45ff7bdbe7f5fb",
+      "bytes": 4141
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "380c3649f8c6c3e8cc3da04eedac95cd4d63676ae855be89f4d00d0bdc45c882",
+      "bytes": 703
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "sha256": "ecdbdc91247e0aca717b5d6e88af65be6337cef2a4014a7d0980820f43f28973",
+      "bytes": 3278
+    },
+    {
+      "path": "tests/test_learning.py",
+      "sha256": "790eeeb419f1ced58e3710ed9be640a7864cedae3cd56224b83b6883d1756999",
+      "bytes": 3058
+    },
+    {
+      "path": "tests/test_planning.py",
+      "sha256": "2191447712b2802f0ad9707c09dd7474655f1ad14f8ad95a3da8c340616c0dcd",
+      "bytes": 7160
+    },
+    {
+      "path": "tests/test_regressions.py",
+      "sha256": "513e8cfe603509f846810b102b3f1f5115ae736434af884fc2977d5e23746cc6",
+      "bytes": 2671
+    },
+    {
+      "path": "tests/test_rollout.py",
+      "sha256": "f0ece7fe637cd5e0c59e53d95ec624c84adabd8f98038e7b02e5b8ff2d919ff3",
+      "bytes": 2713
+    }
+  ]
+}

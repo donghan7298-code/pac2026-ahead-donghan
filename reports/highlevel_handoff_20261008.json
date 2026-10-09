@@ -1,0 +1,74 @@
+{
+  "scope": "PYTHON_SNAPSHOT_HANDOFF_ONLY",
+  "team_ref": "e75e2744510e9e3c85af58fc8d5ac2c99c19df59",
+  "python_version": "3.12.14",
+  "numpy_version": "2.3.5",
+  "policy_sha256": "419acb96962bbcdf291f875ad469b9bca725dbf3b7cebac4c7d76c6977cff3f4",
+  "policy_kind": "numpy",
+  "policy_metadata_sha256": "419acb96962bbcdf291f875ad469b9bca725dbf3b7cebac4c7d76c6977cff3f4",
+  "policy_contract": {
+    "slots": 4,
+    "value_provider": "proxy",
+    "placer": "dblf",
+    "candidate_config": "candidates.yaml"
+  },
+  "cases": [
+    {
+      "buffered": false,
+      "action": "PLACE_CURRENT",
+      "box_id": "B001",
+      "state_version": 12,
+      "ranked_count": 4,
+      "ems_source": "EMS_SUPPLIED",
+      "model_status": "PROVIDED",
+      "masked_probabilities": "PASS",
+      "stale_snapshot_rejection": "STALE_PLAN: high-level decision version differs from snapshot",
+      "state_unchanged": true
+    },
+    {
+      "buffered": true,
+      "action": "RETRIEVE_BUFFER(0)",
+      "box_id": "B001",
+      "state_version": 12,
+      "ranked_count": 4,
+      "ems_source": "EMS_SUPPLIED",
+      "model_status": "PROVIDED",
+      "masked_probabilities": "PASS",
+      "stale_snapshot_rejection": "STALE_PLAN: high-level decision version differs from snapshot",
+      "state_unchanged": true
+    }
+  ],
+  "lowlevel_mode": "ranking",
+  "planner_config": {
+    "top_k": 4,
+    "scenario_count": 3,
+    "horizon": 2,
+    "rollout_candidate_limit": 16,
+    "timeout_sec": 1.0,
+    "cvar_alpha": 0.2,
+    "grid_side": 12,
+    "target_support": 0.95,
+    "target_cog_margin": 0.2,
+    "target_load_margin": 0.2,
+    "min_cog_margin": 0.02,
+    "time_reference_sec": 20.0,
+    "base_handling_sec": 2.0,
+    "travel_speed_m_s": 0.5,
+    "rotation_sec_per_rad": 0.5,
+    "weights": {
+      "safety": 0.15,
+      "space": 0.3,
+      "future": 0.4,
+      "risk": 0.1,
+      "time": 0.05
+    }
+  },
+  "model_file": "models/team_fd683e56_smoke.json",
+  "training_contract_equivalence_verified": false,
+  "fixture": "scenario_001_basic; buffer capacity explicitly matched to policy",
+  "robot_execution": "NOT_RUN",
+  "physical_execution": "NOT_RUN",
+  "ros2": "NOT_RUN",
+  "value_provider_mismatch_rejection": "policy contract mismatch on value_provider: trained 'proxy', deployed 'donghan'",
+  "status": "PASS"
+}

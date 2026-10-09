@@ -1,0 +1,13 @@
+scenario_id,scenario_family,seed
+S0001,normal,20261008
+S0002,normal,20262017
+S0003,size_mixed,20263026
+S0004,size_mixed,20264035
+S0005,weight_mixed,20265044
+S0006,weight_mixed,20266053
+S0007,late_large,20267062
+S0008,late_large,20268071
+S0009,late_heavy,20269080
+S0010,late_heavy,20270089
+S0011,repeated_sku,20271098
+S0012,repeated_sku,20272107

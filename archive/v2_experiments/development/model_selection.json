@@ -1,0 +1,61 @@
+{
+  "selection": "VALIDATION_ONLY",
+  "selected": {
+    "seed": 17,
+    "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_17/model.json",
+    "selected_epoch": 10,
+    "validation_objective": 0.05306537055750232,
+    "validation": {
+      "queries": 195,
+      "candidates": 3008,
+      "teacher_best_top_k_recall": 0.9743589743589743,
+      "teacher_top1_relevance_regret": 0.03927048016817142,
+      "future_output_mse": {
+        "mean": 0.0007334016056738042,
+        "cvar": 0.0006721706574792091,
+        "blocking_rate": 0.039573397338049036,
+        "failure_rate": 0.014200591956121576
+      }
+    }
+  },
+  "seeds": [
+    {
+      "seed": 7,
+      "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_7/model.json",
+      "selected_epoch": 13,
+      "validation_objective": 0.053118708969056405,
+      "validation": {
+        "queries": 195,
+        "candidates": 3008,
+        "teacher_best_top_k_recall": 0.9743589743589743,
+        "teacher_top1_relevance_regret": 0.04020173030021863,
+        "future_output_mse": {
+          "mean": 0.00043918259476589814,
+          "cvar": 0.0004766666211233769,
+          "blocking_rate": 0.03580953922609533,
+          "failure_rate": 0.01494252623336647
+        }
+      }
+    },
+    {
+      "seed": 17,
+      "model": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/models/seed_17/model.json",
+      "selected_epoch": 10,
+      "validation_objective": 0.05306537055750232,
+      "validation": {
+        "queries": 195,
+        "candidates": 3008,
+        "teacher_best_top_k_recall": 0.9743589743589743,
+        "teacher_top1_relevance_regret": 0.03927048016817142,
+        "future_output_mse": {
+          "mean": 0.0007334016056738042,
+          "cvar": 0.0006721706574792091,
+          "blocking_rate": 0.039573397338049036,
+          "failure_rate": 0.014200591956121576
+        }
+      }
+    }
+  ],
+  "default_replaced": false,
+  "ros_robot_execution": "NOT_RUN"
+}

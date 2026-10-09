@@ -1,0 +1,28 @@
+
+==================================== ERRORS ====================================
+_______________________ ERROR collecting tests/taehyeon ________________________
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
+    ???
+<frozen importlib._bootstrap>:935: in _load_unlocked
+    ???
+../test_deps/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/taehyeon/conftest.py:10: in <module>
+    from th_helpers import REPO, make_context  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/taehyeon/th_helpers.py:16: in <module>
+    team_paths.bootstrap()
+scripts/taehyeon/team_paths.py:68: in bootstrap
+    raise RuntimeError(
+E   RuntimeError: pac_common not found. Run scripts/taehyeon/fetch_team_deps.sh or set PAC_COMMON_SRC.
+=========================== short test summary info ============================
+ERROR tests/taehyeon - RuntimeError: pac_common not found. Run scripts/taehye...
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.15s

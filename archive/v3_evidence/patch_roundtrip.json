@@ -1,0 +1,34 @@
+[
+  {
+    "baseline": "b320251caa6de8dff8d2e3ab88f74211f2c60d59",
+    "patch_sha256": "6bdddb7154c969a135c6899af5d276f7e1388395759b6b8e65b2e9bceb4cc1e5",
+    "files_verified": 167,
+    "apply_check": true,
+    "apply": true,
+    "final_bytes_match": true
+  },
+  {
+    "baseline": "705b5bb86042da1c828f1f2b3843f39152e5670f",
+    "patch_sha256": "853d8168c613120f5d9517653f5d9c0bbfa67e30de77e9686f07f5ba5b894648",
+    "files_verified": 167,
+    "apply_check": true,
+    "apply": true,
+    "final_bytes_match": true
+  },
+  {
+    "baseline": "81d0333ba6550d9ee6f02661d8b8d9e79beaca6c",
+    "patch_sha256": "133da646334cf957d0dca9b2d91f0b91665f06d6252160364b369946b55b6f77",
+    "files_verified": 9,
+    "apply_check": true,
+    "apply": true,
+    "final_bytes_match": true
+  },
+  {
+    "baseline": "HEAD",
+    "patch_sha256": "c6398deed9dacef494a2cf94baf662165e377eb3adc8587643b35ecb4f6bb525",
+    "files_verified": 2,
+    "apply_check": true,
+    "apply": true,
+    "final_bytes_match": true
+  }
+]

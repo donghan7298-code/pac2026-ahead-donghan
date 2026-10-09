@@ -1,0 +1,6 @@
+schema_version: 1
+# Stage 6 owns robot-specific settings. No UR20 reach or payload is assumed.
+validation_backend: external_required
+robot_model: null
+gripper_mass_kg: null
+load_com_in_gripper_m: null

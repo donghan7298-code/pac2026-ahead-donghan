@@ -1,0 +1,59 @@
+{
+  "mode": "learned_ranking",
+  "scenario_id": "S0010",
+  "seed": 201,
+  "variant": "nominal",
+  "inventory_group": "df654ad97890eeba14401b298c29200cc08cf3c53230f5ef4445a5e741052717",
+  "family": "late_heavy",
+  "stream_sha256": "0b3e01d10635d2d4f27d7254956897fa43eb096deb5fb5e6550564b92b143df6",
+  "outcome_sha256": "2f0088cf124a9a75aa2401b7fbd14885b3b17da0d80faa49d72df11ad39d4b58",
+  "placed": 24,
+  "pallets": 3,
+  "fill_true_mean": 0.1260531893004115,
+  "time_s": 447.9,
+  "placed_volume_m3": 0.6126185000000002,
+  "pallet_equivalent": 2.6218404320987654,
+  "L4": 0,
+  "final_audit_issues": 0,
+  "final_audit_codes": {},
+  "executability_rate": 1.0,
+  "ems_verified": true,
+  "model_fallback_calls": 0,
+  "inspection": 0,
+  "missing": 0,
+  "stage6": {
+    "calls": 40,
+    "robot_rejected": 13,
+    "code:ROBOT_COLLISION": 13,
+    "fell_back": 6
+  },
+  "decisions": {
+    "PLACE_CURRENT": 17,
+    "L0": 24,
+    "grip_retries": 1,
+    "BUFFER_CURRENT": 7,
+    "RETRIEVE_BUFFER": 7,
+    "PALLET_CLOSE": 2
+  },
+  "ranker_provenance": {
+    "ranker": "donghan_ems_rollout_v1",
+    "calls": 40,
+    "candidate_evaluations": 148,
+    "geometry_sources": {
+      "EMS_SUPPLIED": 148
+    },
+    "ems_verified": true,
+    "model_statuses": {
+      "PROVIDED": 40
+    },
+    "robot_validation_required_calls": 40,
+    "backend_contract_sha256": "b4925444700225794b829fdfa57ac465d090094336e8e8ea40fab76463f47022"
+  },
+  "wall_time_sec": 41.21040296499996,
+  "planner_mean_sec": 0.6547822865001081,
+  "planner_p95_sec": 1.673462345000323,
+  "scope": "PYTHON_RUNTIME_SIMULATION",
+  "robot_execution": "NOT_RUN",
+  "evaluation_digest": "ba64c2c101f2165372238ca52722e13af143d5f39851587fbcdeb5ba89245d61",
+  "episode_sha256": "8a23ee512e943fd1dd48fa3ec9467c14926aa472ddb871d33c6d74c0fa03be74"
+}

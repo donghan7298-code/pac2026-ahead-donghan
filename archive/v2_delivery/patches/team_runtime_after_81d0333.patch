@@ -1,0 +1,371 @@
+diff --git a/ros2_ws/src/pac_runtime/launch/gazebo_cell.launch.py b/ros2_ws/src/pac_runtime/launch/gazebo_cell.launch.py
+index 0fd65b4..71a254c 100644
+--- a/ros2_ws/src/pac_runtime/launch/gazebo_cell.launch.py
++++ b/ros2_ws/src/pac_runtime/launch/gazebo_cell.launch.py
+@@ -4,11 +4,15 @@ Start the Gazebo workcell first (pac2026-ahead workspace, other terminal),
+ with the robot on the 0.5 m pedestal:
+     ros2 launch ~/pac-mission1-shared/tools/runtime/launch/hdr50_pedestal_workcell.launch.py
+ then (this workspace):
+-    ros2 launch pac_runtime gazebo_cell.launch.py repo:=$HOME/pac-mission1-shared
++    ros2 launch pac_runtime gazebo_cell.launch.py \
++      repo:=$HOME/pac-mission1-shared ranker:=donghan
+ 
+ Both nodes use config/taehyeon/robot_check_gazebo.yaml (robot base at world
+ (1.35, 0.15, 0.5), pallet centre (1.35, -1.0)), so the joint values match the
+-robot in Gazebo.
++robot in Gazebo. ``ranker:=dblf`` remains the compatibility default. The
++Donghan ranker uses its deterministic EMS-backed heuristic when
++``ranker_model_path`` is empty. Learned models require their matching
++``ranker_config`` to preserve the rollout horizon/scenario contract.
+ """
+ 
+ from launch import LaunchDescription
+@@ -27,6 +31,13 @@ def generate_launch_description():
+             [LaunchConfiguration("repo"), "config", "taehyeon", "example_order.json"])),
+         DeclareLaunchArgument("speed_scale", default_value="0.3"),
+         DeclareLaunchArgument("seed", default_value="0"),
++        DeclareLaunchArgument("ranker", default_value="dblf",
++                              description="low-level ordering: dblf or donghan"),
++        DeclareLaunchArgument("ranker_model_path", default_value="",
++                              description="optional validated donghan model; empty uses deterministic heuristic"),
++        DeclareLaunchArgument("ranker_config", default_value="",
++                              description="matching Donghan planner config (horizon/scenario contract)"),
++        DeclareLaunchArgument("ranker_seed", default_value="7"),
+         Node(package="pac_runtime", executable="runtime_node", output="screen", parameters=[{
+             "order_file": order,
+             "candidates_config": cfg("candidates.yaml"),
+@@ -34,6 +45,10 @@ def generate_launch_description():
+             "runtime_config": cfg("runtime.yaml"),
+             "robot_config": cfg("robot_check_gazebo.yaml"),
+             "policy": "rule",
++            "ranker": LaunchConfiguration("ranker"),
++            "ranker_model_path": LaunchConfiguration("ranker_model_path"),
++            "ranker_config": LaunchConfiguration("ranker_config"),
++            "ranker_seed": LaunchConfiguration("ranker_seed"),
+         }]),
+         Node(package="pac_runtime", executable="gazebo_cell", output="screen", parameters=[{
+             "order_file": order,
+diff --git a/ros2_ws/src/pac_runtime/launch/runtime.launch.py b/ros2_ws/src/pac_runtime/launch/runtime.launch.py
+index 9de04b1..c75bc75 100644
+--- a/ros2_ws/src/pac_runtime/launch/runtime.launch.py
++++ b/ros2_ws/src/pac_runtime/launch/runtime.launch.py
+@@ -1,6 +1,7 @@
+ """Start the AHEAD runtime node (stages 1-8 decisions) with taehyeon's configs.
+ 
+-    ros2 launch pac_runtime runtime.launch.py repo:=/path/to/pac-mission1-shared order_file:=/path/order.json
++    ros2 launch pac_runtime runtime.launch.py repo:=/path/to/pac-mission1-shared \
++      order_file:=/path/order.json ranker:=donghan
+ """
+ 
+ from launch import LaunchDescription
+@@ -17,6 +18,13 @@ def generate_launch_description():
+         DeclareLaunchArgument("order_file", description="order list JSON (see pac_runtime/order.py)"),
+         DeclareLaunchArgument("policy", default_value="rule"),
+         DeclareLaunchArgument("policy_file", default_value=""),
++        DeclareLaunchArgument("ranker", default_value="dblf",
++                              description="low-level ordering: dblf or donghan"),
++        DeclareLaunchArgument("ranker_model_path", default_value="",
++                              description="optional validated donghan model; empty uses deterministic heuristic"),
++        DeclareLaunchArgument("ranker_config", default_value="",
++                              description="matching Donghan planner config (horizon/scenario contract)"),
++        DeclareLaunchArgument("ranker_seed", default_value="7"),
+         Node(
+             package="pac_runtime",
+             executable="runtime_node",
+@@ -29,6 +37,10 @@ def generate_launch_description():
+                 "robot_config": cfg("robot_check.yaml"),
+                 "policy": LaunchConfiguration("policy"),
+                 "policy_file": LaunchConfiguration("policy_file"),
++                "ranker": LaunchConfiguration("ranker"),
++                "ranker_model_path": LaunchConfiguration("ranker_model_path"),
++                "ranker_config": LaunchConfiguration("ranker_config"),
++                "ranker_seed": LaunchConfiguration("ranker_seed"),
+             }],
+         ),
+     ])
+diff --git a/ros2_ws/src/pac_runtime/pac_runtime/core.py b/ros2_ws/src/pac_runtime/pac_runtime/core.py
+index e9e42e4..df2e975 100644
+--- a/ros2_ws/src/pac_runtime/pac_runtime/core.py
++++ b/ros2_ws/src/pac_runtime/pac_runtime/core.py
+@@ -168,8 +168,8 @@ class RuntimeCore:
+         sm, a = self.sm, cmd.action
+         report = report or ExecutionReport()
+         if cmd.state_version != sm.version and a not in ("WAIT",):
+-            # something changed between decision and execution: the caller must re-plan
+             self.counts["stale_result"] += 1
++            raise ValueError("STALE_RESULT: state changed after the command was planned")
+         if a == "REJECT_NG":
+             sm.reject(cmd.box_id)
+             self.inspection.append({"box_id": cmd.box_id, "reason": cmd.reason, "stage": 4})
+diff --git a/ros2_ws/src/pac_runtime/pac_runtime/placer.py b/ros2_ws/src/pac_runtime/pac_runtime/placer.py
+index 44523d5..7911a44 100644
+--- a/ros2_ws/src/pac_runtime/pac_runtime/placer.py
++++ b/ros2_ws/src/pac_runtime/pac_runtime/placer.py
+@@ -46,24 +46,14 @@ class RobotAwarePlacer:
+ 
+ 
+ def donghan_ranker(model_path=None, planner_config=None, seed=7):
+-    """Ranking by donghan's 5-3~5-6 planner; candidates it does not rank keep
+-    their DBLF order behind the ranked ones."""
+-    from pac_planning import PlacementPlanner, PlannerConfig
++    """Rank with donghan's EMS-backed 5-3~5-6 planner.
+ 
+-    cfg = planner_config or PlannerConfig()
+-    model = None
+-    if model_path is not None:
+-        from pac_highlevel.value import _load_ranker
++    Candidates rejected by the planner are intentionally omitted instead of
++    being appended again as DBLF fallbacks.
++    """
++    from pac_planning import PlannerConfig, TeamRuntimeRanker
+ 
+-        model = _load_ranker(model_path)
+-
+-    def rank(valid, box, state, backend):
+-        planner = PlacementPlanner(context=backend.context, config=cfg,
+-                                   generate_candidates=backend.generate_candidates,
+-                                   validate_constraints=backend.validate_constraints, model=model)
+-        box = state.inventory.tracked_boxes.get(box.box_id, box)
+-        ranked = list(planner.plan(box, state, valid, seed=seed).ranked)
+-        seen = {c.candidate_id for c in ranked}
+-        return ranked + [c for c in dblf_order(valid) if c.candidate_id not in seen]
+-
+-    return rank
++    return TeamRuntimeRanker(
++        planner_config or PlannerConfig(), model_path=model_path,
++        seed=seed, mode="ahead", use_time_budget=False,
++    )
+diff --git a/ros2_ws/src/pac_runtime/pac_runtime/ros_node.py b/ros2_ws/src/pac_runtime/pac_runtime/ros_node.py
+index 2af6fba..d26c953 100644
+--- a/ros2_ws/src/pac_runtime/pac_runtime/ros_node.py
++++ b/ros2_ws/src/pac_runtime/pac_runtime/ros_node.py
+@@ -13,7 +13,8 @@ Topics (all JSON):
+ 
+ Parameters: ``order_file`` (see ``order.py``), ``candidates_config``,
+ ``highlevel_config``, ``runtime_config``, ``robot_config``, ``policy``
+-(rule | numpy | sb3) and ``policy_file``.
++(rule | numpy | sb3), ``policy_file``, ``ranker`` (dblf | donghan),
++``ranker_model_path``, ``ranker_config`` and ``ranker_seed``.
+ 
+ Run (after ``colcon build``)::
+ 
+@@ -73,6 +74,27 @@ def report_from_dict(d):
+                            repack_poses={k: pose(v) for k, v in (d.get("repack_poses") or {}).items()})
+ 
+ 
++def make_runtime_ranker(name="dblf", model_path="", seed=7, config_path=""):
++    """Build the optional stage-5 ranker without changing the PPO contract.
++
++    ``dblf`` keeps the existing runtime behaviour.  ``donghan`` only replaces
++    the low-level ordering inside :class:`RobotAwarePlacer`; stage 4 still uses
++    its declared proxy + DBLF value-provider contract.  An empty model path is
++    intentional: no learned model is assumed compatible with the live EMS
++    backend until its saved backend fingerprint has been checked.
++    """
++    selected = str(name).strip().lower()
++    if selected in ("", "dblf"):
++        return None
++    if selected == "donghan":
++        from .placer import donghan_ranker
++        from pac_planning.config import load_config
++
++        config = load_config(config_path) if config_path else None
++        return donghan_ranker(model_path or None, planner_config=config, seed=int(seed))
++    raise ValueError(f"unknown runtime ranker: {name!r} (expected dblf or donghan)")
++
++
+ class CoreBridge:
+     """ROS-free message handling (unit-tested); the node only moves strings."""
+ 
+@@ -102,8 +124,16 @@ class CoreBridge:
+             raise ValueError("no outstanding command")
+         if int(d.get("state_version", self.pending.state_version)) != self.pending.state_version:
+             raise ValueError("result for another command")
++        completed_action = self.pending.action
+         level = self.core.on_result(self.pending, report_from_dict(d))
+         self.pending = None
++        # These commands release the conveyor box.  The plant publishes the
++        # next observation immediately afterwards, so planning a buffered-box
++        # command here would use the pre-arrival state and become stale as soon
++        # as that observation lands.  Let on_observation/on_idle plan it from
++        # the authoritative new snapshot instead.
++        if completed_action in ("PLACE_CURRENT", "BUFFER_CURRENT", "REJECT_NG"):
++            return level, None
+         return level, self._next()
+ 
+     def on_idle(self, text):
+@@ -112,9 +142,14 @@ class CoreBridge:
+ 
+     def status(self):
+         sm = self.core.sm
+-        return {"state_version": sm.version, "pallet_id": sm.pallet_id, "placed": len(sm.placed),
+-                "buffer": sm.buffer_slots(), "mode": self.core.supervisor.mode.value,
+-                "inspection": len(self.core.inspection), "counts": dict(self.core.counts)}
++        ranker = self.core.placer.ranker
++        out = {"state_version": sm.version, "pallet_id": sm.pallet_id, "placed": len(sm.placed),
++               "buffer": sm.buffer_slots(), "mode": self.core.supervisor.mode.value,
++               "inspection": len(self.core.inspection), "counts": dict(self.core.counts),
++               "ranker": getattr(ranker, "name", "dblf") if ranker is not None else "dblf"}
++        if ranker is not None and hasattr(ranker, "provenance"):
++            out["ranker_provenance"] = ranker.provenance()
++        return out
+ 
+ 
+ def main(args=None):  # pragma: no cover - needs ROS 2
+@@ -135,12 +170,14 @@ def main(args=None):  # pragma: no cover - needs ROS 2
+             super().__init__("pac_runtime")
+             p = {n: self.declare_parameter(n, d).value for n, d in (
+                 ("order_file", ""), ("candidates_config", ""), ("highlevel_config", ""),
+-                ("runtime_config", ""), ("robot_config", ""), ("policy", "rule"), ("policy_file", ""))}
++                ("runtime_config", ""), ("robot_config", ""), ("policy", "rule"), ("policy_file", ""),
++                ("ranker", "dblf"), ("ranker_model_path", ""), ("ranker_config", ""), ("ranker_seed", 7))}
+             cand = load_candidate_config(p["candidates_config"])
+             hl = load_highlevel_config(p["highlevel_config"])
+             policy = load_policy(p["policy"], p["policy_file"] or None, config=hl)
++            ranker = make_runtime_ranker(p["ranker"], p["ranker_model_path"], p["ranker_seed"], p["ranker_config"])
+             core = RuntimeCore(load_order(p["order_file"], cand), cand, hl, load_runtime_config(p["runtime_config"]),
+-                               RobotFeasibility(load_robot_check_config(p["robot_config"])), policy)
++                               RobotFeasibility(load_robot_check_config(p["robot_config"])), policy, ranker=ranker)
+             self.bridge = CoreBridge(core)
+             self.cmd_pub = self.create_publisher(String, "/pac/command", 10)
+             self.status_pub = self.create_publisher(String, "/pac/status", 10)
+diff --git a/ros2_ws/src/pac_runtime/package.xml b/ros2_ws/src/pac_runtime/package.xml
+index 6a1ddbb..dd530f9 100644
+--- a/ros2_ws/src/pac_runtime/package.xml
++++ b/ros2_ws/src/pac_runtime/package.xml
+@@ -8,6 +8,7 @@
+   <exec_depend>pac_common</exec_depend>
+   <exec_depend>pac_candidates</exec_depend>
+   <exec_depend>pac_highlevel</exec_depend>
++  <exec_depend>pac_planning</exec_depend>
+   <exec_depend>pac_robot_check</exec_depend>
+   <exec_depend>python3-yaml</exec_depend>
+   <exec_depend>rclpy</exec_depend>
+diff --git a/tests/taehyeon/test_th_runtime.py b/tests/taehyeon/test_th_runtime.py
+index 5a9c226..9fa8203 100644
+--- a/tests/taehyeon/test_th_runtime.py
++++ b/tests/taehyeon/test_th_runtime.py
+@@ -240,6 +240,23 @@ def test_core_event_api_like_a_real_cell():
+     assert core.on_conveyor_idle(60.0) == Counter() and not core.has_work()
+ 
+ 
++def test_core_rejects_result_after_state_changed():
++    """A matching command id/version is still stale if another event changed state."""
++    from pac_runtime import ExecutionReport, RawObservation, RuntimeCore
++
++    hl = replace(HighLevelConfig(), buffer=replace(HighLevelConfig().buffer, slots=2))
++    core = RuntimeCore(_cell((), {"K": 2}), CandidateConfig(), hl, RuntimeConfig(), RobotFeasibility(),
++                       load_policy("rule", config=hl))
++    core.on_observation(RawObservation(
++        "A", "K", 4.0, Size3D(0.4, 0.3, 0.2), 1.0, False, "top", 0.0))
++    cmd = core.next_command()
++    core.on_observation(RawObservation(
++        "B", "K", 4.0, Size3D(0.4, 0.3, 0.2), 1.0, False, "top", 1.0))
++    with pytest.raises(ValueError, match="STALE_RESULT"):
++        core.on_result(cmd, ExecutionReport(measured_pose=cmd.candidate.target_pose))
++    assert not core.sm.placed and {"A", "B"} <= set(core.sm.tracked)
++
++
+ def test_order_file_and_ros_bridge_messages():
+     import json
+ 
+@@ -271,6 +288,44 @@ def test_order_file_and_ros_bridge_messages():
+     assert missing == {"K": 1}
+ 
+ 
++def test_runtime_ranker_selection_and_status_provenance(tmp_path):
++    """The ROS-free factory exposes Donghan's EMS ranker without changing stage 4."""
++    import json
++
++    from pac_runtime import RuntimeCore
++    from pac_runtime.order import cell_from_order
++    from pac_runtime.ros_node import CoreBridge, make_runtime_ranker
++
++    assert make_runtime_ranker("dblf") is None
++    with pytest.raises(ValueError, match="unknown runtime ranker"):
++        make_runtime_ranker("unvalidated")
++
++    ranker = make_runtime_ranker("donghan", seed=11)
++    assert ranker.name == "donghan_ems_rollout_v1" and ranker.model is None
++    order = {"pallet": {"size_m": [1.2, 1.0, 1.35]},
++             "skus": {"K": {"size_m": [0.4, 0.3, 0.2], "weight_kg": [2.0, 6.0], "count": 1}}}
++    hl = replace(HighLevelConfig(), buffer=replace(HighLevelConfig().buffer, slots=2))
++    core = RuntimeCore(cell_from_order(order, CandidateConfig()), CandidateConfig(), hl, RuntimeConfig(),
++                       RobotFeasibility(), load_policy("rule", config=hl), ranker=ranker)
++    bridge = CoreBridge(core)
++    before = bridge.status()
++    assert before["ranker"] == "donghan_ems_rollout_v1"
++    assert before["ranker_provenance"]["calls"] == 0
++
++    obs = {"box_id": "A", "label_sku": "K", "weight_kg": 4.0, "size_m": [0.4, 0.3, 0.2]}
++    _, cmd = bridge.on_observation(json.dumps(obs))
++    assert cmd["action"] == "PLACE_CURRENT"
++    after = bridge.status()["ranker_provenance"]
++    assert after["calls"] > 0 and after["candidate_evaluations"] > 0
++    assert after["ems_verified"] is True
++
++    # A trained h2/s3 model must be deployed with its matching rollout config.
++    config = tmp_path / "ranker.yaml"
++    config.write_text("schema_version: 1\nplanning:\n  horizon: 2\n  scenario_count: 3\n")
++    configured = make_runtime_ranker("donghan", config_path=str(config))
++    assert configured.config.horizon == 2 and configured.config.scenario_count == 3
++
++
+ def test_state_manager_reconciles_measurement_noise():
+     sm = StateManager(PALLET, CAT, {"K": 3}, pallet_max_weight_kg=500, buffer_slots=2)
+     for i, pose in enumerate([Pose3D("pallet", 0.0, 0.0, 0.0), Pose3D("pallet", 0.4, 0.0, 0.0)]):
+diff --git a/tools/runtime/scripts/run_runtime.py b/tools/runtime/scripts/run_runtime.py
+index 1595d3f..4a6be53 100644
+--- a/tools/runtime/scripts/run_runtime.py
++++ b/tools/runtime/scripts/run_runtime.py
+@@ -12,6 +12,7 @@ Variants (paired, same streams and seeds):
+ """
+ 
+ import argparse
++from collections import Counter
+ from dataclasses import replace
+ import json
+ import multiprocessing as mp
+@@ -66,6 +67,8 @@ def _run(task):
+         ranker = donghan_ranker()
+     out = RuntimeLoop(cell, cand, hl, rt, robot, load_policy("rule", config=hl), ranker=ranker,
+                       log_events=False).run()
++    if ranker is not None:
++        out["ranker_provenance"] = ranker.provenance()
+     out.pop("events", None)
+     for p in out["pallet_list"]:
+         p.pop("layout", None)
+@@ -126,11 +129,32 @@ def main():
+             "inspection_reasons": {r: sum(1 for o in outs for i in o["inspection"] if i["reason"] == r)
+                                    for r in sorted({i["reason"] for o in outs for i in o["inspection"]})},
+         }
++        provenance = [o["ranker_provenance"] for o in outs if "ranker_provenance" in o]
++        if provenance:
++            geometry = Counter()
++            statuses = Counter()
++            for item in provenance:
++                geometry.update(item["geometry_sources"])
++                statuses.update(item["model_statuses"])
++            contracts = sorted({item["backend_contract_sha256"] for item in provenance})
++            summary[v]["ranker_provenance"] = {
++                "ranker": provenance[0]["ranker"],
++                "calls": sum(item["calls"] for item in provenance),
++                "candidate_evaluations": sum(item["candidate_evaluations"] for item in provenance),
++                "geometry_sources": dict(sorted(geometry.items())),
++                "ems_verified": all(item["ems_verified"] for item in provenance),
++                "model_statuses": dict(sorted(statuses.items())),
++                "robot_validation_required_calls": sum(
++                    item["robot_validation_required_calls"] for item in provenance
++                ),
++                "backend_contract_sha256": contracts,
++            }
+     for v, s in summary.items():
+         print(v, json.dumps(s))
+     if args.report:
+         args.report.parent.mkdir(parents=True, exist_ok=True)
+-        args.report.write_text(json.dumps({"split": args.split, "variants": args.variants, "summary": summary,
++        args.report.write_text(json.dumps({"split": args.split, "variants": args.variants,
++                                           "ranker": args.ranker, "summary": summary,
+                                            "spec_mismatch_probability": args.spec_mismatch,
+                                            "missing_probability": args.missing,
+                                            "episodes": [{"variant": v, "scenario": s, "seed": p, **o}

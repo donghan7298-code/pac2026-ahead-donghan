@@ -1,0 +1,159 @@
+{
+  "scope": "validation candidate-level sensitivity; weights remain provisional",
+  "variants": [
+    {
+      "name": "baseline",
+      "weights": {
+        "safety": 0.15,
+        "space": 0.3,
+        "future": 0.4,
+        "risk": 0.1,
+        "time": 0.05
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "safety_x0.8",
+      "weights": {
+        "safety": 0.12371134020618557,
+        "space": 0.30927835051546393,
+        "future": 0.4123711340206186,
+        "risk": 0.10309278350515465,
+        "time": 0.051546391752577324
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "safety_x1.2",
+      "weights": {
+        "safety": 0.17475728155339804,
+        "space": 0.2912621359223301,
+        "future": 0.3883495145631068,
+        "risk": 0.0970873786407767,
+        "time": 0.04854368932038835
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "space_x0.8",
+      "weights": {
+        "safety": 0.15957446808510636,
+        "space": 0.2553191489361702,
+        "future": 0.425531914893617,
+        "risk": 0.10638297872340426,
+        "time": 0.05319148936170213
+      },
+      "mean_future_value": 0.16107486263736265,
+      "mean_blocking": 0.017857142857142856,
+      "mean_time_proxy_sec": 3.0076977971671033,
+      "pareto": true
+    },
+    {
+      "name": "space_x1.2",
+      "weights": {
+        "safety": 0.14150943396226415,
+        "space": 0.33962264150943394,
+        "future": 0.37735849056603776,
+        "risk": 0.09433962264150944,
+        "time": 0.04716981132075472
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.0510077570355794,
+      "pareto": false
+    },
+    {
+      "name": "future_x0.8",
+      "weights": {
+        "safety": 0.16304347826086954,
+        "space": 0.3260869565217391,
+        "future": 0.3478260869565218,
+        "risk": 0.10869565217391304,
+        "time": 0.05434782608695652
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "future_x1.2",
+      "weights": {
+        "safety": 0.13888888888888887,
+        "space": 0.27777777777777773,
+        "future": 0.4444444444444444,
+        "risk": 0.09259259259259259,
+        "time": 0.046296296296296294
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "risk_x0.8",
+      "weights": {
+        "safety": 0.15306122448979592,
+        "space": 0.30612244897959184,
+        "future": 0.40816326530612246,
+        "risk": 0.08163265306122451,
+        "time": 0.05102040816326531
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "risk_x1.2",
+      "weights": {
+        "safety": 0.14705882352941177,
+        "space": 0.29411764705882354,
+        "future": 0.39215686274509803,
+        "risk": 0.11764705882352941,
+        "time": 0.049019607843137254
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    },
+    {
+      "name": "time_x0.8",
+      "weights": {
+        "safety": 0.15151515151515152,
+        "space": 0.30303030303030304,
+        "future": 0.4040404040404041,
+        "risk": 0.10101010101010102,
+        "time": 0.040404040404040414
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.0510077570355794,
+      "pareto": false
+    },
+    {
+      "name": "time_x1.2",
+      "weights": {
+        "safety": 0.1485148514851485,
+        "space": 0.297029702970297,
+        "future": 0.39603960396039606,
+        "risk": 0.09900990099009901,
+        "time": 0.0594059405940594
+      },
+      "mean_future_value": 0.16014766483516482,
+      "mean_blocking": 0.026785714285714284,
+      "mean_time_proxy_sec": 3.031069827158711,
+      "pareto": false
+    }
+  ]
+}

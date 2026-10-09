@@ -1,0 +1,30 @@
+{
+ "PAC2026_AHEAD_Dataset_Adapter.zip": {
+  "bytes": 33385,
+  "sha256": "ce67e440139f39d387367b12e08e206f31f2f80477d0400e0776d2d621c58201"
+ },
+ "PAC2026_Donghan_Model_v2_20261009.zip": {
+  "bytes": 6311058,
+  "sha256": "62dc750b0184cb817a4aeba1ef4c0bd6a01db83e06d9bc62b892738766246e5a"
+ },
+ "PAC2026_Donghan_Planner_5_3_to_5_6.zip": {
+  "bytes": 114742,
+  "sha256": "30fe8843f968b1978b90b2498a8980e9d4dc41363610e7cf4b2f2eb5ad144f27"
+ },
+ "PAC2026_Donghan_Team_Integration_20261008.zip": {
+  "bytes": 67565,
+  "sha256": "bbd4873cc27ccf65056584224cc39a8bf43bb9371fdc3f1354c4e9a979217c48"
+ },
+ "PAC2026_Donghan_v3_20261009_code.zip": {
+  "bytes": 1548771,
+  "sha256": "083cb5f71c02d47200601e793454e175e737040365dbdc17a06a9c4ffdaa80a4"
+ },
+ "PAC2026_Generator_Model_Training_20261008.zip": {
+  "bytes": 736332,
+  "sha256": "ebcbd26704d3215c09ad9dd90456a1ea6cff387843bf01e8c17813ee92bc63e8"
+ },
+ "pac-mission1-shared-feature-donghan-placement-planner.zip": {
+  "bytes": 309323,
+  "sha256": "4ffd95c1bbff1e83051c44a5523b6be3ebbef75bef56099497366afd9f8cf0c5"
+ }
+}

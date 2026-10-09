@@ -1,0 +1,190 @@
+{
+  "scope": "BULLET_RIGID_SETTLEMENT_ONLY",
+  "deck": "solid",
+  "boxes": 8,
+  "status": "PASS_SETTLEMENT",
+  "fixture_sha256": "a606d96767769883f462c76ac055822de6acd374f3d70a5780b1009c7bb2e16d",
+  "runtime_report_sha256": "9cbf9b023a5968d7e79819c8f2bb084f906e73cf38dcf38c61c96364a10fb60e",
+  "simulator_source_sha256": {
+    "pac_simulation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pac_simulation/ahead_sim/__init__.py": "814c3e63506a01c203e6c6d052a011e43eb4b68c633808c10b3ccb4aecdb6a40",
+    "pac_simulation/ahead_sim/config.py": "35969ee6907ea09092883d9691982fe691b35e978f531e6a94c36b3e2c9a7773",
+    "pac_simulation/ahead_sim/contact_graph.py": "fe284f105c2d8354f522108fcde5f5f795c2d2c13b043d7979a34106966e87bb",
+    "pac_simulation/ahead_sim/force_window.py": "46fd49fcb3bbd83e772777f71cb856e31cb1d351e9eeee366ba984e131cd7516",
+    "pac_simulation/ahead_sim/metrics.py": "23257d496dc5d3fb0d1d66f2296a2b91cea48fe110f3d415d4c9ee9e199b0d3f",
+    "pac_simulation/ahead_sim/models.py": "e19f7db0bef4adb36aec10d51d6b6bbddf33649ec9bea7a642391c0ffbddb1d4",
+    "pac_simulation/ahead_sim/server.py": "fbdf2051d85852e95cdceb16715f0b45cfb2ea999719a4e21a1c892d98476b4b",
+    "pac_simulation/ahead_sim/simulator.py": "7c0f69461757732f1fb0d54a1d2275ac7bfd13d4de373b868f3a041269d32023",
+    "pac_simulation/ahead_sim/strength.py": "bd20fb31ce45b5e29445621d299cbd53be0da23e40fea20685a653d11716e30b",
+    "pac_simulation/ahead_sim/world.py": "2f5ad9d75d8394772548b33bad78d311e49fc416984888dec95017d0685239ea"
+  },
+  "simulation_time_s": 18.0,
+  "errors": [],
+  "measured_boxes": {
+    "S0001-B001": {
+      "center": [
+        -0.4270735001160817,
+        -0.3718743063542637,
+        0.10498910261608854
+      ],
+      "quaternion": [
+        1.9274244293332214e-06,
+        -4.095930084644255e-06,
+        0.00011705966308213948,
+        0.9999999931382718
+      ],
+      "displacement_m": 0.0001460133987640285,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 33.7949389292756,
+        "max_top_load_n": 436.566,
+        "utilization": 0.07741083577116771
+      }
+    },
+    "S0001-B002": {
+      "center": [
+        0.013024672803580547,
+        -0.2568442332154973,
+        0.1999898911956113
+      ],
+      "quaternion": [
+        -2.728866777073143e-07,
+        5.343199565655599e-09,
+        -0.00013363154435036187,
+        0.9999999910712679
+      ],
+      "displacement_m": 0.00015803235844914537,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 568.36,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B003": {
+      "center": [
+        -0.33700669397658645,
+        0.23316588288768872,
+        0.19998827362461877
+      ],
+      "quaternion": [
+        1.0905699466754872e-06,
+        -4.611402589530922e-06,
+        -7.87364741367395e-05,
+        0.9999999968890566
+      ],
+      "displacement_m": 0.00016643151633652617,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 281.1603042602662,
+        "max_top_load_n": 568.36,
+        "utilization": 0.49468700165434965
+      }
+    },
+    "S0001-B004": {
+      "center": [
+        0.5070000871394985,
+        -0.36200112079225766,
+        0.07498966496838848
+      ],
+      "quaternion": [
+        1.508889564239024e-06,
+        -7.742350416729596e-07,
+        0.7071096286845228,
+        0.7071039336750717
+      ],
+      "displacement_m": 1.0395991871300789e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 381.268,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B005": {
+      "center": [
+        0.4399986499813026,
+        0.13999782214749723,
+        0.1049895514885119
+      ],
+      "quaternion": [
+        1.671488580805242e-06,
+        -1.5910471076948811e-07,
+        0.7071102131008015,
+        0.7071033492536433
+      ],
+      "displacement_m": 1.0758112488891473e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 436.566,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B006": {
+      "center": [
+        0.11899931294845753,
+        0.2449996946620632,
+        0.06498915599816696
+      ],
+      "quaternion": [
+        2.7356557311046615e-06,
+        -2.8347821293936694e-06,
+        0.7071055135674896,
+        0.7071080487923589
+      ],
+      "displacement_m": 1.087003435286883e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 389.648,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B007": {
+      "center": [
+        -0.4869618708618964,
+        0.08807355090108034,
+        0.4449725869502279
+      ],
+      "quaternion": [
+        1.744533115905749e-05,
+        -9.24579379747489e-06,
+        2.257241494909663e-05,
+        0.9999999995503309
+      ],
+      "displacement_m": 8.726420526231944e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 363.928,
+        "utilization": 0.0
+      }
+    },
+    "S0001-B008": {
+      "center": [
+        -0.47204427084324174,
+        -0.3969182163302572,
+        0.2849760513623296
+      ],
+      "quaternion": [
+        4.266663484379769e-06,
+        -1.598244957113638e-05,
+        3.085770739551354e-05,
+        0.9999999993870794
+      ],
+      "displacement_m": 9.603131491448813e-05,
+      "strength": {
+        "status": "OK",
+        "load_from_above_n_avg": 0.0,
+        "max_top_load_n": 381.268,
+        "utilization": 0.0
+      }
+    }
+  },
+  "capacity_source": "TEAM_MCKEE_ASSUMPTION",
+  "robot_execution_verified": false,
+  "gazebo_verified": false,
+  "physics_engine": "pybullet",
+  "limitation": "Rigid drop and contact forces only; no carton crushing, vacuum or robot motion"
+}

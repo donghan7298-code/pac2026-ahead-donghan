@@ -1,0 +1,7 @@
+{
+  "scope": "REAL_PORTABLE_CHECKPOINT_RELOCATION",
+  "completed_shards": 180,
+  "arrays_validated": 3,
+  "immutable_bytes_unchanged": true,
+  "target_is_delivery_copy": true
+}

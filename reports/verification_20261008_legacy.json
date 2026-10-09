@@ -1,0 +1,124 @@
+{
+  "checked_at": "2026-10-08",
+  "sources": [
+    {
+      "repo": "yang8988/pac-mission1-shared",
+      "branches": [
+        {
+          "name": "claude/pensive-pasteur-dwbu3g",
+          "sha": "fd683e56e67af8e2de743b80456f9fd2177a3eef"
+        },
+        {
+          "name": "feature/donghan-placement-planner",
+          "sha": "146797e337d9b17c521b3ddb1b8560453cddb1bf"
+        },
+        {
+          "name": "feature/jaesung-dataset-generator",
+          "sha": "cc4c075daa3dd4c7f80510042732763fc9502933"
+        },
+        {
+          "name": "feature/jaesung-physics-simulator",
+          "sha": "7f4ae37621ea20527c09a707390db9b0f1317aa3"
+        },
+        {
+          "name": "main",
+          "sha": "1eb10252ffcbd47b1b9f24990aa6e9e5f523a0a4"
+        }
+      ]
+    },
+    {
+      "repo": "dlwotjd1289-cloud/pac2026-ahead",
+      "branches": [
+        {
+          "name": "fix/hyundai-submodule-init",
+          "sha": "0c8fb80f5674e6202489209a743f8b82ce915262"
+        },
+        {
+          "name": "main",
+          "sha": "fa3115a903117eeb57009defd12a201d5290345d"
+        }
+      ]
+    }
+  ],
+  "unpublished_planner_patch": true,
+  "github_write_attempted": false,
+  "validated_candidate_commit": "fd683e56e67af8e2de743b80456f9fd2177a3eef",
+  "upstream_planner_base": "146797e337d9b17c521b3ddb1b8560453cddb1bf",
+  "tests": {
+    "planner": {
+      "passed": 64,
+      "skipped": 0,
+      "seconds": 3.89,
+      "bullet_settling_cases": 2,
+      "zero_top_load_functional_cases": 1
+    },
+    "teammate": {
+      "passed": 175,
+      "skipped": 2,
+      "seconds": 31.69,
+      "skip_reason": "gymnasium and torch unavailable"
+    },
+    "regression_before_followup": {
+      "failed_as_expected": 2
+    },
+    "replay": {
+      "boxes": 5,
+      "placed": 5,
+      "safety_issues": 0,
+      "policy": "RULE",
+      "value_provider": "proxy",
+      "scope": "OFFLINE_SIMULATION",
+      "robot": "NOT_RUN"
+    },
+    "staged_packages": 5,
+    "patch_apply_check": "PASS",
+    "ros2": "NOT_RUN",
+    "moveit": "NOT_RUN",
+    "robot_pick_place": "NOT_RUN",
+    "model_service_related": {
+      "passed": 17,
+      "seconds": 2.65
+    }
+  },
+  "latest_read_changed_files": [],
+  "previous_integration_patch_published": true,
+  "followup_files": [
+    "pac-mission1-shared/config/team_fd683e56_smoke.yaml",
+    "pac-mission1-shared/docs/generator_model_training_20261008.md",
+    "pac-mission1-shared/docs/meeting_handoff_20261008.md",
+    "pac-mission1-shared/docs/requirements_traceability.md",
+    "pac-mission1-shared/models/team_fd683e56_smoke.json",
+    "pac-mission1-shared/reports/team_generator_training_20261008.json",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/launch/placement_planner.launch.py",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/features.py",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planner.py",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/planning_service.py",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_bridge.py",
+    "pac-mission1-shared/ros2_ws/src/pac_planning/pac_planning/team_training.py",
+    "pac-mission1-shared/scripts/donghan/stage_planner_workspace.py",
+    "pac-mission1-shared/scripts/donghan/train_team_model.py",
+    "pac-mission1-shared/tests/test_highlevel_handoff.py",
+    "pac-mission1-shared/tests/test_meeting_regressions.py",
+    "pac-mission1-shared/tests/test_team_training.py"
+  ],
+  "lowlevel_training": {
+    "scope": "OFFLINE_TRAINING_AND_EVALUATION",
+    "team_sha": "fd683e56e67af8e2de743b80456f9fd2177a3eef",
+    "generator_sha": "cc4c075daa3dd4c7f80510042732763fc9502933",
+    "scenarios": 12,
+    "boxes": 96,
+    "train_queries": 64,
+    "train_candidates": 1724,
+    "val_queries": 16,
+    "val_candidates": 331,
+    "test_queries": 16,
+    "test_candidates": 364,
+    "selected_epoch": 41,
+    "horizon": 2,
+    "scenario_count": 3,
+    "ppo_trained": false,
+    "published": false,
+    "artifact": "PAC2026_Generator_Model_Training_20261008.zip"
+  },
+  "training_patch_apply_check": "PASS"
+}

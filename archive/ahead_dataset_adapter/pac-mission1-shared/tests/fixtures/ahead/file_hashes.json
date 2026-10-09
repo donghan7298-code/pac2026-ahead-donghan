@@ -1,0 +1,20 @@
+{
+  "test_data/S0001.json": "0435d6306b8103529f2dcec00c416b93e4ee22fafbb2dfefb1b65986890109f4",
+  "test_data/S0002.json": "28983995f41eaa1ce91c3448b7ffd68f78f2c029f46a05ccaaf766155eac0c0c",
+  "test_data/S0003.json": "d1656da221b1a1f0ea8794a3c0cf2d2267d13a57ca62b02ca5f1d2e746e2d97d",
+  "test_data/S0004.json": "a4085f61cb56df460e886de3f89dff949e83668150aba6bb915e4a2d7af6c54e",
+  "test_data/S0005.json": "2a63847145748088c590cfb54238185b9c3569b19fc53822d7324b38d9f4ba16",
+  "test_data/S0006.json": "2ae709a49c048f814869c7bfe62dbdd6e5e37131d4fd1fc85cc4a01f3ba4f757",
+  "ground_truth/S0001.json": "ee3a816b7df9a574589e4752bea91348be861baa07aab6a0b9aaff6ae47a5bee",
+  "ground_truth/S0002.json": "4f80a90ce00f7027c66274064f366fe4bb48bd173000bf14ffab4249078363c8",
+  "ground_truth/S0003.json": "497114274fe0ed989106480e6063398d9d2c14facf9b3d993110b065e15eb1fc",
+  "ground_truth/S0004.json": "7ffdcbdd948a50faa133e2254e7da047e4f25aa45004ed40c70019205d0c73e9",
+  "ground_truth/S0005.json": "351fb8e498277160e5621632c36eb595d33d3752557913a56c1fdefd403eaa74",
+  "ground_truth/S0006.json": "08978efde52ad8fe0f61e19160abbe136799bbf0e9e64f8f8c656f8d7786d3ba",
+  "simulation_observations/S0001.jsonl": "00da5bb208b15225aef2dfa4f8e5d79ae221e1135c7e08233dbba3a8598fbbbf",
+  "simulation_observations/S0002.jsonl": "fd36f1a36c07b49076aeefa6291f60d001d7a60c5018cfba9704eb2b6eeaead3",
+  "simulation_observations/S0003.jsonl": "12f2254fd892c1802c60536647525fae0b3cc4bbc8d58896744c97976d65768d",
+  "simulation_observations/S0004.jsonl": "a3c5cc90f5ead9185c5c116be64304eedbae59f594342b5c915448a9b3a0dd36",
+  "simulation_observations/S0005.jsonl": "8817c53ad60573713059a2561868fb14c2314075196df086c413b3c3ed884f33",
+  "simulation_observations/S0006.jsonl": "ce77bb3deee852e8e100e39fbde9471420ef5d9b439f796c613dd05b970b9ebb"
+}

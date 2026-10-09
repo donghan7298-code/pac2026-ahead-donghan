@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "source_scenario": "S0001",
+  "source_ground_truth_sha256": "1db9b5e74a676c2736e1944cc3cee83ec84dd87cf085240070e6662e81476ee1",
+  "simulation_physics": "RIGID_BOXES",
+  "observation_source": "KNOWN_GAZEBO_RIGID_BODY",
+  "eoat_mass_assumption_kg": 15.0,
+  "vision_verified": false,
+  "base_position_world_m": [
+    1.35,
+    0.15,
+    0.5
+  ],
+  "pick_surface_world_m": [
+    -0.2,
+    1.2,
+    0.85
+  ],
+  "pallet": {
+    "size_m": [
+      1.2,
+      1.0,
+      1.35
+    ],
+    "origin_world_m": [
+      0.75,
+      -1.5,
+      0.15
+    ],
+    "max_load_kg": 1000.0
+  },
+  "boxes": [
+    {
+      "box_id": "S0001-B001",
+      "sku": "K08",
+      "size_m": [
+        0.34,
+        0.25,
+        0.21
+      ],
+      "weight_kg": 4.800477,
+      "max_top_load_n": 436.566,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    },
+    {
+      "box_id": "S0001-B002",
+      "sku": "K13",
+      "size_m": [
+        0.52,
+        0.48,
+        0.4
+      ],
+      "weight_kg": 13.087056,
+      "max_top_load_n": 568.36,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    },
+    {
+      "box_id": "S0001-B003",
+      "sku": "K13",
+      "size_m": [
+        0.52,
+        0.48,
+        0.4
+      ],
+      "weight_kg": 28.486273,
+      "max_top_load_n": 568.36,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    },
+    {
+      "box_id": "S0001-B004",
+      "sku": "K03",
+      "size_m": [
+        0.27,
+        0.18,
+        0.15
+      ],
+      "weight_kg": 1.394617,
+      "max_top_load_n": 381.268,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    },
+    {
+      "box_id": "S0001-B005",
+      "sku": "K08",
+      "size_m": [
+        0.34,
+        0.25,
+        0.21
+      ],
+      "weight_kg": 1.741063,
+      "max_top_load_n": 436.566,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    },
+    {
+      "box_id": "S0001-B006",
+      "sku": "K04",
+      "size_m": [
+        0.27,
+        0.2,
+        0.13
+      ],
+      "weight_kg": 0.860186,
+      "max_top_load_n": 389.648,
+      "capacity_source": "TEAM_MCKEE_ASSUMPTION"
+    }
+  ]
+}

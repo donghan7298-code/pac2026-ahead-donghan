@@ -1,0 +1,3370 @@
+{
+  "backend_contract": {
+    "backend": "pac_candidates.backend.CandidateBackend",
+    "source_sha256": {
+      "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+      "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+      "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+      "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+      "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+      "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+      "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+      "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+      "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+    },
+    "candidate_config": {
+      "generation": {
+        "yaw_set_rad": [
+          0.0,
+          1.5707963267948966
+        ],
+        "use_ems": true,
+        "use_extreme_points": true,
+        "ems_anchors": [
+          "corner_ll",
+          "corner_lr",
+          "corner_ul",
+          "corner_ur",
+          "center"
+        ],
+        "dedup_distance_m": 0.08,
+        "dedup_mode": "support_aware",
+        "order": "likely_valid_first",
+        "max_candidates": 0,
+        "balance_anchors": true,
+        "balance_step_m": 0.04
+      },
+      "uncertainty": {
+        "lateral_clearance_m": 0.004,
+        "size_tolerance_m": 0.002,
+        "height_tolerance_m": 0.003,
+        "cog_uncertainty_ratio": 0.05,
+        "cog_uncertainty_min_m": 0.005,
+        "uncertain_policy": "robust",
+        "uncertain_multiplier": 2.0
+      },
+      "constraints": {
+        "min_support_ratio": 0.7,
+        "min_lbcp_margin_m": 0.0,
+        "pallet_overhang_m": 0.0,
+        "heavy_on_light": {
+          "enabled": true,
+          "mode": "share",
+          "max_weight_ratio": 1.0,
+          "tolerance_kg": 0.5,
+          "min_share": 0.1
+        },
+        "load_model": {
+          "ect_n_per_m": 5000.0,
+          "board_thickness_m": 0.003,
+          "safety_factor": 4.0,
+          "share_model": "lever"
+        },
+        "pallet_cog": {
+          "enabled": true,
+          "final_half_extent_ratio": 0.5,
+          "ramp_mass_kg": 150.0,
+          "allow_improving": true
+        },
+        "default_pallet_max_weight_kg": 1000.0
+      },
+      "cache_size": 256,
+      "collect_all_reasons": false
+    }
+  },
+  "episodes": [
+    {
+      "task": "test-S0006-7-teacher",
+      "split": "test",
+      "scenario_id": "S0006",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0006-7-teacher.jsonl.gz",
+      "shard_sha256": "80c1502fd8a535eaa9f05fca96abc8bd24a2e82b831e7f6bfa16994ce508aa29",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "fce0df580015a5771cce19be16839384b73d74e4f3dab2b0e0efa66ceb33cc0a",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 36,
+      "candidates": 418,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "6c7aed48b134c96bfc307239dbac2b40fb29f0f43377c40d9a9d15b8d94926ed",
+      "feature_rejects": {},
+      "wall_time_sec": 22.796617814
+    },
+    {
+      "task": "test-S0017-7-teacher",
+      "split": "test",
+      "scenario_id": "S0017",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0017-7-teacher.jsonl.gz",
+      "shard_sha256": "bb820b19a24b726b62edb24f7220168e4fc589449f75f3b84875e0b4bcc8d0cc",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "3e5fc796fcde796d17cdeb4e2820c82f1171494e0268a074e1adac98abecb928",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 34,
+      "candidates": 456,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "2387a0f01a83ebf8f30b58dac6c3949086e67bd3916e12ab400da54c230a48e3",
+      "feature_rejects": {},
+      "wall_time_sec": 71.51204078399996
+    },
+    {
+      "task": "test-S0023-7-teacher",
+      "split": "test",
+      "scenario_id": "S0023",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0023-7-teacher.jsonl.gz",
+      "shard_sha256": "2559439fe7b216ad04f0c950fb55c55e771a194d358e1ef5c28c09b04b1c91b8",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "767e31b629cf5fc310ae6d373ad4741ccf1c9fa337c70e544bf678f7d2d66c57",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 37,
+      "candidates": 736,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "6799fcdeaf40c7e9bf07b0e4c7659548152d2533eff2f53a314e3df4a5d05682",
+      "feature_rejects": {},
+      "wall_time_sec": 41.92922111400003
+    },
+    {
+      "task": "test-S0025-7-teacher",
+      "split": "test",
+      "scenario_id": "S0025",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0025-7-teacher.jsonl.gz",
+      "shard_sha256": "f0427a5674c2243d6f03cd5aa4c408a55761221519479193a4221cdbf7015106",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "752119af9a29e707eadc9b2b9b4b66b0eb4263e7313720f666b840ee90a3dbaf",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 50,
+      "candidates": 878,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "54a2af6bec4b871b1fa9e3c6d72fd0990e1c0b91966d40f1dc01972aae828fb2",
+      "feature_rejects": {},
+      "wall_time_sec": 44.08688714600021
+    },
+    {
+      "task": "test-S0030-7-teacher",
+      "split": "test",
+      "scenario_id": "S0030",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0030-7-teacher.jsonl.gz",
+      "shard_sha256": "39568ceeb238ff04379502d6057034bf18079a45a0d56e0c624a02162b34baa0",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "2a3dac6b860b6600c746b83ebc7bf71409a0b8cba6643c2284406c407dd5cb38",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 32,
+      "candidates": 313,
+      "placed": 19,
+      "boxes": 24,
+      "stream_sha256": "a85084cd3cdfd07b88e691e54b416f56e0c442d41f6b155196eb1ef645904c5d",
+      "feature_rejects": {},
+      "wall_time_sec": 21.33013978100007
+    },
+    {
+      "task": "test-S0035-7-teacher",
+      "split": "test",
+      "scenario_id": "S0035",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/test-S0035-7-teacher.jsonl.gz",
+      "shard_sha256": "0101863282216458f5de397b723b9cf18214e800f070e6b95aa57dbd443f6378",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "61babb05da07babd1a2927b423ccc18acd34a5876bceed8aaaaac9112769a013",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 33,
+      "candidates": 527,
+      "placed": 21,
+      "boxes": 24,
+      "stream_sha256": "f77791efda9bb25f692401482a03e298cd50612de97b27068d0f996aad4d923d",
+      "feature_rejects": {},
+      "wall_time_sec": 19.71455257300022
+    },
+    {
+      "task": "train-S0003-7-teacher",
+      "split": "train",
+      "scenario_id": "S0003",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0003-7-teacher.jsonl.gz",
+      "shard_sha256": "013c5429bdf69593c3567956e9ed83c45cd7b87fb903f9c9696f3f6e19bae07e",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "fa63b6ebf234a2332674be83e3aa08fd99d42f789258736e32a9823bbb57a899",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 48,
+      "candidates": 429,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "ba6e995e29b878540c85fe0e2746b86e171731a8fa7ad02fe83957614834f08d",
+      "feature_rejects": {},
+      "wall_time_sec": 35.161209235000115
+    },
+    {
+      "task": "train-S0004-7-teacher",
+      "split": "train",
+      "scenario_id": "S0004",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0004-7-teacher.jsonl.gz",
+      "shard_sha256": "26e80be2451eb1d961fba7e8390396a4364e058f6ffcf9c21414685e7093736d",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "c4ce77f1f92edd4a4d8019322a580a77096ed67abe749308ddf91c3f4393078c",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 35,
+      "candidates": 422,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "e9d22c60f0aa410ff57a62862f38c72a2aef77a35590de88096780413b0cfe13",
+      "feature_rejects": {},
+      "wall_time_sec": 40.95969728599994
+    },
+    {
+      "task": "train-S0005-7-teacher",
+      "split": "train",
+      "scenario_id": "S0005",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0005-7-teacher.jsonl.gz",
+      "shard_sha256": "7012d51e7c595d0e6d472c5ded3a7fd9bc088410e98df99698ac7bdfecf33b66",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "07e1cc0258e0faed3ec001d9d0a13c3dca16cfaf75fdedad9b2d792e06dc46bb",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 34,
+      "candidates": 428,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "75156f6ad5b9c4486b6f2c9d5fd6cb38aa1d8fa4aec04c4e47f912282b14a640",
+      "feature_rejects": {},
+      "wall_time_sec": 49.21531810899978
+    },
+    {
+      "task": "train-S0007-7-teacher",
+      "split": "train",
+      "scenario_id": "S0007",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0007-7-teacher.jsonl.gz",
+      "shard_sha256": "15d2d984be61dcb96cc007b2939bdc29930123e80dd9f97de4af6ac313effbc1",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "3f461ea6aabbce96f470aa625041b56ed16961a65518738aab34062f85daeb19",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 27,
+      "candidates": 403,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "ad2f95481a842b227d3e9fcef950447fea74a819aadc72b65e1c7ec041016a05",
+      "feature_rejects": {},
+      "wall_time_sec": 52.29001206199973
+    },
+    {
+      "task": "train-S0008-7-teacher",
+      "split": "train",
+      "scenario_id": "S0008",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0008-7-teacher.jsonl.gz",
+      "shard_sha256": "8b8e0702e7f21509a9e3187dbacb3add9bdf5f3464e3846e55778f8722e0e5b2",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "04f20e996a6460d28b33bf34e08b3ed7b63584f09456b86d78452fedd83bfd39",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 30,
+      "candidates": 497,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "10e4a51c685bdd3f3bdcb1d86a56249a1b103e6642c0205af803f373015d3b74",
+      "feature_rejects": {},
+      "wall_time_sec": 58.22319630899983
+    },
+    {
+      "task": "train-S0009-7-teacher",
+      "split": "train",
+      "scenario_id": "S0009",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0009-7-teacher.jsonl.gz",
+      "shard_sha256": "4c0d5849982e16a91612633e785f2c4b18f3fe80fffd52dd690318e6ffa2e3cd",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "a654196520df054cbba9dff45cf2f3e54f63ef4f32412ac30ef593107d25d828",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 26,
+      "candidates": 329,
+      "placed": 20,
+      "boxes": 24,
+      "stream_sha256": "42cffb45aa075c1a53f185fad600aa77abdea50169f90612239937ffb452a9aa",
+      "feature_rejects": {},
+      "wall_time_sec": 59.958935878000375
+    },
+    {
+      "task": "train-S0010-7-teacher",
+      "split": "train",
+      "scenario_id": "S0010",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0010-7-teacher.jsonl.gz",
+      "shard_sha256": "3be02c79cd9be1bb344c84dfbd4795c6d1c6bb820136f65fde7ff458d4f1ccd4",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "71a8f65726a8c323ef41254c73e955b3746ca8b0e06360183313d5ab9b0f0f86",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 44,
+      "candidates": 619,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "e718f913eb701c02510a8a85c5fce9c19e93e99433d5b38d2dd6651afdd90df2",
+      "feature_rejects": {},
+      "wall_time_sec": 52.85899564400006
+    },
+    {
+      "task": "train-S0011-7-teacher",
+      "split": "train",
+      "scenario_id": "S0011",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0011-7-teacher.jsonl.gz",
+      "shard_sha256": "bd95a449be999faa7d752beb225ffef74d582a9fe5821aae5c0e906df5174f69",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "2cec7bab5465ce0282a3dfa5f4a9d12b524d65984b65654f3b3abcc4a1fe6ca4",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 35,
+      "candidates": 449,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "58155a03a76e0b85f7cb2843f3e421e868936a95eccb87d262cf06a9d88023d0",
+      "feature_rejects": {},
+      "wall_time_sec": 44.239230869999574
+    },
+    {
+      "task": "train-S0012-7-teacher",
+      "split": "train",
+      "scenario_id": "S0012",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0012-7-teacher.jsonl.gz",
+      "shard_sha256": "9c53c00991fcc1265fb03647e3f5eb350958ea5060169dc5b967ae74d0f214f2",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "528ef3b15d4d06f2fddc63eca61bb701559811d300c9f6cb22efac56725a710e",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 38,
+      "candidates": 513,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "cbf70c66034b924b2a5322e31f52f11c1ce32d76050221e444a673f6238286bc",
+      "feature_rejects": {},
+      "wall_time_sec": 32.64024482400009
+    },
+    {
+      "task": "train-S0013-7-teacher",
+      "split": "train",
+      "scenario_id": "S0013",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0013-7-teacher.jsonl.gz",
+      "shard_sha256": "490f8de286c630b86ff537dfb2368ccdb0b2c5d170828cd6ad53d6970293d420",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "3cba01d611933e1223f0abdf4b5ca0971586490c3878277d56c9875231a6aa7c",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 24,
+      "candidates": 294,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "2bbde072f5f18184d4029e246d85b79a66478fe7d88dfcfb89ec552b3a85a5bf",
+      "feature_rejects": {},
+      "wall_time_sec": 70.78388827800018
+    },
+    {
+      "task": "train-S0014-7-teacher",
+      "split": "train",
+      "scenario_id": "S0014",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0014-7-teacher.jsonl.gz",
+      "shard_sha256": "66d74ddcfa91d7a161cc51d86108bbf0aa164f88eeda52216ea3708613d9311d",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "7441dbb9e14eff0eb242008423cb66035a4c2991f80671e330aa46eeed3ad97c",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 31,
+      "candidates": 499,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "ceed3d35406201123ba34d292ca6e6c57e1367de102e7f4f35d67c9c99d56433",
+      "feature_rejects": {},
+      "wall_time_sec": 42.685841167000035
+    },
+    {
+      "task": "train-S0015-7-teacher",
+      "split": "train",
+      "scenario_id": "S0015",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0015-7-teacher.jsonl.gz",
+      "shard_sha256": "b8fa7169e6f1badc6e22aeab0d11baba280a819b59b0012356d985bcc75d30c4",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "4f52c1e2fbb7d79e7f171350a8c9e83358211570a8b651dc699f1a96c475dc27",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 43,
+      "candidates": 504,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "e2df5f63a2212467540cb8794c2563cae92dcbecc93052df7c3b1546a4de3d74",
+      "feature_rejects": {},
+      "wall_time_sec": 78.80075633900015
+    },
+    {
+      "task": "train-S0016-7-teacher",
+      "split": "train",
+      "scenario_id": "S0016",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0016-7-teacher.jsonl.gz",
+      "shard_sha256": "86ad7b021cfc649b8d6ba394ccf5829cd97f18d376e16015efaf0b3d2ec2b965",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "77e88999a1d496c97585c3146da148c322fd95c674c835527731f17042035d2d",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 43,
+      "candidates": 586,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "90990bb8df77569384d286122bd5a0c69630349655b3c98676140329758c981a",
+      "feature_rejects": {},
+      "wall_time_sec": 52.91127969599984
+    },
+    {
+      "task": "train-S0018-7-teacher",
+      "split": "train",
+      "scenario_id": "S0018",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0018-7-teacher.jsonl.gz",
+      "shard_sha256": "cba50cbace33ef671fa21ee9189f474ee402be2500b47761f0009529042e18e5",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "8b80c65a29d27dd01ddf808b2355d9d0615d947abbc07a551f9a66539af3eafd",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 32,
+      "candidates": 396,
+      "placed": 21,
+      "boxes": 24,
+      "stream_sha256": "107379951c825b6cb420d3b7098cc7fc26abfcebef6e92d0840d406d285d38b4",
+      "feature_rejects": {},
+      "wall_time_sec": 25.086551906000295
+    },
+    {
+      "task": "train-S0019-7-teacher",
+      "split": "train",
+      "scenario_id": "S0019",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0019-7-teacher.jsonl.gz",
+      "shard_sha256": "bd6f76beb67ca0b97cdb629d19ea25720c52477517055ef380179d42d1f4f35d",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "b5ba76b1473c19065173a505da6b1de606af01c52a607890b560a2b56052b9c2",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 32,
+      "candidates": 638,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "711009d14c3736f785710e89a97835ae70692891ff1534921392bdc606ff5301",
+      "feature_rejects": {},
+      "wall_time_sec": 68.28501338399974
+    },
+    {
+      "task": "train-S0022-7-teacher",
+      "split": "train",
+      "scenario_id": "S0022",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0022-7-teacher.jsonl.gz",
+      "shard_sha256": "c48441da84f136ae2e948be5c41e92aef012448404a502ba235307de404722cb",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "115f8e050c2d3fdebe75296c63a77e33c5a12f73e9efa5563b51e3e5eff18f0f",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 40,
+      "candidates": 682,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "97abefbeb8567c9b92a9b1ea4c87905babf4f2b1a16c896e0e02e467156f45bb",
+      "feature_rejects": {},
+      "wall_time_sec": 48.39613526099993
+    },
+    {
+      "task": "train-S0024-7-teacher",
+      "split": "train",
+      "scenario_id": "S0024",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0024-7-teacher.jsonl.gz",
+      "shard_sha256": "16931a448bc857cbc1769a3b871a8cdb2249933c8dd62995ca3ab931223681e6",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "17b04465c4a93168710b6db289b4508949b326bb0f63b9b31a7a44ed47915688",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 39,
+      "candidates": 559,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "07e21f70b8af0c834e40c4d1f07c91e7ad0058a6649c9d53a1fe5aca7c4e8246",
+      "feature_rejects": {},
+      "wall_time_sec": 53.24801750500001
+    },
+    {
+      "task": "train-S0027-7-teacher",
+      "split": "train",
+      "scenario_id": "S0027",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0027-7-teacher.jsonl.gz",
+      "shard_sha256": "0a3cbfae46aa6897d1703d182fd6f9c1fe4722908137897e04e8ad4a5a22cdf0",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "c4b1c58b9e2079521f3bab951bc6271f9854b5822e6e57a5877985f0a39e378e",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 45,
+      "candidates": 527,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "b1c7e5c245c210fb8ff83ce9380ba43a2f7ac97cc47509943ac81c9b71770f7f",
+      "feature_rejects": {},
+      "wall_time_sec": 25.64198670099995
+    },
+    {
+      "task": "train-S0028-7-teacher",
+      "split": "train",
+      "scenario_id": "S0028",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0028-7-teacher.jsonl.gz",
+      "shard_sha256": "3d1bed4120b531d8841337db3d6ac84bf042c071e5752bbf176d6e17b143501c",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "ff89eeb0473a8260028f4f7e8abed5db874331efbdc6bb684d8efb32ac4fd60c",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 36,
+      "candidates": 687,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "daf56b7bb712d9af202096076be711466bda5b40e14d57874648a823dbf76178",
+      "feature_rejects": {},
+      "wall_time_sec": 47.84485350700015
+    },
+    {
+      "task": "train-S0029-7-teacher",
+      "split": "train",
+      "scenario_id": "S0029",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0029-7-teacher.jsonl.gz",
+      "shard_sha256": "5f9d0981038c2736eb2a44a2dd81bd0d313046e01c6456fb7c8967a054f5c677",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "7e9c260ef2ede6d6fbb9a15e0684660aa5c0dce93c10d98695b4a08aeff8a59a",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 43,
+      "candidates": 628,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "0600ab7b549beb73157643e851e7b0aec018fc971967256a972eafd9e2e1e17c",
+      "feature_rejects": {},
+      "wall_time_sec": 56.016071051999916
+    },
+    {
+      "task": "train-S0031-7-teacher",
+      "split": "train",
+      "scenario_id": "S0031",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0031-7-teacher.jsonl.gz",
+      "shard_sha256": "1d6fd918127cd579332c41868f2605e42b071a24307c2a49dc61a95e648f4d55",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "48c138872d03cbbfa7c663c7f55bfb3760e6194f3162736437c10207f553ef7b",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 30,
+      "candidates": 437,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "5b44d9840f481ef4255e49aaf8aadd82331b0cf179b27a66784f9c44fe4195bf",
+      "feature_rejects": {},
+      "wall_time_sec": 64.61846717899971
+    },
+    {
+      "task": "train-S0032-7-teacher",
+      "split": "train",
+      "scenario_id": "S0032",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0032-7-teacher.jsonl.gz",
+      "shard_sha256": "de22c0709afc6954f2e6f663c380aa74f346bd237f22c8e99535b65c7010606e",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "7af81d2d26e29aaa968d3d2ecd83e5a0db1efe76c4a16aa7f5e9e5953560216a",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 25,
+      "candidates": 325,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "f173bf5c78c973e4537565b067fcfdb08b88d6234ca3af9b1385553389f67088",
+      "feature_rejects": {},
+      "wall_time_sec": 32.61371896599985
+    },
+    {
+      "task": "train-S0033-7-teacher",
+      "split": "train",
+      "scenario_id": "S0033",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0033-7-teacher.jsonl.gz",
+      "shard_sha256": "011c0c8438c35a53b139ac0622d519e4c20e4b795f00ef93d8b9a7e6d89c4593",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "7a58186b0dba490c08df2b201a29df9719d9ad2efb7bc0306b7840122c8dbb16",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 22,
+      "candidates": 296,
+      "placed": 20,
+      "boxes": 24,
+      "stream_sha256": "6ac1d33a778e7b536ec2f7a7843c02c1ac5d29c211ab9c2d76d43d7e370e7f28",
+      "feature_rejects": {},
+      "wall_time_sec": 21.473598003000006
+    },
+    {
+      "task": "train-S0034-7-teacher",
+      "split": "train",
+      "scenario_id": "S0034",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0034-7-teacher.jsonl.gz",
+      "shard_sha256": "bf706a7770f00ee4b7d740a01caa119b93c4d9b8e223261d7b1ee2f556ab806c",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "ab307279dcd92d26704dc60f29ebedbe0344606bf11f14d1cf44c2bdf6f26f30",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 49,
+      "candidates": 682,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "5be2ef36292a3c35a06dadfb732b22d664e267c4022555d095ef658b32e6b443",
+      "feature_rejects": {},
+      "wall_time_sec": 49.833756297000036
+    },
+    {
+      "task": "train-S0036-7-teacher",
+      "split": "train",
+      "scenario_id": "S0036",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/train-S0036-7-teacher.jsonl.gz",
+      "shard_sha256": "9a6322372cd757afc0f0ae8c3b0be72d21760071be227c3c691d487a2c985294",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "1560a366ec19f3117ee5e4bc3d8341c355dfeb90ced1c84e0405cf7449bbe03f",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 32,
+      "candidates": 182,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "e838ecaf875ecd8ead88482148bca07116e14acf1f0bb6df913bec4c03688dde",
+      "feature_rejects": {},
+      "wall_time_sec": 9.791057681999973
+    },
+    {
+      "task": "val-S0001-7-teacher",
+      "split": "val",
+      "scenario_id": "S0001",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/val-S0001-7-teacher.jsonl.gz",
+      "shard_sha256": "70c3e5aeed82e37e262dcd97534dab00b8267294d7e35855768cf979fcfe0c33",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "1270b3b555ae97262da95f0922c53e7d610b4f04ba49bf4c2589630b42aa7d1c",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 41,
+      "candidates": 582,
+      "placed": 24,
+      "boxes": 24,
+      "stream_sha256": "989b43ddb07c0e25a0ad0ba35edb6125421d3745ae9bc59d45cab06b1a3dea0c",
+      "feature_rejects": {},
+      "wall_time_sec": 44.469266415999755
+    },
+    {
+      "task": "val-S0002-7-teacher",
+      "split": "val",
+      "scenario_id": "S0002",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/val-S0002-7-teacher.jsonl.gz",
+      "shard_sha256": "2192aa2171f5ebc8e90d4b208c6379c96c4dd3972b093cde1f37b88726779592",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "eab47ad1afde736b0683c6c4dd2e5f341250e6b57503b07e0e56e38e82e125d6",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 40,
+      "candidates": 599,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "98a78750ba03b389dfa1b03eca134acacaa9da86b69ba226f57646c4da3d6d8b",
+      "feature_rejects": {},
+      "wall_time_sec": 50.21149999099998
+    },
+    {
+      "task": "val-S0020-7-teacher",
+      "split": "val",
+      "scenario_id": "S0020",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/val-S0020-7-teacher.jsonl.gz",
+      "shard_sha256": "e0179dd46505370aaac0ea12394e17a83c27582f0cf6da721e6a7883f4e72eaa",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "b285a2c10386398ebe8198f740550fd497961ff38e1294d88b5d3cf89ba78945",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 37,
+      "candidates": 663,
+      "placed": 23,
+      "boxes": 24,
+      "stream_sha256": "92771846886d950a24bc16a9b7e4324016b1322ba8410853a62dfc48f9cad342",
+      "feature_rejects": {},
+      "wall_time_sec": 62.790572505
+    },
+    {
+      "task": "val-S0021-7-teacher",
+      "split": "val",
+      "scenario_id": "S0021",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/val-S0021-7-teacher.jsonl.gz",
+      "shard_sha256": "9fe8c31f74c39613f71fcd5f51ac86154f1ee2028863acfed718680412381dda",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "b1658f552ed0e61bcf2fdf7c9027fc218f4408045a260e95ef6c1fa86e226472",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 35,
+      "candidates": 482,
+      "placed": 21,
+      "boxes": 24,
+      "stream_sha256": "be5c2cab3873869353d526eb5942c080371ef6472b4d58c97171e08741215ef8",
+      "feature_rejects": {},
+      "wall_time_sec": 30.01067126399994
+    },
+    {
+      "task": "val-S0026-7-teacher",
+      "split": "val",
+      "scenario_id": "S0026",
+      "seed": 7,
+      "behaviour": "teacher",
+      "shard": "/workspace/scratch/1486a29040a3/model_scale_20261009/experiment_development/shards/val-S0026-7-teacher.jsonl.gz",
+      "shard_sha256": "357a790b4927b3f8a287a380fedc4650e5a897e529fc8b8b2f7f08104b3880ca",
+      "collection_digest": "db791281a3237e3cca6b265058ca12040a28679d06dc2c70628e9c59612cca85",
+      "inventory_group": "8bd34baf570fd7ca53a0f9a9e5d215e646aa12e9c5537b004525fa97a80bcb66",
+      "backend_contract": {
+        "backend": "pac_candidates.backend.CandidateBackend",
+        "source_sha256": {
+          "__init__.py": "d47d5e019a9f4dc2c5f476185824dc80c0791e9e56296628d8fdf34b8e3069de",
+          "backend.py": "7d0b9de555bb6e3a921e832c42f8605d4ecaaa04fe9520a83b7c2ecb88f42338",
+          "candidate_generation.py": "7f93fbf44d98afd31eb5c4965c10ebe44c025a87f14c558e47000365ab8eb0ea",
+          "config.py": "b000113c5f66d6afba7f11cc9a52b92bba878cdc4cb43c2ff1b3903ed1d2b8ed",
+          "geometry.py": "97f1fcb3fd7d9dfc73362e0dd29f72eeb5bf95f0cbacb40571161bd957d78ed3",
+          "hard_mask.py": "4f2c4f641e041c074ee02c6c7bbf4fcb92cddea3675631e67bd4a30d325bb9cf",
+          "loads.py": "b22b350d529054d322a162415e7741c3521f57ced0998642f236966d006f3f63",
+          "pallet_model.py": "a02df94e95d8ae48b93c7ac02a34d92b395306b4dc1231e76015ce2103cc3331",
+          "reports.py": "61ebbdc7f364081849b3d18a7c7f5178e4495d8e4a12b8e8e759de15c6e8ff86"
+        },
+        "candidate_config": {
+          "generation": {
+            "yaw_set_rad": [
+              0.0,
+              1.5707963267948966
+            ],
+            "use_ems": true,
+            "use_extreme_points": true,
+            "ems_anchors": [
+              "corner_ll",
+              "corner_lr",
+              "corner_ul",
+              "corner_ur",
+              "center"
+            ],
+            "dedup_distance_m": 0.08,
+            "dedup_mode": "support_aware",
+            "order": "likely_valid_first",
+            "max_candidates": 0,
+            "balance_anchors": true,
+            "balance_step_m": 0.04
+          },
+          "uncertainty": {
+            "lateral_clearance_m": 0.004,
+            "size_tolerance_m": 0.002,
+            "height_tolerance_m": 0.003,
+            "cog_uncertainty_ratio": 0.05,
+            "cog_uncertainty_min_m": 0.005,
+            "uncertain_policy": "robust",
+            "uncertain_multiplier": 2.0
+          },
+          "constraints": {
+            "min_support_ratio": 0.7,
+            "min_lbcp_margin_m": 0.0,
+            "pallet_overhang_m": 0.0,
+            "heavy_on_light": {
+              "enabled": true,
+              "mode": "share",
+              "max_weight_ratio": 1.0,
+              "tolerance_kg": 0.5,
+              "min_share": 0.1
+            },
+            "load_model": {
+              "ect_n_per_m": 5000.0,
+              "board_thickness_m": 0.003,
+              "safety_factor": 4.0,
+              "share_model": "lever"
+            },
+            "pallet_cog": {
+              "enabled": true,
+              "final_half_extent_ratio": 0.5,
+              "ramp_mass_kg": 150.0,
+              "allow_improving": true
+            },
+            "default_pallet_max_weight_kg": 1000.0
+          },
+          "cache_size": 256,
+          "collect_all_reasons": false
+        }
+      },
+      "queries": 42,
+      "candidates": 682,
+      "placed": 22,
+      "boxes": 24,
+      "stream_sha256": "21af303f5f5140fb495e0798da7a52ba9c30e78b947ed0f55797830416700e9f",
+      "feature_rejects": {},
+      "wall_time_sec": 88.26257568399978
+    }
+  ],
+  "counts": {
+    "train": {
+      "queries": 883,
+      "candidates": 12011,
+      "inventory_groups": 25
+    },
+    "val": {
+      "queries": 195,
+      "candidates": 3008,
+      "inventory_groups": 5
+    },
+    "test": {
+      "queries": 222,
+      "candidates": 3328,
+      "inventory_groups": 6
+    }
+  }
+}

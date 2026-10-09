@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pac_execution</name><version>0.3.0</version>
+  <description>Confirmed MoveIt and Gazebo handoff for the AHEAD planner.</description>
+  <maintainer email="donghan@example.invalid">Donghan</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend><exec_depend>std_msgs</exec_depend><exec_depend>std_srvs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend><exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>action_msgs</exec_depend>
+  <exec_depend>tf2_msgs</exec_depend><exec_depend>tf2_ros</exec_depend>
+  <exec_depend>shape_msgs</exec_depend><exec_depend>moveit_msgs</exec_depend>
+  <exec_depend>launch</exec_depend><exec_depend>launch_ros</exec_depend><exec_depend>xacro</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend><exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend><exec_depend>controller_manager</exec_depend>
+  <exec_depend>controller_manager_msgs</exec_depend>
+  <exec_depend>pac_common</exec_depend><exec_depend>pac_planning</exec_depend>
+  <exec_depend>pac_candidates</exec_depend><exec_depend>pac_highlevel</exec_depend>
+  <exec_depend>pac_robot_check</exec_depend><exec_depend>pac_runtime</exec_depend>
+  <exec_depend>pac_gazebo_grasp</exec_depend><exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>ament_index_python</exec_depend><exec_depend>python3-yaml</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

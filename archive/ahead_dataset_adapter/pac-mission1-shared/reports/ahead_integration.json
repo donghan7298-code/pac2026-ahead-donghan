@@ -1,0 +1,327 @@
+{
+  "source_generator": "dlwotjd1289-cloud/ahead-dataset-generator",
+  "source_commit": "766d1ee179e7efe3b8b75b0813c1918dca26bc90",
+  "planner_branch_commit": "1cd65ba67dbd7e1d1b6365d2c89376448e535980",
+  "python": "3.12.14",
+  "scope": "Integration smoke, 6 families, 144 parsed observations, first 3 decisions per family; NOT a full packing benchmark or hardware test",
+  "generator_config": "upstream unchanged config/default.yaml",
+  "adapter_policy": {
+    "schema_version": 1,
+    "scope": "OFFLINE_SIMULATION",
+    "height_reference": "above_pallet",
+    "pallet_max_weight_kg": 150.0,
+    "default_top_load_capacity_n": 0.0,
+    "top_load_capacity_n_by_sku": {},
+    "unseen_weight_policy": "upper_bound",
+    "allow_identity_measurement": true
+  },
+  "dataset_contract": {
+    "adapter": "ahead-dataset-v1",
+    "generator_version": "1.2.0",
+    "generator_config_sha256": "2ef1d1806dbe0b97746d223faf2b2cbd35ef6c72f0dafcf2dcf3211f452cb0aa",
+    "adapter_config_sha256": "18aa16e44f1696e8eed7b0345b85b4b8f8841098965353710ce92d4deb848be8",
+    "future_weights": "upper_bound; current weights are observed",
+    "observation": "identity; sequential release; no future preview"
+  },
+  "python310_syntax": "PASS; runtime tests on 3.12.14",
+  "scenarios": [
+    {
+      "id": "S0001",
+      "family": "normal",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 3,
+      "decisions": [
+        {
+          "box_id": "S0001-B001",
+          "weight_kg": 1.887012,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0001-B002",
+          "weight_kg": 15.06588,
+          "valid_count": 16,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0001-B003",
+          "weight_kg": 0.36254,
+          "valid_count": 18,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        }
+      ]
+    },
+    {
+      "id": "S0002",
+      "family": "size_mixed",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 3,
+      "decisions": [
+        {
+          "box_id": "S0002-B001",
+          "weight_kg": 8.310669,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0002-B002",
+          "weight_kg": 3.347248,
+          "valid_count": 12,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0002-B003",
+          "weight_kg": 7.799667,
+          "valid_count": 14,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        }
+      ]
+    },
+    {
+      "id": "S0003",
+      "family": "weight_mixed",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 2,
+      "decisions": [
+        {
+          "box_id": "S0003-B001",
+          "weight_kg": 6.129358,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0003-B002",
+          "weight_kg": 4.26962,
+          "valid_count": 16,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0003-B003",
+          "weight_kg": 11.6798,
+          "valid_count": 0,
+          "future_scenarios": 0,
+          "model_status": null,
+          "placed": false
+        }
+      ]
+    },
+    {
+      "id": "S0004",
+      "family": "late_large",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 3,
+      "decisions": [
+        {
+          "box_id": "S0004-B001",
+          "weight_kg": 2.873928,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0004-B002",
+          "weight_kg": 1.356888,
+          "valid_count": 16,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0004-B003",
+          "weight_kg": 0.229748,
+          "valid_count": 18,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        }
+      ]
+    },
+    {
+      "id": "S0005",
+      "family": "late_heavy",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 3,
+      "decisions": [
+        {
+          "box_id": "S0005-B001",
+          "weight_kg": 0.339456,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0005-B002",
+          "weight_kg": 0.696688,
+          "valid_count": 12,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0005-B003",
+          "weight_kg": 0.73969,
+          "valid_count": 14,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        }
+      ]
+    },
+    {
+      "id": "S0006",
+      "family": "repeated_sku",
+      "parsed_boxes": 24,
+      "initial_cargo_height_m": 1.5,
+      "placed_in_prefix": 3,
+      "decisions": [
+        {
+          "box_id": "S0006-B001",
+          "weight_kg": 1.86001,
+          "valid_count": 10,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0006-B002",
+          "weight_kg": 3.81462,
+          "valid_count": 16,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        },
+        {
+          "box_id": "S0006-B003",
+          "weight_kg": 4.28273,
+          "valid_count": 18,
+          "future_scenarios": 7,
+          "model_status": "OOD_HEURISTIC_FALLBACK",
+          "placed": true
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "planner_original": 36,
+    "adapter_added": 19,
+    "planner_total_passed": 55,
+    "upstream_generator_passed": 4
+  },
+  "blocked_case": {
+    "scenario_id": "S0003",
+    "box_id": "S0003-B003",
+    "reason": "NO_VALID_FINITE_SEARCH_CANDIDATE",
+    "reject_code_counts": {
+      "OUT_OF_BOUND": 20,
+      "BOX_COLLISION": 14,
+      "APPROACH_FAIL": 14,
+      "LOW_SUPPORT": 12
+    },
+    "interpretation": "Reference candidate search with zero unknown top-load capacity has no valid candidate at step 3; this is a planning outcome, not a parser crash or proof of globally impossible packing."
+  },
+  "training_smoke": {
+    "train_ids": [
+      "S0006",
+      "S0002"
+    ],
+    "validation_ids": [
+      "S0003"
+    ],
+    "holdout_ids": [
+      "S0005"
+    ],
+    "epochs": 3,
+    "max_steps": 2,
+    "aggregate_rounds": 1,
+    "rounds": [
+      {
+        "iteration": 0,
+        "training_queries": 4,
+        "validation": {
+          "queries": 2,
+          "candidates": 22,
+          "teacher_best_top_k_recall": 1.0,
+          "teacher_top1_regret": 0.0017360862977180425,
+          "output_mse": {
+            "mean": 0.0036411838962252304,
+            "cvar": 0.002224555204604683,
+            "blocking_rate": 0.08850932685815628,
+            "failure_rate": 0.03145642864801873
+          }
+        }
+      },
+      {
+        "iteration": 1,
+        "training_queries": 8,
+        "validation": {
+          "queries": 2,
+          "candidates": 22,
+          "teacher_best_top_k_recall": 1.0,
+          "teacher_top1_regret": 0.0017360862977180425,
+          "output_mse": {
+            "mean": 0.0014330222687766918,
+            "cvar": 0.0023023852766206813,
+            "blocking_rate": 0.0759295926791183,
+            "failure_rate": 0.025102065874806387
+          }
+        }
+      }
+    ],
+    "benchmark": [
+      {
+        "mode": "greedy",
+        "placed_boxes": 2,
+        "requested_boxes": 2,
+        "truncated_for_smoke": true
+      },
+      {
+        "mode": "current",
+        "placed_boxes": 2,
+        "requested_boxes": 2,
+        "truncated_for_smoke": true
+      },
+      {
+        "mode": "teacher",
+        "placed_boxes": 2,
+        "requested_boxes": 2,
+        "truncated_for_smoke": true
+      },
+      {
+        "mode": "ranking",
+        "placed_boxes": 2,
+        "requested_boxes": 2,
+        "truncated_for_smoke": true
+      },
+      {
+        "mode": "ahead",
+        "placed_boxes": 2,
+        "requested_boxes": 2,
+        "truncated_for_smoke": true
+      }
+    ],
+    "scope": "Software-path verification only; model weights deliberately not released as a replacement production model."
+  }
+}

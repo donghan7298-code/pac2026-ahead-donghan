@@ -1,0 +1,36 @@
+{
+  "scope": "STATIC_POLICY_METADATA_AND_XML_ONLY",
+  "team_ref": "e75e2744510e9e3c85af58fc8d5ac2c99c19df59",
+  "sb3_metadata": {
+    "status": "PASS",
+    "sha256": "86451cfd8a66791744938c27fdbee5580690bf0280ea4207d5379d02f4bd101c",
+    "features": 77,
+    "actions": 6,
+    "contract": {
+      "slots": 4,
+      "value_provider": "proxy",
+      "placer": "dblf",
+      "candidate_config": "candidates.yaml"
+    },
+    "normalization_count": 163462.0001,
+    "trained_steps": 150000,
+    "train_scenarios": 42,
+    "binary_downloaded": false,
+    "binary_inference": "NOT_RUN"
+  },
+  "staged_package_names": [
+    "pac_candidates",
+    "pac_common",
+    "pac_highlevel",
+    "pac_planning",
+    "pac_planning_interfaces"
+  ],
+  "package_xml_check": "PASS",
+  "rosdep": "NOT_RUN",
+  "colcon": "NOT_RUN",
+  "ros2": "NOT_RUN",
+  "moveit": "NOT_RUN",
+  "robot_pick_place": "NOT_RUN",
+  "new_physics_execution": "NOT_RUN",
+  "model_retraining": "NOT_RUN"
+}

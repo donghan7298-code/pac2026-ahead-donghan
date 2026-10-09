@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pac_gazebo_grasp</name><version>0.3.0</version>
+  <description>Fortress fixed-joint grasp with detached startup and confirmed feedback.</description>
+  <maintainer email="donghan@example.invalid">Donghan</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ignition-gazebo6</depend><depend>ignition-plugin1</depend>
+  <depend>ignition-transport11</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
